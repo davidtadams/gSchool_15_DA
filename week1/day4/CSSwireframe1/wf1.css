@@ -1,0 +1,30 @@
+.leftbar {
+	width: 18%;
+	height: 300px;
+	border-style: solid;
+	padding: 10px;
+	display: inline-block;
+	float: left;
+}
+
+.mainbody {
+	display: inline-block;
+	float: right;
+	width: 75%;
+}
+
+.outerbox {
+	display: inline-block;
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+	width: 22%;
+}
+
+.innerbox {
+	border-style: solid;
+	height: 50px;
+	width: 50px;
+	margin: 20px auto;
+}
+
