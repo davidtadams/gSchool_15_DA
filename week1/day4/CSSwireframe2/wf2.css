@@ -1,0 +1,28 @@
+.mainbox {
+	border-style: solid;
+	padding: 10px;
+	margin: 20px;
+	height: 150px;
+	width: 500px;
+}
+
+.contentbox {
+	display: inline-block;
+	border-style: solid;
+	height: 75px;
+	width: 75px;
+}
+
+.contentbox p {
+	text-align: center;
+}
+
+.bodybox {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.inputcheck {
+	display: inline-block;
+	margin-top: 20px;
+}
