@@ -13,11 +13,32 @@
       <a href="example_03.html">Example 3</a>
       <a href="example_04.html">Example 4</a>
       <a href="example_05.html">Example 5</a>
-      <a href="example_06.html">Example 6</a>
     </nav>
     <h1>Form Fields: Example 3</h1>
 
-    <form action="" method="get">
+    <form action="example_03.html" method="get">
+      <fieldset>
+        <legend>Size</legend>
+        <label>Small
+          <input type="radio" name="size" value="small">
+        </label>
+        <label>Medium
+          <input type="radio" name="size" value="medium">
+        </label>
+        <label>Large
+          <input type="radio" name="size" value="large">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Color</legend>
+        <label for="blue">Blue</label>
+        <input type="radio" name="color" value="blue" id="blue">
+        <label for="red">Red</label>
+        <input type="radio" name="color" value="red" id="red" checked>
+        <label for="yellow">Yellow</label>
+        <input type="radio" name="color" value="yellow" id="yellow">
+      </fieldset>
+      <input type="submit" name="submit" value="submit">
     </form>
 
     <div class="query-params">
