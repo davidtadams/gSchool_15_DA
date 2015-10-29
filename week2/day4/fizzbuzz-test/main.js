@@ -12,9 +12,22 @@ module.exports = {
     else {
       return num;
     }
+  },
+
+  fizzbuzz2: function (num) {
+    var retArr = [];
+    if (num <= 0) {
+      return 0;
+    }
+
+    for (var i = 1; i <= num; i++) {
+      retArr.push(this.fizzbuzz(i));
+    }
+
+    return retArr;
   }
 }
 
-for (var i = 1; i <= 50; i++) {
-  console.log(module.exports.fizzbuzz(i));
-}
+// for (var i = 1; i <= 50; i++) {
+//   console.log(module.exports.fizzbuzz(i));
+// }
