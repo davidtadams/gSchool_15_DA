@@ -1,0 +1,22 @@
+.form-params, .query-params {
+  display: none;
+}
+
+.form-params table, .query-params table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  min-width: 16em;
+  padding: .3em;
+}
+
+tr:nth-child(odd) td {
+  background: #efefef;
+}
