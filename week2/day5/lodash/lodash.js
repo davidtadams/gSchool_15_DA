@@ -52,9 +52,11 @@ _.compact = function(arr) {
 // Example:
 // _.difference([1, 2, 3], [4, 2]);
 // → [1, 3]
-_.difference = function() {
+_.difference = function(arr1, arr2) {
 	// Place your solution here
-  
+  var testArr = [];
+  testArr.push(arr1, arr2);
+  console.log(testArr);
 };
 
 // Create a duplicate free version of the array
