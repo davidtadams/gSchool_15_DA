@@ -54,37 +54,72 @@ _.compact = function(arr) {
 // → [1, 3]
 _.difference = function(arr1, arr2) {
 	// Place your solution here
-  var testArr = [];
-  testArr.push(arr1, arr2);
-  console.log(testArr);
+  var retArr = [];
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) === -1) {
+      retArr.push(arr1[i]);
+    }
+  }
+  return retArr;
 };
 
 // Create a duplicate free version of the array
 // _.uniq([2, 1, 2]);
 // → [2, 1]
-_.uniq = function() {
+_.uniq = function(arr) {
 	// Place your solution here
+  return arr.filter(function(value, index, self) {
+    return self.indexOf(value) == index;
+  }).sort()
 };
 
 // Returns maximum value in an array
-_.max = function() {
+_.max = function(arr) {
 	// Place your solution here
+  var max = 0;
+  for(var i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+  return max;
 };
 
 // Returns min value in an array
-_.min = function() {
+_.min = function(arr) {
 	// Place your solution here
+  if (!arr.length) {
+    return undefined;
+  }
+
+  var min = arr[0];
+  for(var i = 0; i < arr.length; i++) {
+    if (min > arr[i]) {
+      min = arr[i];
+    }
+  }
+  return min;
 };
 
 // Returns index of matched value, else return -1
-_.indexOf = function() {
+_.indexOf = function(arr, val) {
 	// Place your solution here
+  return arr.indexOf(val);
 };
 
 /*************** BONUS ***************/
 // Retuns a new shuffled array
-_.shuffle = function() {
+_.shuffle = function(arr) {
 	// Place your solution here
+  var random = 0;
+  var retArr = [];
+  for(var i = 0; i < arr.length; i++) {
+    random = Math.floor(Math.random() * arr.length);
+    if (arr[random]) {
+      retArr.push(arr[random]);
+    }
+  }
+  return retArr;
 };
 
 /**************************************
