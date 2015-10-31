@@ -126,8 +126,15 @@ _.shuffle = function(arr) {
 ************* COLLECTIONS *************
 **************************************/
 // Returns the length of the collection
-_.size = function() {
+_.size = function(input) {
 	// Place your solution here
+  var count = 0;
+  for (var n in input) {
+    if (input.hasOwnProperty(n)) {
+      count++;
+    }
+  }
+  return count;
 };
 
 // Iterates on each item of the collection and then returns the original collection
