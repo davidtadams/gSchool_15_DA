@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adding images</title>
+  </head>
+  <body>
+    <h1>Adding an image map!!!</h1>
+    <img src="images/USA-states.png" alt="USA map" usemap="#usa-map" height="500" width="700"/>
+    <map name="usa-map">
+      <area shape="rect" coords="0,0,200,200" href="pages/page1.html" alt="NorthWest"/>
+      <area shape="circle" coords="250,250,100" href="pages/page2.html" alt="MidWestish"/>
+      <area shape="rect" coords="500,300,700,500" href="pages/page3.html" alt="Florida"/>
+      <area shape="default" nohref="nohref" alt="defaultRegion"/>
+    </map>
+  </body>
+</html>
