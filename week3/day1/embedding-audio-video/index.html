@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>adding audio and video</title>
+    <!--
+      https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+    -->
+  </head>
+  <body>
+    <h2>ADDING SOME AUDIO AND VIDEO!!!!!!!!</h2>
+    <video controls="controls" preload="metadata">
+      <source src="./video/sintel-short.mp4" type="video/mp4">
+      <source src="./video/sintel-short.webm" type="video/webm">
+      <track kind="subtitles" src="./captions/sintel-en.vtt" srclang="en" label="English">
+      <track kind="subtitles" src="./captions/sintel-de.vtt" srclang="de" label="Deutsch">
+      <track kind="subtitles" src="./captions/sintel-es.vtt" srclang="es" label="Spanish" default>
+    </video>
+
+    <audio controls="controls">
+      <source src="./audio/1.mp3" type="audio/mp3">
+    </audio>
+
+    <audio controls="controls">
+      <source src="./audio/2.mp3" type="audio/mp3">
+    </audio>
+
+    <audio controls="controls">
+      <source src="./audio/3.mp3" type="audio/mp3">
+    </audio>
+
+  </body>
+</html>
