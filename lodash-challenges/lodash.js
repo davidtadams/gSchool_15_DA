@@ -113,10 +113,11 @@ _.shuffle = function(arr) {
 	// Place your solution here
   var random = 0;
   var retArr = [];
-  for(var i = 0; i < arr.length; i++) {
+  while (retArr.length < arr.length) {
     random = Math.floor(Math.random() * arr.length);
-    if (arr[random]) {
+    if (arr[random] != null) {
       retArr.push(arr[random]);
+      arr[random] = null;
     }
   }
   return retArr;
@@ -138,24 +139,51 @@ _.size = function(input) {
 };
 
 // Iterates on each item of the collection and then returns the original collection
-_.forEach = function() {
+_.forEach = function(input, funct) {
 	// Place your solution here
+  for (var n in input) {
+    funct(n);
+  }
+  return input;
 };
 
 // Returns a new array with the filtered items
-_.filter = function() {
+_.filter = function(input, funct) {
 	// Place your solution here
+  var retArr = [];
+  for (var n in input) {
+    if (funct(input[n])) {
+      retArr.push(input[n]);
+    }
+  }
+  return retArr;
 };
 
 // Returns a new array with the unfiltered items
-_.reject = function() {
+_.reject = function(input, funct) {
 	// Place your solution here
+  var retArr = [];
+  for (var n in input) {
+    if (!funct(input[n])) {
+      retArr.push(input[n]);
+    }
+  }
+  return retArr;
 };
 
 /*************** BONUS ***************/
 // Returns n random items
-_.sample = function() {
+_.sample = function(arr, n) {
 	// Place your solution here
+  var retArr = [];
+  while (retArr.length < n) {
+    random = Math.floor(Math.random() * arr.length);
+    if (arr[random]) {
+      retArr.push(arr[random]);
+      arr[random] = null;
+    }
+  }
+  return retArr;
 };
 
 
