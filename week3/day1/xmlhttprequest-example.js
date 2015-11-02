@@ -1,3 +1,4 @@
+// example from lecture
 // Create a new XMLHttpRequest object to start
 var awwRequest = new XMLHttpRequest();
 
