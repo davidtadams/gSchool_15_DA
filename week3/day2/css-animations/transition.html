@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Transition</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/transition.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-header">CSS Animation with Transition</h1>
+      <div class="description row">
+        <h2>What is a transition?</h2>
+        <p>
+          Transitions cause changes to a property and take place over a period of time(duration).
+        </p>
+        <h3><em>Transition Recipe: </em></h3>
+        <ul>
+          <li>
+            When creating a transition, order is irrelevant so long as you have your duration specified. The rest will have defaults, like all, ease, and 0. Make sure to put duration number before delay number.
+            <p class="well"><strong>transition: property<em class="info">(defaults to All) </em> duration<em class="info">(needs to be specified) </em> timing-function<em class="info">(defaults to ease) </em> delay<em class="info">(defaults to 0)</em></strong></p>
+          </li>
+          <li>
+            Stay subtle with transitions and only dramatize when you really need to call attention to an element.
+            <!-- The fastest transition easily seen by the human eye is .256s. -->
+          </li>
+          <li>
+            Moving hidden content onto the screen is another common use for transitions. (e.i. Button with extra hidden content)
+          </li>
+          <li>
+            Not all properties can be transitioned such as <em>display: none;</em></li>
+          <li>
+            Properties that can be transitioned (has a middle transitioning state):</p>
+            <ul>
+              <li>background-color, color, opacity, font-size, line-height, padding, margin, visibility, text-shadow, z-index, etc.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="visual-rep well row">
+          <div class="col-sm-3 text-center">
+            <h3>Start</h3>
+            <div class="box one"></div>
+            <p>Time = 0s</p>
+            <p><strong>INITIAL STATE</strong></p>
+          </div>
+          <div class="col-sm-4 col-sm-offset-1 text-center">
+            <h3>Middle</h3>
+            <div class="box two"></div>
+            <p>Time = 0.5s</p>
+            <p><strong>INTERMEDIATE STATE</strong></p>
+          </div>
+          <div class="col-sm-3 col-sm-offset-1 text-center">
+            <h3>End</h3>
+            <div class="box three"></div>
+            <p>Time = 1s</p>
+            <p><strong>FINAL STATE</strong></p>
+          </div>
+        </div>
+      </div>
+      <div class="squares row">
+        <h3>Examples:</h3>
+        <div class="square text-center">
+          <h4>Instant Color Change</h4>
+        </div>
+        <div class="square-with-t text-center">
+          <h4>Transition Color Change</h4>
+        </div>
+      </div>
+      <div class="row">
+        <h2 class="page-header">Note about Browser Support and Vendor Prefixes</h2>
+        <p>
+          Until all browsers adopt the standard version, you will want to include vendor prefixes to allow Cross-Browser Compatibility.
+        </p>
+        <h4>Always include the Vendor Prefixes</h4>
+        <ul>
+          <li>-webkit- (Chrome &amp; Safari)</li>
+          <li>-moz- (Firefox)</li>
+          <li>-o- (Opera)</li>
+          <li>-ms- (IE)</li>
+          <li>standard property - place it always last</li>
+        </ul>
+        <div class="row">
+          <div class="col-sm-4">
+            <ul class="list-unstyled well">
+              <code>
+              <li>-webkit-transition: background-color 3s;</li>
+              <li>-moz-transition: background-color 3s;</li>
+              <li>-o-transition: background-color 3s;</li>
+              <li>-ms-transition: background-color 3s;</li>
+              <li>transition: background-color 3s;</li>
+              </code>
+            </ul>
+          </div>
+        </div>
+        <p>
+          Always check latest browser support for prefixes - <a href="http://caniuse.com/">caniuse.com</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

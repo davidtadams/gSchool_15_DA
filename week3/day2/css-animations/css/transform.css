@@ -1,0 +1,186 @@
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+code {
+  font-family: monospace;
+  margin-top: 1.5em;
+}
+
+.demo.well {
+  padding: 6px;
+  padding-left: 10px;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  position: relative;
+  margin-bottom: 1.5em;
+  -webkit-transition: transform 2s;
+  -moz-transition: transform 2s;
+  -o-transition: transform 2s;
+  -ms-transition: transform 2s;
+  transition: transform 2s;
+}
+
+/*The skew() method*/
+.square.skew:hover {
+  -webkit-transform: skewX(20deg);
+  -moz-transform: skewX(20deg);
+  -o-transform: skewX(20deg);
+  -ms-transform: skewX(20deg);
+  transform: skew(20deg);
+}
+
+/*The scale() method*/
+.square.inner-scale {
+  background-color: #000;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: transform 3s, background-color 2s 1s;
+  -moz-transition: transform 3s, background-color 2s 1s;
+  -o-transition: transform 3s, background-color 2s 1s;
+  -ms-transition: transform 3s, background-color 2s 1s;
+  transition: transform 3s, background-color 2s 1s;
+}
+
+.square.inner-scale:hover {
+  background-color: tomato;
+  -webkit-transform: scale(2,2);
+  -moz-transform: scale(2,2);
+  -o-transform: scale(2,2);
+  -ms-transform: scale(2,2);
+  transform: scale(2,2);
+}
+
+/*The rotate() method*/
+.square.rotate {
+  background-color: purple;
+  -webkit-transition: transform 3.5s;
+  -moz-transition: transform 3.5s;
+  -o-transition: transform 3.5s;
+  -ms-transition: transform 3.5s;
+  transition: transform 3.5s;
+}
+
+.square.rotate:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/*The translate() method*/
+.square.translate {
+  background-color: teal;
+  -webkit-transition: transform 5s, background-color 3s 1s;
+  -moz-transition: transform 5s, background-color 3s 1s;
+  -o-transition: transform 5s, background-color 3s 1s;
+  -ms-transition: transform 5s, background-color 3s 1s;
+  transition: transform 5s, background-color 3s 1s;
+}
+
+.square.translate:hover {
+  background-color: orange;
+  -webkit-transform: translateX(900px) rotate(360deg);
+  -moz-transform: translateX(900px) rotate(360deg);
+  -o-transform: translateX(900px) rotate(360deg);
+  -ms-transform: translateX(900px) rotate(360deg);
+  transform: translateX(900px) rotate(360deg);
+}
+
+.speed {
+  color: tomato;
+}
+
+.keyword-val li {
+  margin-top: 2em;
+}
+
+.timing {
+  width: 260px;
+  background-color: tomato;
+  padding: 10px 50px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.timing.linear {
+  -webkit-transition: transform 3s linear;
+  -moz-transition: transform 3s linear;
+  -o-transition: transform 3s linear;
+  -ms-transition: transform 3s linear;
+  transition: transform 3s linear;
+}
+.timing.ease {
+  -webkit-transition: transform 3s ease;
+  -moz-transition: transform 3s ease;
+  -o-transition: transform 3s ease;
+  -ms-transition: transform 3s ease;
+  transition: transform 3s ease;
+}
+.timing.ease-in{
+  -webkit-transition: transform 3s ease-in;
+  -moz-transition: transform 3s ease-in;
+  -o-transition: transform 3s ease-in;
+  -ms-transition: transform 3s ease-in;
+  transition: transform 3s ease-in;
+}
+.timing.ease-out {
+  -webkit-transition: transform 3s ease-out;
+  -moz-transition: transform 3s ease-out;
+  -o-transition: transform 3s ease-out;
+  -ms-transition: transform 3s ease-out;
+  transition: transform 3s ease-out;
+}
+.timing.ease-in-out {
+  -webkit-transition: transform 3s ease-in-out;
+  -moz-transition: transform 3s ease-in-out;
+  -o-transition: transform 3s ease-in-out;
+  -ms-transition: transform 3s ease-in-out;
+  transition: transform 3s ease-in-out;
+}
+
+.timing.custom {
+  -webkit-transition: transform 3s cubic-bezier(.17,.37,.87,0);
+  -moz-transition: transform 3s  cubic-bezier(.17,.37,.87,0);
+  -o-transition: transform 3s  cubic-bezier(.17,.37,.87,0);
+  -ms-transition: transform 3s  cubic-bezier(.17,.37,.87,0);
+  transition: transform 3s  cubic-bezier(.17,.67,.87,0);
+}
+
+.timing:hover {
+  cursor: pointer;
+  -webkit-transform: translateX(900px);
+  -moz-transform: translateX(900px);
+  -o-transform: translateX(900px);
+  -ms-transform: translateX(900px);
+  transform: translateX(900px);
+}
+
+/*#my-button {
+  width: 200px;
+  padding: 15px;
+  background-color: navy;
+  text-align: center;
+}
+
+#my-button .glyphicon-cog {
+  color: ivory;
+  font-size: 2em;
+  transition: transform 2s, color 1.5s;
+}
+
+#my-button .glyphicon-cog:hover {
+  color: navy;
+  transform: rotate(360deg) translateY(-50px);
+}*/

@@ -1,0 +1,83 @@
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.visual-rep .col-sm-3,
+.visual-rep .col-sm-4 {
+  border: 2px solid #696969;
+  padding: 0 50px;
+}
+
+.visual-rep .col-sm-4 {
+  padding-left:
+}
+.visual-rep {
+  margin: 2em 4em;;
+}
+
+.info {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+code {
+  font-family: monospace;
+  color: rgba(46,48,58,0.96);
+  line-height: 2;
+}
+
+.box {
+  margin-left: 29px;
+  width: 100px;
+  height: 100px;
+}
+
+.one {
+  background-color: red;
+}
+
+.two {
+  background-color: purple;
+  margin-left: 65px;
+}
+
+.three {
+  background-color: blue;
+}
+
+/*No transition applied*/
+/*Initial State*/
+.square {
+  float: left;
+  margin-right: 2em;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: #FFF;
+}
+
+/*Final State*/
+.square:hover {
+  background-color: blue;
+}
+
+/*With Transition*/
+/*Initial State*/
+.square-with-t {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: #FFF;
+  -webkit-transition: background-color 3s;
+  -moz-transition: background-color 3s;
+  -o-transition: background-color 3s;
+  -ms-transition: background-color 3s;
+  transition: background-color 3s;
+}
+
+/*Final State*/
+.square-with-t:hover {
+  background-color: blue;
+}

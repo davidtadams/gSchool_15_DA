@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Transform</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/transform.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-header">CSS Animation with Transform</h1>
+      <div class="description row">
+        <h2>What is a transform?</h2>
+        <p>The Transform property let you modify elements in their coordinate space by skewing, rotating, translating, and scaling.</p>
+        <p><strong>CSS Syntax</strong></p>
+        <p>transform: function(parameters)</p>
+        <h3><em>The 2D Transform Methods: </em></h3>
+        <ul>
+          <li>skew(deg)
+            <p>skews an element along the X and Y-axis by the given angle.</p>
+            <div class="square skew"></div>
+            <code class="demo well">transform: skewX(20deg);</code>
+          </li>
+          <hr>
+          <li>scale(width, height)
+            <p>Increases or decreases the size of an element.</p>
+            <p>Note: When scaling an element, it will still maintain its original box model, although appearing scaled.</p>
+            <div class="square scale">
+              <div class="square inner-scale"></div>
+            </div>
+            <code class="demo well">transform: scale(2,2);</code>
+          </li>
+          <hr>
+          <li>rotate(deg) or rotate(turn)
+            <p>Rotates an element clockwise or counter-clockwise according to a given degree.</p>
+            <div class="square rotate"></div>
+            <code class="demo well">transform: rotate(360deg);</code>
+          </li>
+          <hr>
+          <li>translate(X-axis, Y-axis)
+            <p>Moves an element from its current position.</p>
+            <div class="square translate"></div>
+            <code class="demo well">transform: translateX(900px) rotate(1turn)</code>
+          </li>
+          <hr>
+        </ul>
+      </div>
+      <div class="row">
+        <h2 class="page-header">Transition-timing function</h2>
+        <p>MDN states "The transition-timing-function CSS property is used to describe how the intermediate values of the CSS properties being affected by a transition effect are calculated. This in essence lets you establish an acceleration curve, so that the speed of the transition can vary over its duration."</p>
+        <ul class="list-unstyled keyword-val"> <strong>Keyword Values:</strong>
+          <li>
+            <div class="timing linear">linear</div>
+            <p><em class="speed">same speed</em> from start to finish</p>
+          </li>
+          <li>
+            <div class="timing ease">ease (default)</div>
+            <p>starts <em class="speed">slow</em> and ends <em class="speed">slow</em></p>
+          </li>
+          <li>
+            <div class="timing ease-in">ease-in</div>
+            <p><p>starts <em class="speed">slow</em> and ends <em class="speed">fast</em></p></p>
+          </li>
+          <li>
+            <div class="timing ease-out">ease-out</div>
+            <p><p>starts <em class="speed">fast</em> and ends <em class="speed">slow</em></p></p>
+          </li>
+          <li>
+            <div class="timing ease-in-out">ease-in-out</div>
+            <p><p>starts <em class="speed">slow</em>, <em class="speed">fast</em> in the middle and ends <em class="speed">slow</em></p></p>
+          </li>
+          <li>
+            <div class="timing custom">cubic-bezier curve</div>
+            <p><a href="http://cubic-bezier.com/#.17,.67,.83,.67">To Create Custom Timing Function: cubic-bezier curve</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <h2 class="page-header">3D Transform</h2>
+        <a href="https://desandro.github.io/3dtransforms/">Great resource on Intro to CSS 3D transform</a>
+      </div>
+      <!-- <div>
+        <div id="my-button"><span class="glyphicon glyphicon-cog"></span></div>
+      </div> -->
+    </div>
+  </body>
+</html>

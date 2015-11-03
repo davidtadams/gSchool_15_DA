@@ -1,0 +1,131 @@
+.well {
+  font-family: monospace;
+  color: blue;
+}
+
+code {
+  font-family: monospace;
+}
+.indent-one {
+  padding-left: 20px;
+}
+.indent-two {
+  padding-left: 40px;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-o-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.target{
+  font-size: 10em;
+  color: purple;
+  -webkit-animation: pulsate 3s infinite ease-out;
+  -moz-animation: pulsate 3s infinite ease-out;
+  -o-animation: pulsate 3s infinite ease-out;
+  -ms-animation: pulsate 3s infinite ease-out;
+  animation: pulsate 3s infinite ease-out;
+}
+
+.animation-properties {
+  margin-top: 1.5em;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.example-play-state {
+  text-align: center;
+  width: 200px;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: tomato;
+  -webkit-animation: spin 2s ease-in-out infinite;
+  animation: spin 2s ease-in-out infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.example-play-state:hover {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
