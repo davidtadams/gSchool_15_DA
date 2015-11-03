@@ -160,15 +160,23 @@ _.filter = function(input, funct) {
 };
 
 // Returns a new array with the unfiltered items
+// _.reject = function(input, funct) {
+// 	// Place your solution here
+//   var retArr = [];
+//   for (var n in input) {
+//     if (!funct(input[n])) {
+//       retArr.push(input[n]);
+//     }
+//   }
+//   return retArr;
+// };
+
+// Make reject function with previous filter function
 _.reject = function(input, funct) {
 	// Place your solution here
-  var retArr = [];
-  for (var n in input) {
-    if (!funct(input[n])) {
-      retArr.push(input[n]);
-    }
-  }
-  return retArr;
+  return _.filter(input, function(item) {
+    return !funct(item);
+  });
 };
 
 /*************** BONUS ***************/
