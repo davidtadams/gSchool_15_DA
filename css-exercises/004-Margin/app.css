@@ -1,0 +1,14 @@
+div, section {
+  background: #222;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.center {
+  width: 50%;
+}
+
+/* Code Under This Line */

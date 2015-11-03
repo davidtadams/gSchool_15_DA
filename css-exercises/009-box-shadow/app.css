@@ -1,0 +1,16 @@
+p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+/* Your Code Goes Under This Line */
