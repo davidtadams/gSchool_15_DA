@@ -29,15 +29,18 @@ var renderBoxRandom = function(body) {
   var createBoxRandom = function() {
     var box = document.createElement('div');
     box.style.float = "left";
-    box.style.width = "11.1%";
-    box.style.paddingBottom = "11.1%";
-    
-    box.style.backgroundColor = "red";
+    box.style.width = "12.5%";
+    box.style.paddingBottom = "12.5%";
+
+    var r = Math.floor(Math.random() * 255);
+    var g = Math.floor(Math.random() * 255);
+    var b = Math.floor(Math.random() * 255);
+    box.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 
     return box;
   }
 
-  for (var i = 0; i < 63; i++) {
+  for (var i = 0; i < 64; i++) {
     body.appendChild(createBoxRandom());
   }
 }
