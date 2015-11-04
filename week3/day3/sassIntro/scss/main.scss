@@ -1,6 +1,23 @@
 /* one way to do comments */
 //another way to do comments
 
+$borderColor: #ccc;
+
+@mixin dialog-box($border-color) {
+  border: 10px solid $border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0);
+}
+
 .foo {
   background: orange;  //can have inline comments
+  border-color: $borderColor;
+  @include dialog-box(green);
+  p {
+    color: blue;
+    font: {
+      size: 2em;
+      weight: bold;
+    }
+  }
 }

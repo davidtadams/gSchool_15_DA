@@ -1,5 +1,13 @@
 /* one way to do comments */
 .foo {
-  background: orange; }
+  background: orange;
+  border-color: #ccc;
+  border: 10px solid green;
+  padding: 10px;
+  box-shadow: 0 0 30px transparent; }
+  .foo p {
+    color: blue;
+    font-size: 2em;
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
