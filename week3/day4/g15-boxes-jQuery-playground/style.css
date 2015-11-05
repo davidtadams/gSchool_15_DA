@@ -1,0 +1,43 @@
+#container {
+  background:rgb(255,255,153);
+  height: 700px;
+  width: 700px;
+  padding-top: 20px;
+  border: 2px solid;
+  border-color: black;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+.row {
+  height: 160px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+  width: 93%;
+//  border: 2px solid;
+//  border-color: black;
+}
+
+.box {
+  width: 23.8%;
+  height: 90%;
+  margin: 4px 0px 4px 7px;
+  background: orange;
+  text-align: center;
+  padding-top: 10px;
+  float: left;
+}
+
+.boxType1 {
+  background: red;
+}
+
+.boxType2 {
+  background: green;
+}
+
+.boxType3 {
+  background: blue;
+}
