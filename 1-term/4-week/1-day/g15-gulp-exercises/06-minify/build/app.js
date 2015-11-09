@@ -1,0 +1,1 @@
+var list=require("./components/list.js"),calc=require("./components/calc.js");console.log("I'm an app!"),list();var first=1,second=2,result=calc(first,second);console.log(result);

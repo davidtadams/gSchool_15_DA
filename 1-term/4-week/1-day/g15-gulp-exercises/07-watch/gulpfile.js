@@ -12,7 +12,7 @@ gulp.task('lint', function () {
 	return gulp.src('./src/**/*.js')
 		.pipe(eslint())
 		.pipe(eslint.format())
-		.pipe(eslint.failAfterError());
+		.pipe(eslint.failAfterError())
 })
 
 gulp.task('test', function () {
@@ -20,7 +20,7 @@ gulp.task('test', function () {
 		.pipe(mocha())
 })
 
-gulp.task('watch', function () {
+gulp.task('watch', ['default'], function () {
 	gulp.watch('./src/**/*.js', ['default']);
 	gulp.watch('./test/*.js', ['test']);
 })
