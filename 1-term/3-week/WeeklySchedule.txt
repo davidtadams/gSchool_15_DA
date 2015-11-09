@@ -1,0 +1,12 @@
+Week 3
+Schedule for what was covered each day.
+
+Day 1: XHR - Danny / Embedding Media - Kyle
+
+Day 2: Intro to the Dom - CJ / Advanced CSS - Roberto
+
+Day 3: Dom Events - Danny / SASS - CJ
+
+Day 4: jQuery - Danny / Bootstrap - CJ
+
+Day 5: Guest Speaker - Scott Vitale / Lightning Talks(me)

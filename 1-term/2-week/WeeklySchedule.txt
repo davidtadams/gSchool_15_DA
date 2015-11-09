@@ -1,0 +1,12 @@
+Week 2
+Schedule for what was covered each day.
+
+Day 1: Intermediate HTML/CSS - Kyle / Javascript I - Danny
+
+Day 2: Git and Github - Roberto / Javascript II (arrays and objects) - Danny
+
+Day 3: Testing - CJ / Javascript III (functions) - Danny
+
+Day 4: HTML Forms and Inputs - Roberto / Javascript IV (ObjOrient) - CJ
+
+Day 5: Guest speaker (Dan Hannigan) / Lo-dash 

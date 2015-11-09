@@ -1,0 +1,12 @@
+Week 1
+Schedule for what was covered each day.
+
+Day 1: Orientation, set-up, meeting class
+
+Day 2: Learning to Learn - Kyle / Command line - CJ
+
+Day 3: Git - Danny / HTML - CJ
+
+Day 4: CSS - Roberto
+
+Day 5: Guest speaker, Lightning talks, breakouts
