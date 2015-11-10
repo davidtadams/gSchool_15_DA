@@ -1,0 +1,12 @@
+Notes on CJ's deployment lecture
+
+Github Pages
+https://pages.github.com/
+
+Firebase
+https://www.firebase.com/docs/hosting/guide/deploying.html
+
+Amazon S3
+http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+also there is a LE experience on this
+and LE on creating a custom domain name on S3
