@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>03-json</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>03-json</h1>
+    <h2>Step 1: store JSON</h2>
+    <ol>
+      <li>Open the <code>script.js</code> file for editing.</li>
+      <li>
+        Save the <code>data</code> JS Object into a key named <code>"data"</code>.
+        Make sure the object you are storing is the JSON string.
+        Not the JS Object.
+        Hint: use <code>JSON.stringify</code>
+      </li>
+      <li>Verify in the Chrome Dev Tools you stored a JSON String and not <code>"[object Object]"</code>.</li>
+    </ol>
+    <h2>Step 2: retrieve JSON</h2>
+    <ol>
+      <li>
+        Do a <code>localStorage.getItem('data')</code> and parse it into a JS Object.
+        Hint: Use <code>JSON.parse</code>
+      </li>
+      <li>
+        Modify the title on the JS Object and store it back into <code>"data"</code>.
+        Hint: use <code>JSON.stringify</code>.
+      </li>
+    </ol>
+    <h2>Congrats! Go to the next step!</h2>
+  </body>
+</html>

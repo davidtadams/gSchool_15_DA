@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: hsl(0, 0%, 20%);
+  line-height: 2em;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+p, li {
+  color: hsl(0, 0%, 30%);
+}
+
+* ~ li {
+  border-top: 1px solid hsl(0, 10%, 95%);
+}
+
+code {
+  background-color: hsl(0, 10%, 95%);
+}

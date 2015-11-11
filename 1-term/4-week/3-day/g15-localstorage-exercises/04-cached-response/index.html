@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>04-cached-response</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>04-cached-response</h1>
+    <h2>Step 1: Store JSON from XHR</h2>
+    <ol>
+      <li>Open the <code>script.js</code> file for editing.</li>
+      <li>Do an XHR for <code>"http://www.reddit.com/r/aww.json"</code></li>
+      <li>
+        Save the result of the XHR into a key named <code>"redditData"</code>.
+        Make sure the object you are storing is the JSON string.
+        Not the JS Object.
+      </li>
+    </ol>
+    <h2>Step 2: retrieve response</h2>
+    <ol>
+      <li>Do a <code>localStorage.getItem('redditData')</code> and parse it into a JS Object.</li>
+    </ol>
+    <h2>Step 3: pull from cache</h2>
+    <p>The idea is that now if you are offline you can still access the last set of data retrieved</p>
+    <ol>
+      <li>
+        When you run your script. Check if there is an error fetching the data.
+        If there is an error, instead of pulling from reddit.com, pull the cached data from localStorage.
+        Hint: Use jQuery's <a href="http://api.jquery.com/jQuery.get/">$.get</a> and <a href="http://api.jquery.com/deferred.fail/">deferred.fail</a>.
+      </li>
+      <li>
+        Emulate an offline mode in Chrome Dev Tools to test.
+        You can find it on the top-right side of the Network tab.
+        It defaults to "No throttling".
+        <img src="offline.png" width="100%">
+      </li>
+    </ol>
+    <h2>Congrats! You're familiar with localStorage now!</h2>
+    <h3>Don't forget to turn off offline mode in Chrome Dev Tools! ;)</h3>
+  </body>
+</html>
