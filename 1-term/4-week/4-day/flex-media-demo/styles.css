@@ -1,0 +1,14 @@
+div {
+  display: flex;
+  height: 300px;
+  outline: solid blue 1px;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+span {
+  align-content: flex-start;
+  color: red;
+  text-align: left;
+}

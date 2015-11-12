@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #e7e7e7;
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #1f2126;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: arial;
+  font-size: 1.2em;
+  line-height: 50px;
+  height: 50px;
+  border-bottom: none;
+  width: 120px;
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
+
+/*
+Write your Media Queries:
+@media () {
+
+}
+*.
