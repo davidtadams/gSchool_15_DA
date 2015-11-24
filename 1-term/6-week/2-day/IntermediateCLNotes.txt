@@ -1,0 +1,33 @@
+Notes for Danny's lecture on CL
+
+When you change your environment variables, it is on a per session basis.
+If you mess something up, you can just kill that session and restart.
+
+Commands that support wildcards
+cp
+ls
+grep
+rm
+cat
+git add
+...
+
+Environment variables
+$ env
+echo $PATH
+
+ps -ax
+see all processes running on machine
+
+see if chrome is running
+$ ps -ax | grep chrome
+
+$ top
+$ htop
+
+Top shows you top 6 processes using CPU
+
+Bash Scripting
+- see files in folder for lesson for scripts
+#!/bin/bash
+PunchBang ^ lol (punch-# bang-!)

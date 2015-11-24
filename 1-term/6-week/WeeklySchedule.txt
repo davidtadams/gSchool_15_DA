@@ -3,7 +3,7 @@ Schedule for what was covered each day.
 
 Day 1: Vim - Kyle
 
-Day 2:
+Day 2: Intermediate Command Line - Danny
 
 Day 3:
 
