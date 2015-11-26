@@ -25,16 +25,46 @@ module.exports = {
 
   drop: function(array, num) {
     if (array.length - num < 0) {
-      return array.slice(0, array.length);
+      return [];
     }
     return array.slice(array.length - num, array.length);
   },
 
   union: function(array1, array2) {
-    
+    var newArr = array1;
+    var found;
+
+    for (var i = 0; i < array2.length; i++) {
+      found = false;
+      for (var j = 0; j < array1.length; j++) {
+        if (array2[i] === newArr[j]) {
+          found = true;
+        }
+      }
+      if (!found) {
+        newArr.push(array2[i]);
+      }
+    }
+
+    return newArr
   },
 
-  intersection: function(array) {
+  intersection: function(array1, array2) {
+    var newArr = [];
+    var found;
 
+    for (var i = 0; i < array2.length; i++) {
+      found = false;
+      for (var j = 0; j < array1.length; j++) {
+        if (array2[i] === array1[j]) {
+          found = true;
+        }
+      }
+      if (found) {
+        newArr.push(array2[i]);
+      }
+    }
+
+    return newArr
   }
 }

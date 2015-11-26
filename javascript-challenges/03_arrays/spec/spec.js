@@ -75,6 +75,10 @@ describe('union', function() {
     expect(yourCode.union([1,2], [3,4,5])).toEqual([1,2,3,4,5]);
   });
 
+  it('returns the ACTUAL union of two arrays provided as arguments', function() {
+    expect(yourCode.union([1,2], [1,2,3,4,5])).toEqual([1,2,3,4,5]);
+  });
+
   it('returns an empty array when both arguments are empty arrays', function() {
     expect(yourCode.union([], [])).toEqual([]);
   });
