@@ -13,19 +13,25 @@ module.exports = {
   },
 
   first_n: function(array, num) {
+    return array.slice(0, num);
+  },
+
+  last_n: function(array, num) {
+    if (array.length - num < 0) {
+      return array.slice(0, array.length);
+    }
+    return array.slice(array.length - num, array.length);
+  },
+
+  drop: function(array, num) {
+    if (array.length - num < 0) {
+      return array.slice(0, array.length);
+    }
+    return array.slice(array.length - num, array.length);
+  },
+
+  union: function(array1, array2) {
     
-  },
-
-  last_n: function(array) {
-
-  },
-
-  drop: function(array) {
-
-  },
-
-  union: function(array) {
-
   },
 
   intersection: function(array) {
