@@ -6,13 +6,13 @@
 
 module.exports = {
   addition: function(a,b) {
-    a + b;
+    return a + b;
   },
 
   matches: function(first, second) {
     var result;
 
-    if (first = second) {
+    if (first === second) {
       result = true;
     } else {
       result = false;
@@ -26,11 +26,11 @@ module.exports = {
         divisibleByFive = number % 5,
         output = number;
 
-    if (divisibleByThree && divisibleByFive) {
+    if (divisibleByThree === 0 && divisibleByFive === 0) {
       output = 'FizzBuzz';
-    } else if (divisibleByThree) {
+    } else if (divisibleByThree === 0) {
       output = 'Fizz';
-    } else if (divisibleByFive) {
+    } else if (divisibleByFive === 0) {
       output = 'Buzz';
     }
 
@@ -43,8 +43,10 @@ module.exports = {
     switch (word) {
       case 'foo':
         output = 'bar';
+        break;
       case 'nope':
         output = 'yup';
+        break;
       default:
         output = 'never output anything. ever!'
     };
