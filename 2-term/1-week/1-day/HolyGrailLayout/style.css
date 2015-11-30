@@ -1,0 +1,38 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > * {
+  outline: 1px solid black;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+main > * {
+  outline: 1px solid green;
+}
+
+nav {
+  width: 100px;
+  flex-shrink: 0;
+}
+
+aside {
+  width: 50px;
+  flex-shrink: 0;
+}
+
+section {
+  flex-grow: 1;
+}
