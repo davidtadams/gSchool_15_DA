@@ -1,0 +1,26 @@
+What is the concept of scope?
+Scope is about variable accessibility. At any given line during a program's
+execution, what variables and functions does that line have access to.
+
+How do you create a new scope in JS?
+One way to create a new scope in JS is to define a function. That function
+will have its own scope.
+
+What is var hoisting in JavaScript?
+Variable hoisting in JS is when the function declaration is hoisted to the
+top of the scope so that all variables are declared first. Not exactly first,
+but after function hoisting. The function declaration is hoisted, but the
+definition is not.
+
+What are the 2 qualities of higher-order functions?
+1. A function that returns a function
+2. A function that accepts a function as an argument
+
+What is a closure?
+A closure is a higher order function that retains its local scope from
+within the function that creates it.
+
+What is a callback function?
+A callback function is a function that is passed into another function
+as a parameter and then that function is called within the function
+that it is passed into.
