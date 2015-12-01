@@ -1,0 +1,32 @@
+Promises - Roberto
+
+Resources:
+https://students.galvanize.com/users/711/learning_experiences/122
+(videos are from Jeff Dean)
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+http://dailyjs.com/2014/02/20/promises-in-detail/
+http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/
+
+
+Guided Questions:
+What is the Event Loop of JavaScript?
+The event loop allows for a single threaded process to not have blocking I/O
+through the implementation of asynchronous code.
+
+What are three ways to handle async behavior?
+1. Callbacks
+2. Promises
+3.
+
+What is callback hell?
+Callback hell is when you get stuck repeatedly having to use callbacks
+in one block of code, which makes the code hard to read and complicated.
+
+How do you “promisify” a function?
+
+
+What is the difference between Promise.then() and Promise.catch()?
+
+
+How do you run multiple async requests at the same time?
