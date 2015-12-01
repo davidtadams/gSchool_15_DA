@@ -3,30 +3,105 @@ Promises - Roberto
 Resources:
 https://students.galvanize.com/users/711/learning_experiences/122
 (videos are from Jeff Dean)
+
+What is the event loop?
 https://www.youtube.com/watch?v=8aGhZQkoFbQ
+Demo to go along with video: http://latentflip.com/loupe/
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 http://dailyjs.com/2014/02/20/promises-in-detail/
 http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/
 
+http://colintoh.com/blog/staying-sane-with-asynchronous-programming-promises-and-generators
+
+Galvanize video:
+https://vimeo.com/134061121
+pw: schoolhouserock
 
 Guided Questions:
 What is the Event Loop of JavaScript?
-The event loop allows for a single threaded process to not have blocking I/O
-through the implementation of asynchronous code.
+  The event loop allows for a single threaded process to not have blocking I/O
+  through the implementation of asynchronous code.
 
 What are three ways to handle async behavior?
-1. Callbacks
-2. Promises
-3.
+  1. Callbacks
+  2. Deferred Object (jQuery way of doing it before promises)
+  3. Promises
+(generators are a new JS2015 way to handle async)
 
 What is callback hell?
-Callback hell is when you get stuck repeatedly having to use callbacks
-in one block of code, which makes the code hard to read and complicated.
+  Callback hell is when you get stuck repeatedly having to use callbacks
+  in one block of code, which makes the code hard to read and complicated.
+  pyramid of doom
+  functions within functions within functions
 
 How do you “promisify” a function?
-
+  you can add a .then() function
+  if you are nesting promises, you need to return a promise
 
 What is the difference between Promise.then() and Promise.catch()?
-
+  .catch() is more for when it is rejected, deals with rejected only
+  .then() is for either case, if it is fulfilled or rejected
+  .catch() is just like then, except the first argument is undefined
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 How do you run multiple async requests at the same time?
+  use Promise.all()
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+
+
+Code snipped on promises from CJ
+https://gist.github.com/w3cj/d5d08aff650e5eec5811
+// get with callbacks
+
+function get(url, success, error) {
+	var ajax = new XMLHttpRequest();
+
+	ajax.onreadystatechange = function() {
+		if (this.readyState === 4) {
+			if (this.status === 200) {
+			  var result = JSON.parse(this.responseText);
+			  success(result);
+			} else {
+			  error(this.responseText);
+			}
+		}
+	}
+
+	ajax.open('GET', url);
+	ajax.send();
+}
+
+get('https://www.reddit.com/.json', function(result) {
+	console.log(result);
+}, function(error) {
+	console.log(error);
+});
+
+// get with promise
+
+function get(url) {
+	return new Promise(function(resolve, reject){
+		var ajax = new XMLHttpRequest();
+
+		ajax.onreadystatechange = function() {
+			if(this.readyState === 4) {
+				if (this.status === 200) {
+				  var result = JSON.parse(this.responseText);
+				  resolve(result);
+				} else {
+				  reject(this.statusText)
+				}
+			}
+		}
+
+		ajax.open('GET', url);
+		ajax.send();
+	});
+}
+
+get('https://www.reddit.com/.json').then(function(result) {
+	console.log(result);
+}).catch(function(error){
+	console.log(error);
+});
