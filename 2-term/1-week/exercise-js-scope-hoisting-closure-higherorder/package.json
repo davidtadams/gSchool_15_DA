@@ -1,0 +1,23 @@
+{
+  "name": "exercise-js-scope-hoisting-closure-higherorder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/exercise-js-scope-hoisting-closure-higherorder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/exercise-js-scope-hoisting-closure-higherorder/issues"
+  },
+  "homepage": "https://github.com/gSchool/exercise-js-scope-hoisting-closure-higherorder#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
