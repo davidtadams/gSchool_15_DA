@@ -1,0 +1,59 @@
+Notes on Node Modules Lecture - CJ
+
+
+Resources:
+https://students.galvanize.com/users/711/learning_experiences/51
+https://nodejs.org/api/modules.html
+http://eloquentjavascript.net/20_node.html#h_BOlGLA/wK7
+https://github.com/maxogden/art-of-node#modular-development-workflow
+https://www.safaribooksonline.com/library/view/learning-node/9781449326128/ch04.html
+https://github.com/nodejs/node/tree/master/lib
+http://bites.goodeggs.com/posts/export-this/
+
+from exercise repo
+http://openmymind.net/2012/2/3/Node-Require-and-Exports/
+http://www.hacksparrow.com/node-js-exports-vs-module-exports.html
+http://www.sitepoint.com/understanding-module-exports-exports-node-js/
+
+
+Guided Questions:
+What is the problem that the node.js Module system solves?
+  It solves the problem of being able to separate your code into files.
+  Using modules allows you to link in code from other files, so that
+  your code does not have to all be in one file.
+  Readability and organization
+
+What built-in function is used to import a module?
+  require()
+
+What built-in object is used to export a module?
+  module.exports
+
+What types of values can a module export?
+  Objects, functions, variables (strings, bools etc.)
+  string, function, object, numbers
+  Anything
+
+What are 3 ways to export an object?
+  1. module.exports = {}
+  2. module.exports.functionName = function() {}
+  3. exports.functionName = function() {}
+  (doesn't have to be functions)
+
+What are 3 kinds of modules?
+  1. Core Modules
+  2. File Modules
+  3. node_modules
+
+How do you require npm and core modules?
+  require('[module_name]')
+
+How do you require file modules?
+  require('/[file_path]')
+  require('./[file_path]')
+  require('../[file_path]')
+
+Name and describe any 3 core modules.
+  1. HTTP
+  2. FS
+  3. Path
