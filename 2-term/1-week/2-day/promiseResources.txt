@@ -1,0 +1,7 @@
+Additional Promise Resources:
+
+https://www.youtube.com/watch?v=obaSQBBWZLk
+http://blog.parse.com/learn/engineering/whats-so-great-about-javascript-promises/
+https://parse.com/docs/js/guide#promises
+http://www.html5rocks.com/en/tutorials/es6/promises/
+http://javascriptplayground.com/blog/2015/02/promises/
