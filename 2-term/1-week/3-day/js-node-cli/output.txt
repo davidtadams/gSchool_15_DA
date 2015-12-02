@@ -1,0 +1,4 @@
+File size: 522
+File name: fileStats.js
+Executable status: 33188
+Last time modified: Wed Dec 02 2015 11:47:05 GMT-0700 (MST)
