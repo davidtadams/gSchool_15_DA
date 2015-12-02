@@ -1,0 +1,34 @@
+Notes from the Node.js Lecture - Danny
+
+Resources:
+  https://nodejs.org/en/about/
+  https://en.wikipedia.org/wiki/Node.js
+  http://stackoverflow.com/questions/1884724/what-is-node-js
+  https://docs.npmjs.com/getting-started/what-is-npm
+
+Guided Questions:
+What is the history of Node?
+  Invented in 2009 by Ryan Dahl @ Joyent
+
+How does Node provide a JS runtime outside of a browser?
+  It uses Google V8 engine to execute the Javascript code.
+  It uses a browser engine (V8) to run through the command line
+  V8 is javascript interpreter
+
+What is npm?
+  NPM is a package manager for node.js based packages.
+  Node Package Manager
+
+How do you run a JS file with Node?
+  You can type
+  $ node [jsfile]
+
+What is the fs module?
+  The fs module is a node module that allows you to manipulate files.
+  File system module
+  It allows the programmer to access the file system through javascript
+  Wraps simple POSIX file system commands
+
+Node event loop
+  Libuv
+    this is the event loop that node.js uses
