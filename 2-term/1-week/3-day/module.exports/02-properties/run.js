@@ -1,5 +1,5 @@
-// var someObject = require('./base')
-var someObject = require('../solutions/02-properties')
+var someObject = require('./base')
+// var someObject = require('../solutions/02-properties')
 
 console.log('Logging a number...');
 // make the following line print 42

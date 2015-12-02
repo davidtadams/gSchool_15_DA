@@ -7,3 +7,4 @@ Car.prototype.sound = function () {
 }
 
 // ---------- your code below here ----------
+module.exports = Car;
