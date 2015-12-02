@@ -6,7 +6,7 @@ Day 1: Term 1 Assessment
 
 Day 2: Scope - Danny / Promises - Kyle
 
-Day 3:
+Day 3: Warmup - Promises / Node.js - Danny / Node Modules - CJ
 
 Day 4:
 
