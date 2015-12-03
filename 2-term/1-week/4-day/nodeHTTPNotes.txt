@@ -1,0 +1,51 @@
+Notes for TCP/IP HTTP/HTTPS/DNS/CORS lecture with Roberto
+
+
+Resources:
+http://www.smartlabsoftware.com/ref/http-status-codes.htm
+http://www.tutorialspoint.com/http/http_header_fields.htm
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS#The_HTTP_response_headers
+https://www.mattcutts.com/blog/seo-glossary-url-definitions/
+http://eloquentjavascript.net/17_http.html
+https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+
+
+Guided questions:
+What are some pieces that make up a URL?
+  Protocol - typically http
+  host or hostname
+  subdomain
+  domain
+  TLD
+  Path
+
+What is a static url vs a dynamic url?
+  Static urls vs dynamic urls have to do with the document that
+  is being returned for the url. If the server returning the document
+  does not have to do any sort of computation, then the url is static.
+  If the server does have to do any sort of computation it is dynamic.
+
+What are some common HTTP status codes?
+  200 OK
+  404 Not found
+  500 Internal Server Error
+  550 Permission Denied
+
+What type of data is sent over the line with HTTP?
+  Plain text!
+
+What is the same-origin policy?
+  Two pages have the same origin if the protocol,
+  port (if one is specified), and host are the same for both pages.
+
+Review from Danny's talk
+https://github.com/gSchool/g15/blob/master/curriculum/03-week/lessons/the-internet.md
+
+Push terms
+  HTTPS
+  Cookies
+  HTTP Verbs
+  HTTP/2
+  JSONP
+    JSON with Padding. A work around the same-origin policy
+    now that we have CORS, it isn't as relevant
