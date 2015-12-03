@@ -13,9 +13,11 @@ function countLetters(str) {
     }
   }
 
-  for (var i in results) {
-    process.stdout.write(i + ':' + results[i] + ' ');
-  }
+  // for (var i in results) {
+  //   process.stdout.write(i + ':' + results[i] + ' ');
+  // }
+
+  // return JSON.stringify(results);
 
   /* another way to print it out */
   console.log('\n' + JSON.stringify(results));
