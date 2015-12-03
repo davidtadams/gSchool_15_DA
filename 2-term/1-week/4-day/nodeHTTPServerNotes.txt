@@ -1,0 +1,27 @@
+Lecture notes for Node HTTP Server lesson - Danny
+
+
+Resources:
+  https://nodejs.org/api/http.html
+  https://nodejs.org/api/url.html
+  https://en.wikipedia.org/wiki/Static_web_page
+  https://docs.nodejitsu.com/articles/HTTP/servers
+  https://docs.nodejitsu.com/articles/HTTP/servers/how-to-create-a-HTTP-server
+  http://www.sitepoint.com/creating-a-http-server-in-node-js/
+  
+LE:
+  https://students.galvanize.com/users/711/learning_experiences/13
+
+Guided Questions:
+Which node module is used to interact with HTTP?
+  The 'http' node module
+  require ('http')
+
+How do you create an HTTP server in Node?
+  http.createServer()
+  https://nodejs.org/en/about/
+  https://docs.nodejitsu.com/articles/HTTP/servers/how-to-create-a-HTTP-server
+
+What is the Node module for parsing a URL string?
+  The 'url' node module
+  require ('url')
