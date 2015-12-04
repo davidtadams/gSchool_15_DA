@@ -1,0 +1,18 @@
+Ember walkthrough with Kyle
+
+Making a dating site
+
+Key part of ember is mapping views to urls
+nested views
+
+started with $ npm install -g ember-cli
+$ ember new [app-name]
+
+start a built in ember serve
+$ ember serve
+
+make a new route
+$ ember generate
+
+install sass
+$ ember install ember-cli-sass
