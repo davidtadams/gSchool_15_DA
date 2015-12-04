@@ -1,0 +1,32 @@
+ES6 will let you do block level scope in JS
+ES5 does not have block level scope
+  if statements and other blocks do not create their own scope
+  only functions do this
+
+var hoisting
+  moving all of the var declarations to the top of the scope
+
+function hoisting
+  functions are hoisted first before variables
+  https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch4.md#functions-first
+
+lexical scoping
+  scope chains
+
+Decent article on closures
+  http://javascriptissexy.com/understand-javascript-closures-with-ease/
+
+How do you promisify a function?
+  var someAyncThing = new Promise(function(resolve, reject) {
+    $.get("google.com", function(data) {
+      resolve(data);
+    });
+  });
+
+  someAsyncThing().then(function(data) {
+    //do something
+  });
+
+
+watch Jeff Dean promise videos!!!
+  billy sent link
