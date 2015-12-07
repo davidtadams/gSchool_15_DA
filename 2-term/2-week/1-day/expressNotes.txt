@@ -1,0 +1,62 @@
+Notes from express lecture with CJ
+Express docs: http://expressjs.com/en/4x/api.html
+
+Install express
+  $ npm install --save express
+adds express to your dependencies
+
+Generally store your express stuff in a variable called 'app'
+
+install nodemon module
+  https://github.com/remy/nodemon
+
+Create an express generator app
+  http://expressjs.com/en/starter/generator.html
+
+Guided Questions:
+  What is an express route?
+    An express route is used to handle a client request to a specific endpoint,
+    or URI, uniform resource identifier, and specific HTTP verb (get, post, delete...)
+
+    From express docs: "Routing refers to the definition of application
+    end points (URIs) and how they respond to client requests."
+
+  How do you create an express route?
+    app.METHOD(PATH, HANDLER)
+
+  What is a route a combination of?
+    a URI (path) and HTTP verb
+
+  What are 2 parameters to an express route callback?
+    request, response
+
+  How do you send a response to the client?
+    response.send()
+
+  What other methods does the response provide for sending data to the client?
+    res.render() - render a view template
+    res.download() - prompt a file to be downloaded
+    res.end() - end the response process
+    res.json() - send json response
+    res.jsonp() - send jsonp response
+    res.redirect() - redirect a request
+
+  What are 2 ways of passing data into express?
+    1. URL parameters (get)
+    2. Query parameters (post, put, delete)
+
+Push Questions:
+  Name 2 templating engines commonly used with Express?
+    1. Jade (http://jade-lang.com/)
+    2. EJS (http://www.embeddedjs.com/)
+    3. HAML (https://www.npmjs.com/package/hamljs)
+
+  How do you create a nested express route defined in it's own file?
+    http://expressjs.com/en/4x/api.html#router.use
+    var router = express.Router()
+    app.use()
+    multiple nested routes is common in large applications
+    example at the bottom of here: http://expressjs.com/en/guide/routing.html
+
+Express tempatling engines
+  https://github.com/strongloop/express/wiki#template-engines
