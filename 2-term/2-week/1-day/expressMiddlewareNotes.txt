@@ -1,0 +1,28 @@
+Notes from Express Middleware Lecture - Danny
+
+
+Guided Questions:
+What is a middleware? (1 sentence)
+  Middleware functions have access to the req and res object and the req-res cycle.
+
+How do you use a middleware with Express?
+  you can use app.use() or app.METHOD() (ie app.get(), app.delete() etc.)
+
+What is one way you search for an Express middleware?
+  Express documentation/resources
+  http://expressjs.com/en/resources/middleware.html
+  The internet...
+
+What is a middleware for parsing the body of a request?
+  body-parser
+  https://github.com/expressjs/body-parser
+
+What is a middleware for setting the CORS headers of a response?
+  cors
+  https://github.com/expressjs/cors
+
+What is a middleware for serving up static files?
+  serve-static
+  https://github.com/expressjs/serve-static
+
+What other middlewares can you find that are interesting?
