@@ -1,0 +1,54 @@
+Notes on RESTful design w/ Roberto
+
+Resources:
+http://restcookbook.com/
+http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+http://www.restapitutorial.com/
+
+Guided Questions:
+What is REST?
+  Representational State Transfer
+  REST is a type or architecture for building APIs
+  6 constraints
+    Uniform Interface
+    Stateless
+    Cacheable
+    Client-Server
+    Layered System
+    Cod on Demand
+
+What are the HTTP verbs commonly used in RESTful services?
+  GET, POST, PUT, DELETE
+
+What HTTP methods are supported by the browser?
+  HTML forms can only make GET and POST
+  XMLHttpRequest can make other methods such as PUT, DELETE
+  XHR should be able to do any other http method
+
+What are the RESTful routes of CRUD?
+  C = Create = Post
+  R = Read = Get
+  U = Update = Put
+  D = Delete = Delete
+
+  Create
+    GET - new page
+    POST - create new resource
+  Read
+    GET - show individual page
+    GET - show all page
+  Update
+    GET - edit page
+    PUT - edit request
+  Delete
+    DELETE - remove resource
+
+How do you create a PUT route in Express?
+  app.put()
+
+What are idempotent methods?
+  An HTTP method that can be called many times without different outcomes
+
+
+HATEOAS
+  Hypermedia as the Engine of Application State

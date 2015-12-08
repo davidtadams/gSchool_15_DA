@@ -1,0 +1,21 @@
+{
+  "puppies": [
+    {
+      "name": "iago"
+    },
+    {
+      "name": "isis"
+    },
+    {
+      "name": "scooby doo"
+    },
+    {
+      "name": "lassie",
+      "breed": "border collie"
+    },
+    {
+      "name": "example name",
+      "breed": "example breed"
+    }
+  ]
+}

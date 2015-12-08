@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(href="/style.css" rel="stylesheet")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js')
+    title= title
+  body
+    h1 New Puppy
+    form(action="/puppies/new" method="POST")
+      label(for="name") Name: 
+      input(type="text" id="name" name="name")
+      label(for="breed") Breed: 
+      input(type="text" id="breed" name="breed")
+      button(type="submit") Add
+    a(href="/puppies/") home
+    script(type='text/javascript', src='/app.js')
