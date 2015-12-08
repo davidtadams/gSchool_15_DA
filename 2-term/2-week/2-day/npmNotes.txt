@@ -1,0 +1,46 @@
+NPM Lecture notes - Danny
+
+Module to learn how to make modules:
+  https://github.com/npm/how-to-npm
+
+Guided Questions:
+What are some reasons to use npm?
+  To install node packages that are dependencies for a project
+  Obtain packages/modules for third party applications
+  1. use as task runner
+  2. upload your own modules
+  3. use modules other people made
+  ...many more
+
+What is npmjs.org? (list of 2 to 3 things)
+  1. An application that stores all npm modules
+  2. A place to search for npm modules
+  3. The location of the npm documentation
+  A hosting organization that hosts all versions of all modules being hosted on it
+
+What are some npm commands for maintaining package dependencies?
+  npm update
+  npm uninstall
+  npm install
+  npm outdated
+
+What are the benefits of Semantic Versioning?
+  helps avoid dependency hell
+    the more dependencies you have the more likely something will break your app
+  It makes it clear when an update would break your code
+    what kind of update just happened
+    x.y.z
+      x = major release, breaking code
+      y = new features
+      z = bugs/patches
+
+What are some package.json fields?
+  name
+  version
+  description
+  author
+
+How do you use npm as a task runner?
+  you can use npm test to automate testing
+  npm run build
+    you can use a scripts tag in the package.json to run a build script
