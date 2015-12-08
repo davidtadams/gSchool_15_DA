@@ -9,6 +9,8 @@ var request = require('request')
 
 var app = Express()
 
+app.set('view engine', 'jade');
+
 app.use(cors())
 app.use(morgan('combined'))
 
@@ -31,12 +33,14 @@ app.get('/mike', function(req, res) {
     if (!error && response.statusCode == 200) {
       console.log(body) // Show the HTML for the Google homepage.
       var data = JSON.parse(body);
-      var html = "<!DOCTYPE html><html><head><meta charset='utf-8'><title>David Server</title></head>";
-      html += '<body><ul><li>Name: ' + data.name + '</li>';
-      html += '<li>Age: ' + data.age + '</li>';
-      html += '<li>Height: ' + data.height + '</li></ul></body>'
-      html += '</html>';
-      res.send(html);
+      // var html = "<!DOCTYPE html><html><head><meta charset='utf-8'><title>David Server</title></head>";
+      // html += '<body><ul><li>Name: ' + data.name + '</li>';
+      // html += '<li>Age: ' + data.age + '</li>';
+      // html += '<li>Height: ' + data.height + '</li></ul></body>'
+      // html += '</html>';
+      // res.send(html);
+
+      res.render('index', {name: data.name, age: data.age, height: data.height});
       return;
     }
     res.send('error')
