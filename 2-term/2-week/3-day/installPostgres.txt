@@ -1,0 +1,20 @@
+$ brew doctor
+$ brew update
+$ brew install postgres
+$ brew info postgres
+(read information under caveats)
+
+---Notes from brew info caveats---
+To have launchd start postgresql at login:
+  ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+Then to load postgresql now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+Or, if you don't want/need launchctl, you can just run:
+  postgres -D /usr/local/var/postgres
+----------------------------------
+
+$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+$ createdb `whoami`
+$ psql
+# [user]=# \q (to quit psql command line)
