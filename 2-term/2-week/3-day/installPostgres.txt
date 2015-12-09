@@ -38,3 +38,9 @@ Start Postgres
 
 Stop Postgres
   $ lunchy stop postgres
+
+Can also install ezservices - npm package
+  $ sudo npm install ezservices -g
+
+  $ ezservices start postgres
+  $ ezservices stop postgres
