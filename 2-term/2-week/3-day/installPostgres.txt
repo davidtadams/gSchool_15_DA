@@ -1,10 +1,12 @@
+How to install and get Postgres running
+
 $ brew doctor
 $ brew update
 $ brew install postgres
 $ brew info postgres
-(read information under caveats)
 
----Notes from brew info caveats---
+(read information under caveats)
+---Notes (output) from brew info caveats---
 To have launchd start postgresql at login:
   ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 Then to load postgresql now:
@@ -13,8 +15,26 @@ Or, if you don't want/need launchctl, you can just run:
   postgres -D /usr/local/var/postgres
 ----------------------------------
 
-$ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-$ createdb `whoami`
-$ psql
-# [user]=# \q (to quit psql command line)
+Set postgres DB server to load on startup
+  $ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+
+Launch postgres DB server
+  $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+Create new database from your username
+  $ createdb `whoami`
+
+Opens up PostgresCLI prompt
+  $ psql
+
+How to quit command line prompt
+  # [user]=# \q (to quit psql command line)
+
+Install Lunchy
+  $ sudo gem install lunchy
+
+Start Postgres
+  $ lunchy start postgres
+
+Stop Postgres
+  $ lunchy stop postgres
