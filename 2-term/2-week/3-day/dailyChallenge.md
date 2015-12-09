@@ -12,7 +12,7 @@ Write a function `garland` that, given a lowercase word, returns the degree of t
 garland('programmer') //0
 garland('ceramic') //1
 garland('onion') //2
-garland('alfalfa') //4
+garland('alfalfa') //1
 garland('hotshots') //4
 garland('abracadabra') //4
 garland('couscous') //4
