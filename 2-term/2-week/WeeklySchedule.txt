@@ -6,7 +6,7 @@ Day 1: Express - CJ / Express Middleware - Danny
 
 Day 2: NPM - Danny / RESTful Design - Roberto
 
-Day 3:
+Day 3: Databases and Postgress - CJ / SQL - Danny
 
 Day 4:
 
