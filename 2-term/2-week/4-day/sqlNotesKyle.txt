@@ -1,0 +1,68 @@
+Notes from SQL Lecture w/ Kyle
+Data Modeling
+
+Modeling with an ERD
+ERD = Entity Relation Model
+
+Candidate key
+  - you have a key but is not actually part of the relationship
+
+Foreign Keys
+
+Primary Keys
+
+IMPORTANT
+The primary key is always the one side of the relationship
+The foreign key is always the many side of the relationship - every time
+
+multiple sources of truth
+if you can determine the truth in two different places, you are asking for
+an integrity issue with your database
+if you can infer a value from other values in a table, you should always do that
+That way you don't have to change values in multiple places
+
+Lookup table
+- just has one column, has a list of values that somehting else can be
+
+Joins are very very very expensive performance wise. the less you have to do
+the better
+
+Many to Many
+- you cannot do a many to many relationship in a database (in 2 tables)
+- you have to make a 3rd table
+- A Join table
+canonical example is students to classes = many to many relationship
+
+Indexing
+- database can have its own system that is very fast that indexes certain things
+for faster lookups
+- performance concept
+
+To turn an ERD into a Schema, you now have to formalize the relationship with
+datatypes and SQL logic
+
+Datatypes:
+varchar     (variable characters)
+int         (integer)
+char        (characters) (good for state codes)
+serial      (auto incrementing integer)
+datetime    (self explanatory)
+boolean     (true/false or 0/1)
+text        (strings with no declared size, for a lot of data)
+double      (floating point)
+float       (floating point)
+
+for most of these you have to declare a size (to manage storage space)
+varchar(255)
+int(3)
+char(2)
+
+Text does not have to declare a size
+
+Schema boxes - KEEP IT STANDARDIZED
+have standard box with table name on top
+don't camel case - always _ in databases
+have 3 columns
+1. left column: primary keys, foreign keys
+2. middle column: all of your fields
+3. right column: types
