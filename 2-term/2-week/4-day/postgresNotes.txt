@@ -1,0 +1,36 @@
+Notes from Postgres lecture with Danny
+
+pronounced Postgres + QL
+
+PostgreSQL is completely open source
+
+ACID Compliant
+A = Atomicity
+C = Consistency
+I = Isolation
+D = Durability
+
+MongoDB is not ACID compliant
+
+Docs
+  http://www.postgresql.org/docs/9.1/static/reference-client.html
+
+ORM
+  Object relation mapping
+  https://en.wikipedia.org/wiki/Object-relational_mapping
+
+NPM Modules
+https://www.npmjs.com/package/pg
+  ORMs
+  https://www.npmjs.com/package/sequelize
+  https://www.npmjs.com/package/massive
+  https://www.npmjs.com/package/bookshelf
+  https://www.npmjs.com/package/knex
+
+Some PostgreSQL commands
+\h -> help
+\c -> connect to database
+\l -> list all databases you can see in Postgres
+\dt -> describe all tables in current database
+\d [tablename] -> describe columns of given table
+\q -> quit
