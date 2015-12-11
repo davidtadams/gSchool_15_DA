@@ -1,0 +1,11 @@
+Notes from the Nodebots meetup on 10/10/15
+
+Resources:
+https://github.com/nodebots-colorado/buttonbot
+https://www.particle.io/
+http://www.amazon.com/JavaScript-Robotics-Johnny-Five-Raspberry-BeagleBone/dp/1457186950
+http://www.amazon.com/Learning-JavaScript-Robotics-Kassandra-Perch/dp/1785883348
+http://socket.io/
+http://www.intel.com/content/www/us/en/do-it-yourself/edison.html
+
+https://github.com/stevekinney/musicbot
