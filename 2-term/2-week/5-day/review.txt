@@ -1,0 +1,145 @@
+--------------
+Express
+
+How do you install express?
+npm install express -S
+
+What is the conventional variable for express?
+var app
+
+How do you create an Express application?
+var express = require('express');
+var app = express();
+
+What is an Express route?
+Definition of application end points (URI) and how to respond to
+client requests.
+
+Create an Express route:
+app.get('/', function(request, response) {
+  response.send('Hello World!')
+})
+
+How do you send a text response back to client?
+response.send('text')
+
+What are 2 other ways to send data?
+response.json()
+response.jsonp()
+response.render()
+res.sendFile()
+res.download()
+
+What are 2 ways of passing data into express?
+query string / query data / query parameters
+url parameters / structured data
+
+Name 2 templating engines commonly used with Express?
+Jade
+EJS
+Handlebars
+Mustache
+Haml
+
+--------------
+Middleware
+
+What is middleware?
+A function that acts on a req and res
+
+What are the 3 parameters for express middleware?
+request, response, next
+
+What does next do?
+moves to the next middleware
+
+What middleware gives you access to the request body?
+body-parser
+
+Which middleware will create a static server?
+serve-static
+
+Which middleware will create a cors enabled server?
+cors
+
+--------------
+npm
+
+What does npm stand for?
+Nothing
+
+How do you install and save a package?
+npm install -S
+npm install --SAVE
+
+Save as dev dependency
+npm install -D
+
+npm install will also install dev dependencies
+
+what is the command to find all packages that are not up to date?
+npm outdated
+
+what is the command to install lodash version 1.2?
+npm install lodash@1.2.0 -S
+
+What is the package.json fieldname for tasks to run?
+scripts
+
+What type of value is scripts?
+JSON object
+
+What commmand runs your start script?
+npm run start
+or
+npm start
+
+How do you see every module installed?
+npm list
+
+--------------
+REST
+
+What is REST?
+a way to design APIs
+
+What are the seven restful routes of CRUD?
+
+CREATE
+  POST "puppies/new"
+    handle submission
+  GET "puppies/create"
+    sends form to the client/browser to render as HTML
+    shows the form to create a new puppy
+
+UPDATE
+  GET "puppies/:id/edit"
+  PUT "puppies/:id"
+
+READ
+  GET "puppies/"
+    display all puppies
+  GET "puppies/:id"
+    get a specific puppy
+
+DELETE
+  DELETE "puppies/:id"
+    deletes a puppy
+
+--------------
+SQL
+
+SQL = Structured Query Language
+RDBMS = Relational Databse Management System
+
+display the cohorts.name and students.name of every student...
+SELECT students.name, cohorts.name
+FROM students
+JOIN cohorts on students.cohort_id = cohorts.id;
+
+Postgres INNER JOIN and JOIN are the same thing
+
+how to update:
+update students
+set hitpoints = 100
+where students.hitpoints = 0;
