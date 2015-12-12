@@ -10,4 +10,5 @@ Day 3: Databases and Postgress - CJ / SQL - Danny
 
 Day 4: SQL - Kyle / Postgres and psql - Danny
 
-Day 5:
+Day 5: Review / Mini Project
+  Speaker: Rachel Dixon - rachel.dixon@accesscare.com
