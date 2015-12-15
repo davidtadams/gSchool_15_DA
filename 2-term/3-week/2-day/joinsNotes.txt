@@ -1,0 +1,7 @@
+Notes on Joins and Operators Lecture - Roberto
+
+Joins are basically cartesian products
+
+Cartesian or Cross Join
+
+Postico - Postgres GUI
