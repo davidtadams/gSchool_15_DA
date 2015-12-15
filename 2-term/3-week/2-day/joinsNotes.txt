@@ -5,3 +5,6 @@ Joins are basically cartesian products
 Cartesian or Cross Join
 
 Postico - Postgres GUI
+
+see this for exercises:
+https://github.com/gSchool/sql-curriculum/blob/master/Unit-02-Relational/02-readme.md
