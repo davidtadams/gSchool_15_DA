@@ -1,0 +1,68 @@
+Normalization - Kyle
+
+Normal Forms
+3 normal forms (that we care about, there are actually 5)
+(maybe care about 4th)
+
+Guided Questions:
+What is normalization, and why would you want to do it?
+  Normalization is organizing your data in a database to reduce
+  data redundancy.
+  You are making it so that something only exists in one place.
+  No multiple sources of truth!
+  If you need to update something, you can just do it in one place and it
+    is reflected everywhere.
+  Keeps the integrity of the database.
+
+What is first normal form (1NF)? Give an example.
+  Do not have any repeating rows
+  issue w/ first normal form is it doesn't solve much for the redundancy
+  - with 1NF we don't have to look inside an element and parse it further
+    You SHOULD NOT have multiple data entries in the same cell
+
+What is second normal form (2NF)? Give an example.
+  - must be 1NF
+  You have sections within a record that don't depend on the key
+  You don't want anything that doesn't have any relationship with your key
+    to be in that table
+  You should separate out the tables and use foreign keys
+  breaking out records into their own tables
+
+What is third normal form (3NF)? Give an example.
+  - must be 1NF and 2NF
+  - Removes all columns that are not dependent on the primary key
+  - a stricter extension of 2NF
+
+What is denormalization, and why would you want to do it?
+  - Denormalization is taking the normalization / normal forms
+    out of your database.
+  Reasons:
+    - Performance: Joins are SUPER expensive
+    - prototyping - no reason to normalize yet, takes too much time
+
+  there might be some cases where you would want to allow for redundant
+    data in order to increase performance
+  For performance sensitive items, you might want to intentionally denormalize
+  - often a last effort to increase performance
+
+Candidate Key
+  - is going to be unique, could be used as a primary key, but is not
+      being used as a primary key
+  for instance, phone number
+    it will be unique but you don't want to make it a primary key
+    because you would want to allow people to change their phone number
+
+Acceptable use cases for NoSQL
+  - way faster for simple data retrieves, simple indexes
+  - ember data - client side caching
+  - you have actually unstructured data, useless to define a schema for
+      data doesn't work well with relational structure
+
+Using NoSQL for data that is highly relational just for performance is
+  a shitty reason to use NoSQL
+
+What might go wrong if we don't normalize?
+  - multiple sources of truth could exist
+      multiple sources of untruth
+  - large duplication of data = large database (memory size)
+  - denormalized data is hard to extend
