@@ -4,7 +4,8 @@ Schedule for what was covered each day.
 
 Day 1: pg - Danny / Knex - CJ
 
-Day 2: 
+Day 2: Daily Warmup - CJ / Data Normalization - Kyle
+       / SQL Operators and Joins - Roberto
 
 Day 3:
 
