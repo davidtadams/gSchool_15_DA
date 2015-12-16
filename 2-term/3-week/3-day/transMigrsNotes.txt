@@ -1,0 +1,39 @@
+Notes on Transactions and migrations with Roberto
+
+Resources:
+  http://knexjs.org/
+
+Guided Questions:
+What is the ACID model?
+  The ACID model makes sure that database transactions are processed reliably
+  A = Atomicity
+    all or nothing. if a transaction fails, nothing happens
+  C = Consistency
+    only valid data gets added to the database
+  I = Isolation
+    If you do two inserts, they won't happen at the same time, isolates data
+  D = Durability
+    Database will not lose data on system failure
+    Once a transaction is committed it will stay there
+
+What is a transactional database?
+  When a database supports rolling back an operation if something happens
+  such as an error or failure.
+  They allow correct recovery from failure.
+
+How do you create a transaction with knex?
+  passing a handler function into knex.transaction();
+  http://knexjs.org/#Transactions
+
+  When would you use a transaction?
+    When you are doing more than one thing at a time.
+    Any sort of multiple things, especially if they depend on each other.
+
+When do you do a schema migration?
+  After a database is already created
+  When you are updating or adding something to a schema
+  You can also revert/roll back with a schema migration
+  Any time you make a change to your database
+
+What are the benefits of schema migrations?
+  It makes updating a database much easier.
