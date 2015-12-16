@@ -7,7 +7,8 @@ Day 1: pg - Danny / Knex - CJ
 Day 2: Daily Warmup - CJ / Data Normalization - Kyle
        / SQL Operators and Joins - Roberto
 
-Day 3:
+Day 3:  Users, Permissions, DDL Statements - Danny
+        Transactions & Migrations - Roberto
 
 Day 4:
 
