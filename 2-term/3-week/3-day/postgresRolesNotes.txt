@@ -1,0 +1,5 @@
+Postgres Roles Lecture Notes w/ Danny
+
+Resources:
+  http://www.postgresql.org/docs/current/static/postgres-user.html
+  http://www.postgresql.org/docs/current/static/user-manag.html

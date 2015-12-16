@@ -1,0 +1,21 @@
+Notes on SQL DDL Lecture w/ Danny
+
+Resources:
+  http://www.postgresql.org/docs/current/static/ddl.html
+
+Constraints
+  extra things you can put on your columns when creating a table
+Examples:
+  PRIMARY KEY
+  NOT NULL
+  UNIQUE
+
+DROP DATABASE [DB NAME]
+DROP TABLE [TABLE NAME]
+
+ALTER TABLE students ADD githubuser text;   //adds column
+ALTER TABLE students DROP email;  //removes email column from table
+
+TRUNCATE
+ENABLE
+DISABLE
