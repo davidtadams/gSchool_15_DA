@@ -10,6 +10,7 @@ Day 2: Daily Warmup - CJ / Data Normalization - Kyle
 Day 3:  Users, Permissions, DDL Statements - Danny
         Transactions & Migrations - Roberto
 
-Day 4:
+Day 4:  Authentication and Authorization - CJ
+        Intro to Passport - Danny
 
 Day 5:
