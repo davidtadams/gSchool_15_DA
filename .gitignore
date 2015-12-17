@@ -33,3 +33,6 @@ build
 
 # Sass build files
 .sass-cache
+
+# Environment Variables
+.env
