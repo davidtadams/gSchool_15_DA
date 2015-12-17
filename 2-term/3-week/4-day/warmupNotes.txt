@@ -1,0 +1,16 @@
+How to create a superuser:
+
+Exercise:
+1. make a new database
+2. make a super user for that DB
+3. make an application user that has
+  select
+  insert
+  update
+  delete
+4. make a user with only select
+
+Create role all_priveleges:
+
+grant all priveleges to all_priveleges ON
+all tables in schema public;

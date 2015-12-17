@@ -1,0 +1,31 @@
+Notes on Passport lecture with Danny
+
+Resources:
+  http://passportjs.org/
+  http://stackoverflow.com/questions/18656528/how-do-i-encrypt-passwords-with-postgresql/18660103#18660103
+  http://www.postgresql.org/docs/current/static/pgcrypto.html
+  http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.VnJQ54YrKCo
+  http://mherman.org/blog/2013/11/10/social-authentication-with-passport-dot-js/#setup-an-authentication-file
+
+Guided Questions:
+What is passport?
+  A node module that offers authentication services
+  Authentication middleware for node
+
+How do you install passport?
+  npm install passport
+
+What is a strategy?
+  The way you plan on authenticating people
+
+How do you find different strategies available for passport?
+  Look at the Passport docs and view all strategies
+  You can search for strategies
+
+Which strategy is used to authenticate against your local database?
+  npm install passport-local
+
+What is the pgcrypto module in Postgres?
+  It allows you to do your crypto hashing on your database
+
+CREATE EXTENSION pgcrypto;
