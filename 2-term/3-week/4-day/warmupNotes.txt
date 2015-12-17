@@ -14,3 +14,23 @@ Create role all_priveleges:
 
 grant all priveleges to all_priveleges ON
 all tables in schema public;
+
+How to do this:
+psql
+# create database g15;
+# create role lead_instructor with login;
+# create role instructor with login;
+# create role student with login;
+# \q
+psql g15
+# revoke all on all tables in schema public from public;
+    //takes away all rights from the public role
+# grant usage on all tables in schema public to pucblic;
+# alter default privileges for role lead_instructor in schema public grant all on tables to lead_instructor;
+    //everything i make i should have all permissions on
+# alter default privileges for role lead_instructor in schema public grant select, update, delete, insert on tables to instructor;
+# alter default privileges for role lead_instructor in schema public grant select on tables to student;
+# alter default privileges for role lead_instructor in schema public grant all on sequences to lead_instructor;
+# alter default privileges for role lead_instructor in schema public grant all on sequences to instructor;
+
+\dp to show all permissions
