@@ -1,0 +1,107 @@
+Topics:
+  Passport
+  pg
+  DDL
+  Postgres roles
+  Normalization
+  Authentication
+  Authorization
+  Knex
+  Joins
+  Transactions
+  Migrations
+
+Passport Authentication with Danny
+  see slides
+
+PG with Danny
+  Sample connection string: postgres://postgres@localhost/pg
+    postgres://localhost/pg
+    works as well and it will automatically add your username
+      (not for linux though)
+
+  Run a query on the client
+    client.query()
+
+  why do you call done() in the query
+    pg.connect() is behind the scenes a pool of clients
+    you have to call done to release the client you are using, so that it
+    can be used agian.
+    Any time you are done with a client, you have to call done()
+    unless it cannot be used again
+    the pg.connect() handler assigns you a client that you need to close
+
+DDL with Danny
+  see slides
+
+Postgres Roles with Danny
+  how to list out all roles in the cluster/database
+    \du
+    (describe users)
+
+  \z
+    shows access rights to certain columns and tables
+
+Postgres Roles - Kyle quick talk notes
+  Revoking all permissions and granting back the ability to see objects:
+    REVOKE ALL IN ALL TABLES IN SCHEMA public FROM public;
+    GRANT USAGE ON ALL TABLES IN SCHEMA public TO public;
+
+  Changing default permissions:
+    ALTER DEFAULT PRIVILEGES FOR ROLE lead_instructor IN SCHEMA public GRANT ALL ON TABLES TO instructor;
+
+  Gives all permissions to instructor on any table that lead_instructor creates if insert/update is involved, you also need to grant them permissions on sequences:
+    ALTER DEFAULT PRIVILEGES FOR ROLE lead_instructor IN SCHEMA public GRANT ALL ON SEQUENCES TO instructor;
+
+Normalization - Kyle
+  2NF
+    has to depend on the primary key
+  3NF
+    transitive dependencies
+    if you see 'type', that means it should probably be broken out in 3NF
+
+  Denormalization
+    Why do it?
+      Joins are very expensive
+
+1 to 1 relationship
+  you use an extension table
+
+Postgres concatenated key
+after you define your columns
+  Primary key(1st column, 2nd column)
+
+Knex review - CJ
+  knex init will initialize knex
+  and create the knexfile.js file
+    this file can do many things
+      one of them is connect to a database
+
+  Command to create a migration
+    knex migrate:make create_students
+      This creates a migration file in the migrations folder
+      time stamped file
+
+  create a column that auto-increments
+    table.increments();
+
+  create a text column called name
+    table.text('name');
+    or
+    table.string('name');
+
+  append .notNullable() to say NOT NULL
+
+  select * from students -> write to knex
+    knex('students').select()
+    knex('students')
+    knex.select().table('students')
+
+  select * from students where id=5 limit1 -> to knex
+    knex('students').select('id=5').limit(1)
+
+Authentication - CJ
+  Types of login
+    Form based
+    OAuth
+    Single Sign-On
