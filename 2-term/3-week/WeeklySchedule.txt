@@ -13,4 +13,16 @@ Day 3:  Users, Permissions, DDL Statements - Danny
 Day 4:  Authentication and Authorization - CJ
         Intro to Passport - Danny
 
-Day 5:
+Day 5: Review / Lightning Talks / Mini-project
+  Review:
+    Passport
+    pg
+    DDL
+    Postgres roles
+    Normalization
+    Authentication
+    Authorization
+    Knex
+    Joins
+    Transactions
+    Migrations
