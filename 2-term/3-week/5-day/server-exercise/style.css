@@ -1,0 +1,19 @@
+body {
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+}
+
+.llamaImage {
+  width: 100px;
+  height: 150px;
+}
+
+.nameBox {
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.profile {
+  padding: 1%;
+}
