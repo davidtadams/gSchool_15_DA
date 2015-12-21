@@ -1,0 +1,26 @@
+{
+  "name": "back-end-student-fullstack",
+  "version": "0.0.1",
+  "description": "Demo of Regly API",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "knex": "^0.9.0",
+    "pg": "^4.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "test",
+    "demo"
+  ],
+  "author": "Kyle Coberly and G15",
+  "license": "ISC"
+}

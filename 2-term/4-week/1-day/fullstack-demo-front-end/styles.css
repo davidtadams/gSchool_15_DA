@@ -1,0 +1,7 @@
+label, input {
+    display: block;
+}
+
+.flash-message {
+    display: none;
+}
