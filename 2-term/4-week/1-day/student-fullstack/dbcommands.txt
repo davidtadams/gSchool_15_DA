@@ -1,0 +1,13 @@
+createdb regly
+psql regly
+# create role regly_app with login;
+# revoke all on all tables in schema public from public;
+# grant usage on all tables in schema public to public;
+# alter default privileges for role regly_app in schema public grant select,insert,update,delete on tables to regly_app;
+# create role regly_knex;
+# grant all on all tables in schema public to regly_knex;
+# alter role regly_knex with login;
+# alter role regly_knex with password 'regly_password';
+# alter default privileges for role regly_knex in schema public grant select,insert,update,delete on tables to regly_app;
+# alter default privileges for role regly_knex in schema public grant all on sequences to regly_app;
+# alter user regly_app with password 'regly_password';

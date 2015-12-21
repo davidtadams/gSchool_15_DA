@@ -1,0 +1,4 @@
+$ knex migrate:make regly
+$ knex migrate:latest
+$ knex seed:make 0-students
+$ knex seed:run
