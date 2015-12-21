@@ -5,6 +5,8 @@ $(document).ready(function() {
   }).catch(function(error) {
     console.log("Couldn't get student data", error);
   });
+
+  attachNewStudentHandler();
 });
 
 function buildStudentList(studentData) {
@@ -47,4 +49,47 @@ function getStudentData() {
       error: reject
     });
   });
+}
+
+function attachNewStudentHandler() {
+  $(".new-student-form").submit(function(event) {
+    event.preventDefault();
+    var formData = getNewStudentData($(this));
+    createNewStudent(formData).then(function(newStudent) {
+      console.log("Added Student");
+      addNewStudentToList(newStudent);
+      flashCreationMessage();
+    }).catch(function(error) {
+      console.error("Unable to add student", error);
+    });
+  });
+}
+
+function getNewStudentData(form) {
+  var formValues = form.serializeArray();
+  return formValues.reduce(function(formattedStudent, student) {
+    formattedStudent[student.name] = student.value;
+    return formattedStudent;
+  }, {});
+}
+
+function createNewStudent(formData) {
+  return new Promise(function(resolve, reject) {
+    $.ajax({
+      method: "POST",
+      url: "http://localhost:8000/students",
+      data: formData,
+      success: resolve,
+      error: reject
+    });
+  });
+}
+
+function addNewStudentToList(student) {
+  var studentListItem = convertStudentObjectToListItem(student);
+  $(".student-list").append(studentListItem);
+}
+
+function flashCreationMessage() {
+  $(".creation-message").fadeIn(300).delay(2000).fadeOut(300);
 }

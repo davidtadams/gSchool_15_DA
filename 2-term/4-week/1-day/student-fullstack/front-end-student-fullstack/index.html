@@ -17,6 +17,26 @@
         <h2>Students</h2>
         <ul class="student-list"></ul>
       </section>
+      <section>
+        <h2>Add a Student</h2>
+        <form class="new-student-form">
+          <label for="student-first-name">First Name</label>
+          <input type="text" name="first_name" id="student-first-name" value="">
+
+          <label for="student-last-name">Last Name</label>
+          <input type="text" name="last_name" id="student-last-name" value="">
+
+          <label for="student-dob">Date of Birth</label>
+          <input type="date" name="date_of_birth" id="student-dob" value="">
+
+          <label for="student-email">Email</label>
+          <input type="email" name="email" id="student-email" value="">
+
+          <input type="submit" name="submit" value="Add Student">
+
+          <output class="flash-message creation-message">Student Added!</output>
+        </form>
+      </section>
     </main>
     <footer>
 
