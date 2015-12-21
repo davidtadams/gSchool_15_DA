@@ -3,11 +3,11 @@ Week 4 (week 10 overall)
 Schedule for what was covered each day.
 
 Day 1:  Student Registration full stack app walkthrough - Kyle
-
-
+    https://github.com/gSchool/CRUD_Practice_Examples
+    https://github.com/gSchool/gBlog
 
 Day 2:
-
+  
 
 
 Day 3:
