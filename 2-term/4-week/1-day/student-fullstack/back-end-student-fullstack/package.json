@@ -4,7 +4,8 @@
   "description": "Demo of Regly API",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon index.js"
   },
   "keywords": [
     "test",
