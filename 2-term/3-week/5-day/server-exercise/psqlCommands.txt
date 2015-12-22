@@ -1,0 +1,8 @@
+psql commands to set up databse:
+
+$ createdb llama_farm
+# create table llamas (
+  id serial,
+  name varchar not null,
+  image varchar not null
+);

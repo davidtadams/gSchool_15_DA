@@ -18,8 +18,8 @@ Look at the app.js file for route hints. Do not modify the file.
 
 ## Usage
 
-Simply clone and run `http-server`. To install run `npm install -g http-server`.
+Simply clone and run `http-server -p 3000`. To install run `npm install -g http-server`.
 
-Then create your server and run locally on port 8080.
+Then create your server (in a different directory) and run locally on port 8080.
 
 Good luck!
