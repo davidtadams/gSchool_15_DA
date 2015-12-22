@@ -6,7 +6,6 @@ $(function () {
         url: "http://localhost:8080/llamas/" + id,
         method: "DELETE",
       }).done(function (result) {
-        console.log('Loading file');
         load();
       })
       .fail(function (err) {
