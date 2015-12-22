@@ -6,8 +6,7 @@ Day 1:  Student Registration full stack app walkthrough - Kyle
     https://github.com/gSchool/CRUD_Practice_Examples
     https://github.com/gSchool/gBlog
 
-Day 2:
-  
-
+Day 2:  Warmup - Build a quick express CRUD API w/ 2 endpoints
+        Free coding for CRUD apps
 
 Day 3:
