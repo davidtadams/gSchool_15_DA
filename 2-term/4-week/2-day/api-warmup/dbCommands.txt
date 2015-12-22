@@ -1,0 +1,16 @@
+For dogs table
+
+create table dogs (
+  id serial primary key,
+  name varchar not null unique,
+  breed varchar not null,
+  age integer not null,
+  owner_id integer references humans(id) on delete cascade
+);
+
+For humans table
+create table humans (
+  id serial primary key,
+  name varchar not null,
+  location varchar default 'none'
+);
