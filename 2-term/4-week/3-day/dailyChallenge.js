@@ -2,23 +2,19 @@ function wordCloudify(quoteData) {
   var optimizedData = {}
 
   for (var person in quoteData) {
-    quoteData[person].forEach(function(phrase) {
-      phrase.split(' ').forEach(function(word) {
-        lowerCaseWord = word.toLowerCase()
-
-        if (!optimizedData[lowerCaseWord]) {
-          optimizedData[lowerCaseWord] = {
+    quoteData[person].join(' ').toLowerCase().split(' ').forEach(function(word) {
+        if (!optimizedData[word]) {
+          optimizedData[word] = {
             count: 0,
             people: []
           }
         }
 
-        if (optimizedData[lowerCaseWord].people.indexOf(person) < 0) {
-          optimizedData[lowerCaseWord].people.push(person)
+        if (optimizedData[word].people.indexOf(person) < 0) {
+          optimizedData[word].people.push(person)
         }
 
-        optimizedData[lowerCaseWord].count += 1
-      })
+        optimizedData[word].count += 1
     })
   }
 
