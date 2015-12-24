@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 Signup
+  form(action="/signup" method="POST")
+    label Name
+      input(type="text")
+    label Password
+      input(type="password")
+    label Confirm Password
+      input(type="password")      
+    input(type="submit" value="Signup")
+    
