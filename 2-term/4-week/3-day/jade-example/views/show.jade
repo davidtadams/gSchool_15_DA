@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  if student
+    h1 Hi #{student.first_name} #{student.last_name}
+    p Email: #{student.email}
+    p DOB: #{student.date_of_birth}
+    p
+      a(href="/edit/" + student.id) Edit
+  else
+    p No student
+  a(href="/enroll") Enroll new student

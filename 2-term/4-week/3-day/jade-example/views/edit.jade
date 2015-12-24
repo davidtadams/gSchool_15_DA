@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Edit a Student
+  form(action="/edit/" + student.id method="post")
+    label First Name
+      input(type="text" name="first_name" value=student.first_name)
+    label Last Name
+      input(type="text" name="last_name" value=student.last_name)
+    label Date of Birth
+      input(type="date" name="date_of_birth" value=student.date_of_birth)
+    label email
+      input(type="email" name="email" value=student.email)
+    input(type="submit" value="edit!")
+  form(action="/delete/" + student.id method="post")
+    input(type="submit" value="Remove")

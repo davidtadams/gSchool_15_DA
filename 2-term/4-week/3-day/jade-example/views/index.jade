@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 Students!
+  if students[0]
+    each student in students
+      p
+        a(href="/" + student.id)= student.first_name
+  else
+    p No students enrolled
+  a(href="/enroll") Enroll new student

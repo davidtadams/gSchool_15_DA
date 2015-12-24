@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Enroll a Student
+  form(action="/" method="post")
+    label First Name
+      input(type="text" name="first_name")
+    label Last Name
+      input(type="text" name="last_name")
+    label Date of Birth
+      input(type="date" name="date_of_birth")
+    label email
+      input(type="email" name="email")
+    input(type="submit" value="enroll!!")
