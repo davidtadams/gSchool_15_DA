@@ -25,6 +25,7 @@ At the very basic level, APIs are URL endpoints that return structured data. We'
 * [Public APIs](https://www.publicapis.com/)
 * [APIs.io](http://apis.io/)
 * [Programmable Web](http://www.programmableweb.com/)
+* [APIs.guru](https://github.com/APIs-guru/api-models)
 
 # Activity
 
