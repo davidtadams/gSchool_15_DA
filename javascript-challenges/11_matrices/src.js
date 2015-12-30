@@ -33,8 +33,65 @@
 
 module.exports = {
   twoByTwoIdentityMatrix: function() {
+    return [[1,0],[0,1]];
   },
 
   identityMatrix: function(n) {
+    var matrix = [];
+    for (var i = 0; i < n; i++) {
+      matrix.push([]);
+      for (var j = 0; j < n; j++) {
+        if (i === j) {
+          matrix[i][j] = 1;
+        } else {
+          matrix[i][j] = 0;
+        }
+      }
+    }
+    return matrix;
   },
+
+  matrixAddition: function(matrix1, matrix2) {
+    if ((matrix1.length != matrix2.length) ||
+        (matrix1[0].length != matrix2[0].length)) {
+      return 'error';
+    }
+
+    var additionMatrix = [];
+
+    for (var i = 0; i < matrix1.length; i++) {
+      additionMatrix.push([]);
+      for (var j = 0; j < matrix1.length; j++) {
+        additionMatrix[i][j] = matrix1[i][j] + matrix2[i][j];
+      }
+    }
+
+    return additionMatrix;
+  },
+
+  matrixSubtraction: function(matrix1, matrix2) {
+    if ((matrix1.length != matrix2.length) ||
+        (matrix1[0].length != matrix2[0].length)) {
+      return 'error';
+    }
+
+    var subtractionMatrix = [];
+
+    for (var i = 0; i < matrix1.length; i++) {
+      subtractionMatrix.push([]);
+      for (var j = 0; j < matrix1.length; j++) {
+        subtractionMatrix[i][j] = matrix1[i][j] - matrix2[i][j];
+      }
+    }
+
+    return subtractionMatrix;
+  },
+
+  matrixConstantMultiplication: function(num, matrix) {
+    return matrix.map(function(row) {
+      return row.map(function(element) {
+        return element * num;
+      });
+    });
+  }
 }
