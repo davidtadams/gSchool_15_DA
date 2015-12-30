@@ -4,7 +4,6 @@ describe("Person", function() {
   describe("eat", function() {
 
     it("returns the person, so it can be chained", function() {
-      pending();
       var person = new Person('vic', 5);
 
       person.eat();
