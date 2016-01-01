@@ -13,7 +13,8 @@ module.exports = {
 
   returnArray: function() {
     // your code here
-  }
+    return [1,2,3,4];
+  },
 
   /*
     def divide(numerator, denominator)
@@ -22,6 +23,9 @@ module.exports = {
   */
 
   // your code here for divide
+  divide: function(numerator, denominator) {
+    return numerator / denominator;
+  },
 
   /*
     def add(a,b)
@@ -30,6 +34,9 @@ module.exports = {
   */
 
   // your code here for add
+  add: function(a,b) {
+    return a + b;
+  },
 
   /*
     def power(base, exponent)
@@ -38,6 +45,9 @@ module.exports = {
   */
 
   // your code here for power
+  power: function(a,b) {
+    return Math.pow(a,b);
+  },
 
   /*
     def concatenate(string_1, string_2)
@@ -46,6 +56,9 @@ module.exports = {
   */
 
   // your code here for concatenate
+  concatenate: function(string1, string2) {
+    return string1 + string2;
+  },
 
   /*
     def sub(string, char, replacement)
@@ -54,4 +67,10 @@ module.exports = {
   */
 
   // your code here for sub
+  sub: function(str, char1, char2) {
+    var index = str.indexOf(char1);
+    var returnString = str.split("");
+    returnString[index] = char2;
+    return returnString.join("");
+  }
 }
