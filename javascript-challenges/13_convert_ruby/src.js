@@ -67,10 +67,7 @@ module.exports = {
   */
 
   // your code here for sub
-  sub: function(str, char1, char2) {
-    var index = str.indexOf(char1);
-    var returnString = str.split("");
-    returnString[index] = char2;
-    return returnString.join("");
+  sub: function(str, char, replacement) {
+    return str.replace(char, replacement);
   }
 }
