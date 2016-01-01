@@ -2,7 +2,6 @@ var yourCode = require('../src');
 
 describe('twoTimesTable', function() {
   it('returns a String representing the "times" tables for 2', function() {
-    pending();
     var expectedOutput = '   1 2\n' +
                          ' 1 1 2\n' +
                          ' 2 2 4';
@@ -13,7 +12,6 @@ describe('twoTimesTable', function() {
 
 describe('timesTable', function() {
   it('returns a string representing the "times" tables for the provided argument, correctly handling spacing', function(){
-    pending();
     var expectedOutput = '     1  2  3  4\n' +
                          '  1  1  2  3  4\n' +
                          '  2  2  4  6  8\n' +
