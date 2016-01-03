@@ -22,7 +22,6 @@ describe('roundRobin', function () {
   });
 
   it('returns round 2 for a 6-element array correctly', function () {
-    pending();
     var input = [1,2,3,4,5,6];
     var result = roundRobin(input);
 
@@ -36,7 +35,6 @@ describe('roundRobin', function () {
   });
 
   it('returns round 3 for a 6-element array correctly', function () {
-    pending();
     var input = [1,2,3,4,5,6];
     var result = roundRobin(input);
 
@@ -50,7 +48,6 @@ describe('roundRobin', function () {
   });
 
   it('returns round 4 for a 6-element array correctly', function () {
-    pending();
     var input = [1,2,3,4,5,6];
     var result = roundRobin(input);
 
@@ -64,7 +61,6 @@ describe('roundRobin', function () {
   });
 
   it('returns round 5 for a 6-element array correctly', function () {
-    pending();
     var input = [1,2,3,4,5,6];
     var result = roundRobin(input);
 
@@ -78,7 +74,6 @@ describe('roundRobin', function () {
   });
 
   it('returns undefined for round 6 of a 6-element array', function () {
-    pending();
     var input = [1,2,3,4,5,6];
     var result = roundRobin(input);
     expect(result[5]).toEqual(undefined);

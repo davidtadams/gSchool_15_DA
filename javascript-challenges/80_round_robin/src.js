@@ -29,4 +29,15 @@
 */
 
 module.exports = function (input) {
+  var result = [];
+
+  if (input.length === 0) {
+    return result;
+  }
+
+  for (var i = 0; i < input.length - 1; i++) {
+    result.push([]);
+    
+  }
+
 };
