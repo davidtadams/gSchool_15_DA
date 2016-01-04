@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+    each player in players
+      div
+        h3 #{player.last_name}, #{player.first_name}
+        p #{moment(moment(player.date_started).format('MM/DD/YYYY')).fromNow()}
+        p #{player.jersey_num} #{player.position}

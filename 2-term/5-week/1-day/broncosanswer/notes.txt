@@ -1,0 +1,24 @@
+Knex commands:
+
+$ knex init
+$ createdb broncos
+$ knex migrate:make create_players
+
+//create migration file, then run it
+$ knex migrate:latest
+
+make a 'db' folder to store file to connect to db
+touch file db/knex.js
+
+//create a seed file
+$ knex seed:make players_seed
+
+//run seed file
+knex seed:run
+
+psql broncos
+// view table that shows knex migration information
+TABLE knex_migrations;
+
+
+Deployment:
