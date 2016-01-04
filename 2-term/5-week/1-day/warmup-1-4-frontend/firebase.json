@@ -1,0 +1,9 @@
+{
+  "firebase": "warmup-1-4",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
