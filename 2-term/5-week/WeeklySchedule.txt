@@ -1,0 +1,16 @@
+Term 2
+Week 5 (week 12 overall)
+(week 11 was Christmas break)
+Schedule for what was covered each day.
+
+Day 1:  Warmup - create broncos crude app - Answer: CJ
+          Answer: https://github.com/gSchool/express-knex-broncos-players
+        Auth with Danny
+
+Day 2:
+
+Day 3:
+
+Day 4:
+
+Day 5:
