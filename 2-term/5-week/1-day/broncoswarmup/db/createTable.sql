@@ -1,0 +1,10 @@
+CREATE TABLE broncos (
+  id SERIAL PRIMARY KEY,
+  player_number INTEGER NOT NULL,
+  name VARCHAR NOT NULL,
+  position VARCHAR NOT NULL,
+  height VARCHAR NOT NULL,
+  weight INTEGER NOT NULL,
+  age INTEGER NOT NULL,
+  college VARCHAR DEFAULT 'None'
+);

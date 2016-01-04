@@ -1,0 +1,149 @@
+Warmup for the day:
+
+Make a very simple CRUD app - QUICKLY
+
+Broncos
+  - 5 properties
+  - 10 records
+
+Connect DB to Express
+
+Render to HTML
+  Server side templating or AJAX
+
+Deploy it
+  Heroku
+
+
+Make a database using PSQL and then connect that DB to an Express APP
+that displays a formatted list and then deploy the app
+
+
+----------- My notes on working on this ---------
+Database
+
+$ psql
+# \i db/createTable.sql
+# \i db/seedTable.sql
+
+create table broncos (
+  id serial primary key,
+  number integer not null,
+  name varchar not null,
+  position varchar not null,
+  height varchar not null,
+  weight integer not null,
+  age integer not null,
+  college varchar default 'None'
+);
+
+Seed database
+insert into broncos values (
+  default,
+  22,
+  'C.J. Anderson',
+  'RB',
+  '5-8',
+  224,
+  24,
+  'California'
+);
+
+insert into broncos values (
+  default,
+  80,
+  'Vernon Davis',
+  'TE',
+  '6-3',
+  250,
+  31,
+  'Maryland'
+);
+
+insert into broncos values (
+  default,
+  23,
+  'Ronnie Hillman',
+  'RB',
+  '5-10',
+  195,
+  24,
+  'San Diego State'
+);
+
+insert into broncos values (
+  default,
+  18,
+  'Peyton Manning',
+  'QB',
+  '6-5',
+  230,
+  39,
+  'Tennessee'
+);
+
+insert into broncos values (
+  default,
+  54,
+  'Brandon Marshall',
+  'ILB',
+  '6-1',
+  250,
+  26,
+  'Nevada'
+);
+
+insert into broncos values (
+  default,
+  17,
+  'Brock Osweiler',
+  'QB',
+  '6-7',
+  240,
+  25,
+  'Arizona State'
+);
+
+insert into broncos values (
+  default,
+  90,
+  'Antonio Smith',
+  'DE',
+  '6-3',
+  290,
+  34,
+  'Oklahoma State'
+);
+
+insert into broncos values (
+  default,
+  94,
+  'DeMarcus Ware',
+  'OLB',
+  '6-4',
+  258,
+  33,
+  'Troy'
+);
+
+insert into broncos values (
+  default,
+  88,
+  'Demaryius Thomas',
+  'WR',
+  '6-3',
+  229,
+  28,
+  'Georgia Tech'
+);
+
+insert into broncos values (
+  default,
+  52,
+  'Corey Nelson',
+  'ILB',
+  '6-1',
+  226,
+  23,
+  'Oklahoma'
+);
