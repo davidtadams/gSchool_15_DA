@@ -20,5 +20,7 @@ psql broncos
 // view table that shows knex migration information
 TABLE knex_migrations;
 
-
-Deployment:
+Deployment to Heroku:
+$ heroku create [name of app]
+$ git push heroku master
+https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app
