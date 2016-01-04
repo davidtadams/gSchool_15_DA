@@ -30,14 +30,49 @@
 
 module.exports = function (input) {
   var result = [];
+  var firstSplit = [];
+  var secondSplit = [];
+  var i,j = 0;
 
+  //make sure input array is not empty
   if (input.length === 0) {
     return result;
   }
 
-  for (var i = 0; i < input.length - 1; i++) {
-    result.push([]);
-    
+  //check if input array has odd number of elements
+  if (input.length % 2 != 0) {
+    input.push('(none)');
   }
 
+  //initialize first and second split arrays
+  firstSplit = input.slice(0, input.length / 2);
+  secondSplit = input.slice(input.length / 2).reverse();
+
+  //add round 1 to result array
+  result.push([]);
+  for (j = 0; j < firstSplit.length; j++) {
+    result[0].push([ firstSplit[j], secondSplit[j] ]);
+  }
+
+  //rotate array for rounds 2 through 4 and add results to result array
+  for (i = 1; i < input.length - 1; i++) {
+    //push the last element of first array onto end of second array
+    secondSplit.push(firstSplit.slice(-1)[0]);
+
+    //rotate elements in first array down except for first 2
+    for (j = firstSplit.length - 1; j > 1; j--) {
+      firstSplit[j] = firstSplit[j - 1];
+    }
+
+    //remove first element in second array and place in index 1 for first array
+    firstSplit[1] = secondSplit.shift();
+
+    //add new pairs
+    result.push([]);
+    for (j = 0; j < firstSplit.length; j++) {
+      result[i].push([ firstSplit[j], secondSplit[j] ]);
+    }
+  }
+
+  return result;
 };

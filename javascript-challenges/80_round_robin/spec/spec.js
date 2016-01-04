@@ -80,7 +80,6 @@ describe('roundRobin', function () {
   });
 
   it('adds the string "(none)" if there are an odd number of teams', function () {
-    pending();
     var input = [1,2,3,4,5];
     var result = roundRobin(input);
 
@@ -116,7 +115,6 @@ describe('roundRobin', function () {
   });
 
   it('returns rounds for 8 correctly', function () {
-    pending();
     var input = [1,2,3,4,5,6,7,8];
     var result = roundRobin(input);
 
