@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .page-header
+    if user
+      h1 Hello #{user.email}
+    h2 Welcome to the Broncos Players List
+    if !user
+      p 
+        | Please
+        | <a href="/auth/signup">Signup</a>
+        | or
+        | <a href="/auth/login">Login</a>
+        | to view the Players List

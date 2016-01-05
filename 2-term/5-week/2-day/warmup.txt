@@ -1,0 +1,9 @@
+The warmup for the day is to add authentication to the app from yesterday
+with the Broncos players
+
+Broncos CRUD app Auth:
+
+/players is viewable by everyone
+/players/new is viewable by only authed users
+create routes for login, register, logout
+passport recommended, but not required

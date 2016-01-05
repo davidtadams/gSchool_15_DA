@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1.alert.alert-danger(role="alert")= message
+  if error
+    h2= error.status
+    pre #{error.stack}

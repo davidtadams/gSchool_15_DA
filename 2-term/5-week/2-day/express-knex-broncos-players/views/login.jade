@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  if error
+    .alert.alert-danger(role="alert")= error
+  .page-header
+    h1 Login
+  form(action="/auth/login",method="POST")
+    .form-group
+      label(for="email") Email
+      input.form-control(type="email",placeholder="Email",name="email")
+    .form-group
+      label(for="password") Password
+      input.form-control(type="password",name="password")
+    button.btn.btn-success(type="submit") Login
+            

@@ -1,0 +1,8 @@
+extends layout
+include player_partial.jade
+
+block content
+  .page-header
+    h1 #{player.first_name} #{player.last_name}    
+  .row
+    +player_template(player)

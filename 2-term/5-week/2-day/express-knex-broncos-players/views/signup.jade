@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .page-header
+    h1 Signup
+  form(action="/auth/signup",method="POST")
+    .form-group
+      label(for="email") Email
+      input.form-control(type="email",placeholder="Email",name="email")
+    .form-group
+      label(for="password") Password
+      input.form-control(type="password",name="password")
+    button.btn.btn-success(type="submit") Signup
+            

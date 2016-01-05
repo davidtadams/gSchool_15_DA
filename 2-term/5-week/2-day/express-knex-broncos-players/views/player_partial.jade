@@ -1,0 +1,10 @@
+mixin player_template(player)
+  .thumbnail
+    a(href="/players/#{player.id}")
+      img(src='http://store51.com/pics/nflbroncos_tmhelmet_600g.jpg', alt='#{player.first_name}')
+      |       
+    .caption
+      h3 #{player.last_name}, #{player.first_name}   
+        span.badge #{player.jersey_number}
+      h4 #{player.position}
+      p Joined the broncos #{moment(player.date_started).fromNow()}
