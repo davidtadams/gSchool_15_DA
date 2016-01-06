@@ -7,3 +7,8 @@ Broncos CRUD app Auth:
 /players/new is viewable by only authed users
 create routes for login, register, logout
 passport recommended, but not required
+
+https://github.com/gSchool/express-knex-broncos-players
+
+watch this:
+https://www.youtube.com/watch?v=twav6O53zIQ

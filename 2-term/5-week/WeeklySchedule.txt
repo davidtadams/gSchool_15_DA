@@ -7,7 +7,12 @@ Day 1:  Warmup - create broncos crude app - Answer: CJ
           Answer: https://github.com/gSchool/express-knex-broncos-players
         Auth with Danny
 
-Day 2:
+Day 2:  Warmup - add authentication to broncos app - Answer: CJ
+          https://github.com/gSchool/express-knex-broncos-players
+          go to branch 'passport'
+        Heroku - Kyle
+        Oauth and Social authentiation
+        Linkedin oAuth authentication
 
 Day 3:
 

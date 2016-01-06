@@ -1,0 +1,7 @@
+Heroku brief overview - Kyle
+
+Dyno
+  number of simultaneous requests that your app can yield
+
+add a database
+  search for add-ons and find the database plugin that you want
