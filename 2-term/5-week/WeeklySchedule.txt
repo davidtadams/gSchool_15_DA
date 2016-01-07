@@ -14,8 +14,11 @@ Day 2:  Warmup - add authentication to broncos app - Answer: CJ
         Oauth and Social authentiation
         Linkedin oAuth authentication
 
-Day 3:
+Day 3:  Rally tour in the morning
+        Git rebasing - Kyle
 
-Day 4:
+Day 4:  Warmup - create a simple social authentication app
+          Using google for the social auth
+        Meet with Teams about group project
 
 Day 5:
