@@ -1,0 +1,21 @@
+Rebasing - Kyle
+
+git topic
+how to pull in new work that is happening if you are working on a branch
+it allows you to use branches and then have your commit history cleaner because
+  it doesn't have merge commits
+the ability to manipulate history to make it look like everything was done in order
+  even though it didn't happen in order
+rebasing danger
+  Golden rule: DON'T CHANGE HISTORY ON SOMETHING THAT IS PUBLIC!!
+
+Squashing
+  If you have numerous commits that are all related, you can squash them into
+    one commit
+
+$ git rebase -i to-be-squashed~3
+
+~3 means to squash the last three commits in the branch
+
+git push -f origin master
+to a push force
