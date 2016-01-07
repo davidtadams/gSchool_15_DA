@@ -1,6 +1,9 @@
 extends layout
 
 block content
-  h1 Welcome to The App
-  p you are this username and you are logged in
+  h1 Welcome #{profile.displayName}
+  p You are logged in!
+  div
+    img(src="#{profile.profilePhoto}")
+  p Log out below
   a(href='auth/logout') Logout
