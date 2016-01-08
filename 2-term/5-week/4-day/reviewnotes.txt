@@ -1,0 +1,30 @@
+sudo su -
+goes to root user
+
+chaining
+;
+
+absolute vs relative css positioning
+
+find example of using media query
+
+find example of responsive app
+
+find example of content inventory and wireframe
+
+transaction
+  database transaction and rollback if a step fails
+  transaction is a step
+
+formal definition of 3rd normal form
+no repeating rows
+no transitive dependencies
+no partial dependencies
+
+every property on the table should be dependent only on the primary key
+
+referential integrity
+  a foreign key has to exist and the primary key
+  foreign key constraint enforces referential integrity
+
+
