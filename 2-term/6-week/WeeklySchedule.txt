@@ -1,0 +1,8 @@
+Term 2
+Week 6 (week 13 overall)
+Schedule for what was covered each day.
+
+PROJECT WEEK
+
+Day2: CJ - decoupled auth breakout
+  https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt

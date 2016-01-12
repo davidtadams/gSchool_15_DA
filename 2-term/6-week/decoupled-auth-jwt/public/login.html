@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Login</h1>
+    </div>
+    <div class="container">
+      <div class="alert alert-danger" role="alert" id="error" style="display:none"></div>
+      <form class="form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" name="email" value="" id="email">
+        </div>
+        <div class="form-group">
+          <label for="email">Password</label>
+          <input type="password" class="form-control" name="password" value="" id="password">
+        </div>
+        <a class="btn btn-primary" href="#" name="button" id="login">Log In</a>
+        <a class="btn btn-warning" href="#" name="button" id="google">Log In With Google</a>
+      </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      showError();
+      $('#google').attr('href', getAPIHost() + '/auth/google');
+      $('#login').click(function(){
+        $.post(getAPIHost() + '/auth/login', {
+          email: $('#email').val(),
+          password: $('#password').val()
+        }).done(function(result) {
+          console.log(result);
+          localStorage.token = result.token;
+          window.location = '/loggedin.html?userID=' + getUser().id;
+        }).fail(function(error) {
+          console.log(error);
+          showError(error.responseJSON.message || error.responseJSON.error);
+        });
+      });
+    </script>
+  </body>
+</html>
