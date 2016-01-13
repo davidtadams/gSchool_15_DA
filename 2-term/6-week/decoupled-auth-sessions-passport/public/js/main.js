@@ -4,6 +4,21 @@ $.ajaxSetup({
   }
 });
 
+function setup(type) {
+  $('#' + type).click(function(){
+    $.post(getAPIHost() + '/auth/' + type, {
+      email: $('#email').val(),
+      password: $('#password').val()
+    }).done(function(result) {
+      console.log(result);
+      window.location = '/loggedin.html?userID=' + result.id;
+    }).fail(function(error) {
+      console.log(error);
+      showError(error.responseJSON.message || error.responseJSON.error);
+    });
+  });
+}
+
 function getAPIHost() {
   if(window.location.hostname == 'localhost') {
     return "http://localhost:3000";

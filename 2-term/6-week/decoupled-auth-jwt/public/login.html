@@ -45,19 +45,7 @@
     <script type="text/javascript">
       showError();
       $('#google').attr('href', getAPIHost() + '/auth/google');
-      $('#login').click(function(){
-        $.post(getAPIHost() + '/auth/login', {
-          email: $('#email').val(),
-          password: $('#password').val()
-        }).done(function(result) {
-          console.log(result);
-          localStorage.token = result.token;
-          window.location = '/loggedin.html?userID=' + getUser().id;
-        }).fail(function(error) {
-          console.log(error);
-          showError(error.responseJSON.message || error.responseJSON.error);
-        });
-      });
+      setup('login');
     </script>
   </body>
 </html>

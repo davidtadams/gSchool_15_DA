@@ -43,17 +43,7 @@
     <script src="js/main.js" charset="utf-8"></script>
     <script type="text/javascript">
       showError();
-      $('#signup').click(function(){
-        $.post(getAPIHost() + '/auth/signup', {
-          email: $('#email').val(),
-          password: $('#password').val()
-        }).done(function(result) {
-          window.location = '/login.html';
-        }).fail(function(error) {
-          console.log(error);
-          showError(error.responseJSON.message);
-        });
-      });
+      setup('signup');
     </script>
   </body>
 </html>

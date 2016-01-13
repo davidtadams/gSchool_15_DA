@@ -18,16 +18,17 @@ passport.use(new LocalStrategy({
     usernameField: 'email'
   }, function(email, password, done) {
     console.log('Logging in...')
-    Users().where('email',email).first()
-    .then(function(user){
-      if(user && bcrypt.compareSync(password, user.password)) {
+    findUserByEmail(email).then(function(user){
+      if(user && user.password !== null &&  bcrypt.compareSync(password, user.password)) {
         return done(null, user);
+      } else if (user && user.password == null){
+        return done(new Error('Please login with Google'));
       } else {
-        return done(null, false, 'Invalid Email or Password');
+        return done(new Error('Invalid Email or Password'));
       }
-    }).catch(function(error){
-      return done(error);
-    });
+    }).catch(function(err){
+      return done(err);
+    })
 }));
 
 passport.use(new GoogleStrategy({
@@ -42,14 +43,15 @@ passport.use(new GoogleStrategy({
       console.log(user);
       done(null, user);
     }).catch(function(err) {
-      if(err == 'User not found.') {
+      if(err.notFound) {
         console.log('Creating User...');
-        createUser(email).then(function(id) {
-          return id;
-        }).then(function(id){
-          return findUserByID(id);
-        }).then(function(user){
+        createUser({
+          email: email,
+          google: true
+        }).then(function(user) {
           done(null, user);
+        }).catch(function(err){
+          done(err);
         });
       } else {
         console.log('Error...');
@@ -79,12 +81,13 @@ passport.deserializeUser(function(id, done) {
 
 
 function findUserByID(id) {
+  console.log('find user by id', id)
   return Users().where('id', id).first()
   .then(function(user){
       if(user) {
         return user;
       } else {
-        return Promise.reject('User not found.');
+        return Promise.reject({notFound:true});
       }
   }).catch(function(err){
     return Promise.reject(err);
@@ -96,23 +99,31 @@ function findUserByEmail(email) {
     if(user) {
       return user;
     } else {
-      return Promise.reject('User not found.');
+      return Promise.reject({notFound:true});
     }
   }).catch(function(err) {
     return Promise.reject(err);
   });
 }
 
-function createUser(email, password) {
-  if(!validator.isEmail(email)) return Promise.reject('Invalid email');
-  if(password == '') return Promise.reject('Password cannot be blank');
+function validPassword(p) {
+  return typeof p !== 'undefined' && p !== null && typeof p == 'string' &&  p.trim() !== '';
+}
 
-  var hash = !password ? null : bcrypt.hashSync(password, 8);
-  return Users().insert({
-    email: email,
-    password: hash
-  }, 'id').then(function(id) {
-    return id[0];
+function createUser(user) {
+  if(!validator.isEmail(user.email)) return Promise.reject('Invalid email');
+  if(user.google) {
+    user = {email:user.email,password:null};
+  } else {
+    if(!validPassword(user.password)) return Promise.reject('Password cannot be blank');
+
+    var hash = bcrypt.hashSync(user.password, 8);
+    user = {email:user.email,password:hash};
+  }
+
+  return Users().insert(user, 'id').then(function(id) {
+    user.id = id[0];
+    return user;
   }).catch(function(err) {
     return Promise.reject(err);
   });
@@ -122,9 +133,15 @@ router.post('/signup', function(req, res, next) {
   findUserByEmail(req.body.email).then(function(user){
       next(new Error('Email is in use'));
   }).catch(function(err){
-    if(err == 'User not found.') {
-      createUser(req.body.email, req.body.password).then(function(id){
-        res.json({id: id})
+    if(err.notFound) {
+      createUser({
+        email: req.body.email,
+        password: req.body.password
+      }).then(function(user){
+        req.login(user, function(err){
+          if(err) return next(err);
+          res.json({id: user.id})
+        });
       }).catch(function(err){
         next(err);
       });;
