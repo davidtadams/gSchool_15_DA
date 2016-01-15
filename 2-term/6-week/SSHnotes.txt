@@ -1,0 +1,9 @@
+Danny - Lecture on SSH
+
+run an SSH server on your macbook
+turn it on
+$ ssh localhost
+
+remote connect to computers
+
+SSH keys

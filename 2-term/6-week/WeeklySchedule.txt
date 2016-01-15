@@ -6,3 +6,6 @@ PROJECT WEEK
 
 Day2: CJ - decoupled auth breakout
   https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt
+
+Day 5: Guest Speaker - MIke Howard
+
