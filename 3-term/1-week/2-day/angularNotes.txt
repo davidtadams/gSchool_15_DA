@@ -1,0 +1,15 @@
+Notes for angular lecture with CJ
+
+angular is not technically MVC it is MVVM
+Model View View Model
+it has MVC elements though
+
+Angular allows you to build single page web applications
+SPA - single page application
+
+Angular curriculum repo
+https://github.com/gSchool/angular-curriculum
+
+Notes from lecture:
+https://gist.github.com/w3cj/d0ec54bffc60c8153d99
+
