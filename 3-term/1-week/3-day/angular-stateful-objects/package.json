@@ -1,0 +1,21 @@
+{
+  "name": "angular-stateful-objects",
+  "version": "1.0.0",
+  "description": "## Setup",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -c-1 -o",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/angular-stateful-objects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/angular-stateful-objects/issues"
+  },
+  "homepage": "https://github.com/gSchool/angular-stateful-objects#readme"
+}

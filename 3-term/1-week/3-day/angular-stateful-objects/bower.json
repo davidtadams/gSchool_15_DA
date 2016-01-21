@@ -1,0 +1,23 @@
+{
+  "name": "angular-stateful-objects",
+  "version": "0.0.0",
+  "authors": [
+    "Jeff Dean <jeff@galvanize.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "https://github.com/gSchool/angular-stateful-objects",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}

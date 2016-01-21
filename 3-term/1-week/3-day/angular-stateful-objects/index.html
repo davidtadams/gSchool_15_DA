@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular State Demo</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="page-header">
+          <h1>Car Wash</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Intake Form</h2>
+          <form>
+            <div class="form-group">
+              <input class="form-control" placeholder="License Plate">
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Owner's Name">
+            </div>
+            <div class="form-group">
+              <select class="form-control">
+                <option>Enter a Type</option>
+                <option value="exterior">Exterior Only</option>
+                <option value="interior-exterior">Interior / Exterior</option>
+                <option value="deluxe">Deluxe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn primary">
+                Start Washing
+                <i class="glyphicon glyphicon-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <h2>Washing...</h2>
+          <form>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Plate #: </strong> [some plate here]
+              </p>
+            </div>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Owner Name: </strong> [some name here]
+              </p>
+            </div>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Type: </strong> [type here]
+              </p>
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Washed by...">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn primary">
+                Send to Polish
+                <i class="glyphicon glyphicon-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <div class="jumbotron">
+            <p class="lead">Nothing is being washed right now</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2>Polishing...</h2>
+          <form>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Plate #: </strong> [some plate here]
+              </p>
+            </div>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Owner Name: </strong> [some name here]
+              </p>
+            </div>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Type: </strong> [type here]
+              </p>
+            </div>
+            <div class="form-group">
+              <p class="form-control-static">
+                <strong>Washed by: </strong> [type name here]
+              </p>
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Polished by...">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn primary">
+                <i class="glyphicon glyphicon-check"></i>
+                Mark Complete
+              </button>
+            </div>
+          </form>
+          <div class="jumbotron">
+            <p class="lead">Nothing is being polished right now</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h2>History</h2>
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <tr>
+              <th>License Plate</th>
+              <th>Owner Name</th>
+              <th>Type</th>
+              <th>Washed by</th>
+              <th>Polished by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="jumbotron">
+          <p class="lead">You have not washed any cars</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
