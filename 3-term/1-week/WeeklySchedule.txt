@@ -7,6 +7,9 @@ Day 1: Assessment
 
 Day 2: Assessment Coverage / Angular - CJ
 
+Angular Curriculm:
+https://github.com/gSchool/angular-curriculum
+
 Day 3: Angular Curriculum
 
 Day 4:
