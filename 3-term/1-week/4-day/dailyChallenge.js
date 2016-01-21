@@ -8,7 +8,7 @@ fs.readFile('./books.json', 'utf8', (error, json) => {
   var books = JSON.parse(json).data
   var newJSON = JSON.stringify({data: formatJSON(books)}, null, 2);
 
-  fs.writeFile('./newBooks.json', newJSON, (error) => {
+  fs.writeFile('./prettyBooks.json', newJSON, (error) => {
     if (error) {
       console.log(error)
     }
