@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GOTchars">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GOT Characters</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css" media="screen">
+    <link rel="stylesheet" href="./app.css" media="screen">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.js"></script>
+    <script type="text/javascript" src="./data.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+  </head>
+  <body ng-controller="GOTController">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-tower"></span> GOT Characters</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li ng-click="toggleNewPost()"><a href="#">Submit Post</a></li>
+            <li><input ng-model="view.searchText" type="text" placeholder="Search" class="form-control search-box"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort By: <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li ng-repeat="option in sortOptions"><a ng-click="setSortSelected(option.selector)" href="#">{{option.name}}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Creat post form -->
+    <div ng-show="view.showNewPost" class="container">
+      <div class="row col-sm-offset-3 col-sm-6">
+        <form ng-submit="createNewPost(newPost)" class="newPostForm">
+          <div class="form-group">
+            <label for="postTitle">Character name</label>
+            <input ng-model="newPost.title" type="text" id="postTitle" class="form-control" name="postTitle" placeholder="Enter a character's name" required>
+          </div>
+          <div class="form-group">
+            <label for="postAuthor">Author</label>
+            <input ng-model="newPost.author" type="text" id="postAuthor" class="form-control" name="postAuthor" placeholder="Enter an author for the post" required>
+          </div>
+          <div class="form-group">
+            <label for="postURL">Character Image URL</label>
+            <input ng-model="newPost.image_url" type="text" id="postURL" class="form-control" name="postURL" placeholder="Enter a valid URL for the character" required>
+          </div>
+          <div class="form-group">
+            <label for="postDesc">Character Description</label>
+            <textarea ng-model="newPost.description" class="form-control" name="name" id="postDesc" rows="4" placeholder="Enter a description" required></textarea>
+          </div>
+          <input type="submit" class="btn btn-success" name="submit" value="Add New Post">
+        </form>
+      </div>
+    </div>
+
+    <!-- Begin Posts -->
+    <div class="container">
+
+      <!-- Post layout -->
+      <div ng-repeat="post in view.posts | orderBy:view.sortby | filter:view.searchText" class="row panel">
+        <div class="col-sm-12 post-section">
+          <div class="col-sm-3">
+            <img class="img-responsive" ng-src="{{post.image_url}}"/>
+          </div>
+          <div class="col-sm-8 character-info">
+            <div class="character-header">
+              <p class="pull-right">By {{post.author}}</p>
+              <h3>{{post.title}}
+                <span class="glyphicon glyphicon-option-vertical"></span>
+                <span ng-click="upVote(post)" class="glyphicon glyphicon-arrow-up"></span>
+                <span ng-click="downVote(post)" class="glyphicon glyphicon-arrow-down"></span>
+                <span ng-class="{'positive':post.upvotes > 0, 'neutral':post.upvotes == 0, 'negative':post.upvotes < 0}">{{post.upvotes}}</span>
+              </h3>
+            </div>
+            <div class="character-body">
+              <p>{{post.description}}</p>
+            </div>
+            <div class="character-footer">
+              <span class="glyphicon glyphicon-calendar"></span>
+              <span>{{ post.date_created }}</span>
+              <span class="glyphicon glyphicon-option-vertical"></span>
+              <span ng-click="toggleComments(post)" class="glyphicon glyphicon-comment"></span>
+              <span ng-click="toggleComments(post)" class="">{{post.comments.length}}
+                <ng-pluralize count="post.comments.length" when="{'1': 'comment', 'other': 'comments'}"></ng-pluralize>
+              </span>
+              <span class="glyphicon glyphicon-option-vertical"></span>
+              <span ng-click="toggleNewComment(post)" class="glyphicon glyphicon-pencil"></span>
+              <span ng-click="toggleNewComment(post)" class="">Add Comment</span>
+            </div>
+          </div>
+        </div>
+        <div ng-show="post.showComments" class="character-comments row col-sm-4 col-sm-offset-5">
+          <p ng-show="post.comments.length == 0">No comments yet!</p>
+          <p ng-repeat="comment in post.comments"><strong>{{comment.author}}</strong> - {{comment.text}}</p>
+        </div>
+        <div ng-show="post.showNewComment" class="character-newcomment row col-sm-9 col-sm-offset-3">
+          <form class="form-inline" ng-submit="addNewComment(post, newComment)">
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" placeholder="Add author" class="form-control" ng-model="newComment.author">
+            </div>
+            <div class="form-group">
+              <label for="commentText">Text</label>
+              <input type="text" id="commentText" placeholder="Add your comment" class="form-control" ng-model="newComment.text">
+            </div>
+            <input class="btn btn-success" type="submit" value="Add New Comment">
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
