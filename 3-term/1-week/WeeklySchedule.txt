@@ -15,3 +15,4 @@ Day 3: Angular Curriculum
 Day 4: Angular Curriculum
 
 Day 5: Guest Speaker - Steve
+  did project for steve
