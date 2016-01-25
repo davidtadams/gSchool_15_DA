@@ -1,0 +1,17 @@
+<form action="javascript:void(0)" ng-submit="calculate(calculation,data.first,data.second)">
+  Operation: <select ng-model="calculation" >
+    <option ng-repeat="operation in operations" value="{{operation}}">{{operation}}</option>
+  </select>
+
+  <div>
+    <label for="first">First:</label>
+    <input type="number" ng-model="data.first" name="first" id="first">
+  </div>
+
+  <div>
+    <label for="second">Second:</label>
+    <input type="number" ng-model="data.second" name="second" id="second">
+  </div>
+  <input type="submit" value="Calculate!">
+</form>
+<h2>The value is: {{value}}</h2>

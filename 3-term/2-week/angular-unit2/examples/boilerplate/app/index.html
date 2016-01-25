@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Boilerplate</title>
+  <!-- styles -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./css/main.css" rel="stylesheet" media="screen">
+</head>
+  <body>
+    <div class="container">
+      <div ng-controller="myController" ng-model="initialText">
+        <h1>Say something</h1>
+        <br>
+        <input type="text" ng-model="greeting"></p>
+        <p>{{ greeting }}</p>
+      <!-- add content here -->
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+    <script src="./js/controllers.js" type="text/javascript"></script>
+    <script src="./js/directives.js" type="text/javascript"></script>
+    <script src="./js/filters.js" type="text/javascript"></script>
+    <script src="./js/services.js" type="text/javascript"></script>
+  </body>
+</html>
