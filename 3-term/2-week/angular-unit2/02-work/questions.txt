@@ -1,0 +1,18 @@
+What is the difference between $scope.digest and $scope.apply
+  - When you call $scope.digest it only runs the digest loop from that particular scope, but when you call $apply, that uses the $rootScope and goes through all scopes in the application.
+  - If you have many watches and scopes, and you know that you only need to modify a single scope it is best to use $digest, otherwise use $apply.
+
+The digest loop is what runs after the $apply function brings a callback into the angular context.
+
+Dirty Checking
+  Dirty Checking is a process to check if the value of an expression/variable has changed. Dirty Checking simply compares an old value with a new one to see if it has changed.
+
+Resources:
+  http://stackoverflow.com/questions/9682092/how-does-data-binding-work-in-angularjs/9693933#9693933
+  https://docs.angularjs.org/guide/scope#scope-life-cycle
+
+Answer the following questions
+  What is the difference between $scope.apply and $scope.digest?
+  What is the digest cycle?
+  What is the scope life cycle? (this will require some additional reading)
+  What does "bootstrapping an angular app" mean?
