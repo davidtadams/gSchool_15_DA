@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filterApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>Filters!</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./filters.js"></script>
+  </head>
+  <body >
+    <h1>Kebab filter test</h1>
+    <p>Should say: hello-class</p>
+    <p>{{"hello_class" | kebab}}</p>
+    <br>
+    <p>Shouldn't break when receiving a number</p>
+    <p>{{112 | kebab}}</p>
+    <br>
+    <h1>Redact filter test</h1>
+    <p>Should say: "My dog REDACTED is adorable"</p>
+    <p>{{"My dog Rusty is adorable, his name is Rusty" | redact: "Rusty"}}</p>
+  </body>
+</html>
