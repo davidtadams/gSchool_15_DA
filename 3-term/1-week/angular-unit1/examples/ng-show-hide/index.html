@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>ngShow + ngHide Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>ngShow + ngHide Example</h1>
+        <br>
+        <div ng-controller="MainController">
+            <h2>{{ val }}</h2>
+            <button type="button" class="btn btn-default" ng-click="increment()">Increment</button>
+            <h2 ng-show="isEven">even</h2>
+            <h2 ng-hide="isEven">odd</h2>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

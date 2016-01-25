@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Binding Warmup</title>
+    <!-- step one, add angular to our scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    
+    <!-- step two, delete ALL that javascript, and make a simple app with a simple controller -->
+    <script type="text/javascript">
+      var app = angular.module('pizzaApp', []);
+
+      app.controller('PizzaController', function($scope) {
+        $scope.pizzaSize = 'large';
+        $scope.pizzaCrust = 'chicago style';
+      });
+    </script>
+  </head>
+  <!-- step three, add the pizza directives -->
+  <body ng-app="pizzaApp" ng-controller="PizzaController">
+    <fieldset>
+      <!-- step 4, add ng-model and templating expressions -->
+      <legend>Pizza Size</legend>
+      <p>
+        <label for="pizza-size">What size would you like your pizza?</label>
+        <input type="text" id="pizza-size" name="size" ng-model="pizzaSize">
+      </p>
+      <p>
+        <strong>Size: </strong>
+        <span>{{pizzaSize}}</span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Crust</legend>
+      <p>
+        <label for="pizza-crust">What crust would you like your pizza?</label>
+        <input type="text" id="pizza-crust" name="size" ng-model="pizzaCrust">
+      </p>
+      <p>
+        <strong>Crust: </strong>
+        <span>{{pizzaCrust}}</span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Pizza Size</legend>
+      <p>
+        <label for="pizza-size">What size would you like your pizza?</label>
+        <input type="text" id="pizza-size" name="size" ng-model="pizzaSize">
+      </p>
+      <p>
+        <strong>Size: </strong>
+        <span>{{pizzaSize}}</span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Crust</legend>
+      <p>
+        <label for="pizza-crust">What crust would you like your pizza?</label>
+        <input type="text" id="pizza-crust" name="size" ng-model="pizzaCrust">
+      </p>
+      <p>
+        <strong>Crust: </strong>
+        <span>{{pizzaCrust}}</span>
+      </p>
+    </fieldset>
+  </body>
+</html>

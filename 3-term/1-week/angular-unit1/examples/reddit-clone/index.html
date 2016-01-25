@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="reddit">
+<head>
+  <meta charset="UTF-8">
+  <title>Reddit Clone</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./app.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+  <script src="./app.js"></script> 
+</head>
+<body ng-controller="RedditController">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Reddit Clone</a>
+    <ul class="nav navbar-nav">
+      <li><a href="javascript:void(0)" ng-click="toggleNewPostVisibility()"><span class="glyphicon glyphicon-plus"></span>Submit Post</a></li>
+      <li class="navbar-form">
+        <div class="form-inline">
+          <input type="text" placeholder="search" class="form-control" ng-model="view.searchText">
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span>Sort by {{ view.currentSort }}</span> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li ng-repeat="field in view.sortableFields"><a href="#" ng-click="setOrderVal(field)">Sort by {{ field }}</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <!-- NEW FORM  -->
+  <form name="postForm" ng-submit="addPost(newPost)" ng-show="view.newPostVisible" class="newForm">
+    <div class="form-group" ng-class="{'has-error': checkForError(postForm.title), 'has-success': postForm.title.$valid }">
+      <label for="title" ng-class="{'text-danger': checkForError(postForm.title), 'text-success': postForm.title.$valid }">Title</label>
+      <input type="text" class="form-control" name="title" placeholder="Title" ng-model="newPost.title" required>
+      <p ng-show="checkForError(postForm.title)" class="help-block">Hey! Where's your title?</p>
+    </div>
+    <div class="form-group" ng-class="{'has-error': checkForError(postForm.author), 'has-success': postForm.author.$valid }">
+      <label for="author" ng-class="{'text-danger': checkForError(postForm.author), 'text-success': postForm.author.$valid }">Author</label>
+      <input type="text" class="form-control" name="author" placeholder="Author" ng-model="newPost.author" required>
+      <p ng-show="checkForError(postForm.author)" class="help-block">Hey! Who are you?</p>
+    </div>
+    <div class="form-group" ng-class="{'has-error': checkForError(postForm.image), 'has-success': postForm.image.$valid }">
+      <label for="image" ng-class="{'text-danger': checkForError(postForm.image), 'text-success': postForm.image.$valid }">Image URL</label>
+      <input type="text" class="form-control" name="image" placeholder="Image URL" ng-model="newPost.image" required>
+      <p ng-show="checkForError(postForm.image)" class="help-block">Hey! Where's your image?</p>
+    </div>
+    <div class="form-group" ng-class="{'has-error': checkForError(postForm.description), 'has-success': postForm.description.$valid }">
+      <label for="description" ng-class="{'text-danger': checkForError(postForm.description), 'text-success': postForm.description.$valid }">Description</label>
+      <input type="text" class="form-control" name="description" placeholder="Description" ng-model="newPost.description" required>
+      <p ng-show="checkForError(postForm.description)" class="help-block">Hey! What are your deepest thoughts?</p>
+    </div>
+    <input type="submit" class="btn btn-default" value="Add Post">
+  </form>
+  <!-- POST AREA -->
+  <div class="well" ng-repeat="post in view.posts | orderBy: view.orderVal | filter:view.searchText">
+    <div class="row">
+      <div class="col-xs-2"><img ng-src="{{ post.image }}"></div>
+      <div class="col-xs-10">
+        <h4>
+          {{ post.title }} | 
+          <span class="glyphicon glyphicon-arrow-up" ng-click="changeVotes(post,1)"></span> 
+          <span class="glyphicon glyphicon-arrow-down" ng-click="changeVotes(post,-1)"></span>
+          <span ng-class="upvoteClass(post)">{{ post.votes }}</span>
+        </h4>
+        <p class="pull-right">By {{ post.author }}</p>
+        <p class="clear">{{ post.description }}</p>
+        <p>
+          <span class="glyphicon glyphicon-calendar"></span>
+          {{ post.date }} | 
+          <span class="hoverable" ng-click="toggleCommentVisibility(post)">
+            <span class="glyphicon glyphicon-comment"></span>
+            <ng-pluralize count="post.comments.length" when="{1: '1 comment', 'other': '{{ post.comments.length }} comments'}"></ng-pluralize>
+          </span> |
+          <span class="hoverable" ng-click="toggleNewCommentVisibility(post)">
+            <span class="glyphicon glyphicon-pencil"></span>
+            Add comment
+          </span>
+        </p>
+        <div class="comment" ng-show="post.commentsVisible">
+          <p ng-repeat="comment in post.comments">
+            <strong>{{ comment.author }}</strong> - {{ comment.text }}
+          </p>
+        </div>
+        <div class="comment" ng-show="post.newCommentVisible">
+          <!-- COMMENT FORM -->
+          <form class="form-inline" ng-submit="addComment(post, newComment)">
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" placeholder="author" class="form-control" ng-model="newComment.author">
+            </div>
+            <div class="form-group">
+              <label for="text">Text</label>
+              <input type="text" placeholder="text" class="form-control" ng-model="newComment.text">
+            </div>
+            <input class="btn btn-success" type="submit" value="Add Comment">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

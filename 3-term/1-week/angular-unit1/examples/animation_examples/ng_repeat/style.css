@@ -1,0 +1,24 @@
+.ng-enter {
+  /*transition:0.4s ease all;*/
+  /*transform:translateX(-100%);*/
+  animation: fadeInRight .5s;
+}
+
+.ng-enter.ng-enter-active {
+  /*transform:translateX(0);*/
+}
+
+.ng-leave {
+  /*transition:0.4s ease all;*/
+  /*transform:translateX(0);*/
+  animation: fadeOutRight .5s;
+}
+
+.ng-leave.ng-leave-active {
+  /*transform:translateX(-100%);*/
+}
+
+/*.ng-enter-stagger, .ng-leave-stagger {
+  transition-delay: 0.2s;
+  transition-duration:0;
+}*/

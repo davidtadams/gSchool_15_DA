@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="animateApp" ng-cloak>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div ng-if="toggleBoolean">
+     Fade me!
+  </div>
+
+  <input type="text" ng-model="name">
+  <div ng-hide="name == 'Elie'">
+     You're not Elie!
+  </div>
+  <div ng-show="name == 'Elie'">
+     Hi Elie!
+  </div>
+
+  <button ng-click="toggleBoolean = !toggleBoolean">Toggle fade</button>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.min.js"></script>
+  <script>
+    angular.module('animateApp',['ngAnimate']);
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular!</title>
+  </head>
+  <body>
+    <h1>Unit 04</h1>
+    <p>currency test: {{3.14159265359 | currency}}</p>
+    <p>currency test (euro): {{3.14159265359 | currency:"&euro;"}}</p>
+
+    <label for="filterTest">Uppercase lowercase filter: </label>
+    <input ng-model="filterTest" type="text" name="filterTest" id="filterTest">
+    <p>Outside voice: {{filterTest | uppercase}}</p>
+    <p>Inside voice: {{filterTest | lowercase}}</p>
+
+    <p>{{3.14159265359 | number:3}}</p>
+    <p>{{3.14159265359 | number:6}}</p>
+    <p>{{3.14159265359 | number:1}}</p>
+
+    <p>How many digts of pi do you want?
+      <select ng-model="pidigits" ng-init="pidigits='1'">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+    </p>
+    <p>Here you go! The first {{pidigits}} digits of pi!</p>
+    <p>{{3.14159265359 | number:pidigits}}</p>
+
+    <h3>Super userful tip calculator</h3>
+    <p>How much did your meal cost?
+      <input ng-model="tipamount" type="text" name="tipamount">
+    </p>
+    <p>How much tip do you want?</p>
+    <select ng-model="tip" ng-init="tip='0.10'">
+      <option value="0.10">10%</option>
+      <option value="0.15">15%</option>
+      <option value="0.20">20%</option>
+    </select>
+    <h4>Subtotal: {{tipamount | currency}}</h4>
+    <h4>Tip: {{tipamount * tip | currency}}</h4>
+
+    <p>window proof (nothing should show up) {{window.location.host}}</p>
+
+    <h2>Mad Libs!!</h2>
+    <h2>Please fill out the following</h2>
+    <label for="bName">Boy's Name</label>
+    <input ng-model="madlibs.bName" type="text" name="bName" id="bName" placeholder="Enter a boy's name...">
+
+    <label for="adj">Adjective</label>
+    <input ng-model="madlibs.adj" type="text" name="adj" id="adj" placeholder="Enter an Adjective...">
+
+    <label for="plrN1">Plural Noun</label>
+    <input ng-model="madlibs.plrN1" type="text" name="plrN1" id="plrN1" placeholder="Enter a plural noun...">
+
+    <label for="plrN2">Plural Noun</label>
+    <input ng-model="madlibs.plrN2" type="text" name="plrN2" id="plrN2" placeholder="Enter a plural noun...">
+
+    <label for="insect">An insect, plural</label>
+    <input ng-model="madlibs.insect" type="text" name="insect" id="insect" placeholder="Enter an insect, plural...">
+
+    <label for="plrN3">Plural Noun</label>
+    <input ng-model="madlibs.plrN3" type="text" name="plrN3" id="plrN3" placeholder="Enter a plural noun...">
+
+    <label for="verb">A verb ending in "s"</label>
+    <input ng-model="madlibs.verb" type="text" name="verb" id="verb" placeholder="Enter a verb ending in s...">
+
+    <h3>I'm in love with <span>{{madlibs.bName}}</span>. He's so <span>{{madlibs.adj}}</span>! He has big flat <span>{{madlibs.plrN1}}</span>, and when our <span>{{madlibs.plrN2}}</span> meet, I get <span>{{madlibs.insect}}</span> in my stomach. I've fallen for him like a ton of <span>{{madlibs.plrN3}}</span>, and he <span>{{madlibs.verb}}</span> for me, too. But I think he's got another girlfriend. What should I do?</h3>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  </body>
+</html>

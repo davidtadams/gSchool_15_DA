@@ -1,0 +1,18 @@
+Questions:
+
+Why learn Angular JS over other frameworks like Ember, Backbone, Knockout, etc?
+  - It is widely used within the industry. There isn't necessarily a compelling reason
+  to use angular over these others, a lot of it is personal preference.
+
+People have some very strong opinions about Angular. What are 3 common complaints people have about Angular?
+  1. It is slow
+  2. some people don't like 2 way data binding
+  3. it is complex
+
+Is Angular an MVC framework?
+  - No, it is techincally MVVM
+
+Turn to the Angular docs. Find ng-app. What is it and what does it do? What does ng stand for?
+  - it designates the root element of the application
+  https://docs.angularjs.org/api/ng/directive/ngApp
+  the ng stands for angular

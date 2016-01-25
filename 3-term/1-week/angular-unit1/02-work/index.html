@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{greeting}} World</title>
+  </head>
+  <body>
+    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+
+    <input ng-model="name" ng-init="name='BoJack'" type="text" placeholder="What is your name?">
+    <h1>My name is: {{name}}</h1>
+
+    <label for="rawJS">raw JS controlled input</label>
+    <input type="text" name="rawJS" id="rawJS">
+    <h1 class="rawJSinput"></h1>
+
+    <select ng-model="animalSelect" class="animals" name="selectTHIS">
+      <option value="Dogs">Dogs</option>
+      <option value="Cats">Cats</option>
+      <option value="Dogs and Cats">Dogs and Cats</option>
+      <option value="Neither">Neither</option>
+    </select>
+    <h3>I love {{animalSelect}}!</h3>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="./raw.js"></script>
+  </body>
+</html>

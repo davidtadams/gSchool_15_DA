@@ -1,0 +1,5 @@
+MVC and MVVM with angularjs
+  http://codechutney.in/blog/javascript/mvc-and-mvvm-with-angularjs/
+
+MVC Slides
+  http://slides.com/tylerbettilyon/angularmvc#/

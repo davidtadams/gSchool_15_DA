@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular!</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .valid {
+        color: green;
+      }
+      .invalid {
+        color:red;
+      }
+      .on-sale {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body ng-init="names=['Harry', 'Ron', 'Hermione', 'Sirius', 'Hedwig', 'Tonks']">
+    <h1>Unit 05</h1>
+    <ul>
+      <li ng-repeat='name in names'>{{name}}</li>
+    </ul>
+    <ul ng-repeat='name in names'>
+      <li>{{name}}</li>
+    </ul>
+
+    <ul ng-init="symbols=['&spades;', '&clubs;', '&hearts;', '&diams;']">
+      <li ng-repeat='symbol in symbols'>{{symbol}}</li>
+    </ul>
+
+    <ul ng-init='dupes=[1,1,2,5,6,9,9,9]'>
+      <li ng-repeat='dup in dupes track by $index'>{{dup}}</li>
+    </ul>
+
+    <div ng-init="objkeys={name: 'mike', age: 35, title: 'Mr.'}">
+      <div ng-repeat="attr in objkeys" >
+        {{attr}}
+      </div>
+    </div>
+
+    <p ng-show="2 + 2 == 4">Show this</p>
+    <p ng-show="2 + 2 == 5">Hide this</p>
+
+    <h2>Sign up Page</h2>
+    <input ng-model="password" type="text" name="pw">
+    <p ng-class="password.length > 6 ? 'valid' : 'invalid'">Your password is {{password.length}} characters</p>
+    <p ng-hide="password.length > 6">Password is invalid</p>
+    <button ng-show="password.length > 6" type="button">Sign up!</button>
+
+    <div ng-class='{highlight: 4 + 4 == 8}'> 4 + 4 = 8</div>
+    <div ng-class='{highlight: 4 + 4 == 10}'>4 + 4 = 10</div>
+
+    <div ng-controller="MainController">
+      <h1>Camera Shop</h1>
+      <select ng-model="cameraSort" ng-init="cameraSort='price'">
+        <option value="price">Price</option>
+        <option value="rating">Rating</option>
+      </select>
+      <div ng-repeat="camera in cameras | orderBy:cameraSort">
+        <h4>{{camera.title}}</h4>
+        <p ng-show="camera.onSale" ng-class="'on-sale'">Price: {{camera.price | currency}} ON SALE!!!</p>
+        <p ng-hide="camera.onSale">Price: {{camera.price | currency}}</p>
+        <p>{{camera.rating}}</p>
+        <img ng-src="{{camera.image}}" height='100' width='120'>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <script type="text/javascript">
+      var app = angular.module('app', []);
+
+      app.controller('MainController', function($scope) {
+        $scope.cameras = [
+          {
+            title: 'Nikon D3100 DSLR',
+            image: 'http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg',
+            rating: 3.4,
+            price: 369.99,
+            onSale: true
+          },
+          {
+            title: 'Canon EOS 70D',
+            image: 'http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg',
+            rating: 2.0,
+            price: 1099.0,
+            onSale: false
+          },
+          {
+            title: 'Nikon D810A',
+            image:'http://ecx.images-amazon.com/images/I/91wtXIfLl2L._SX522_.jpg',
+            rating: 4.2,
+            price: 3796.95,
+            onSale: true
+          }
+        ];
+      });
+    </script>
+  </body>
+</html>

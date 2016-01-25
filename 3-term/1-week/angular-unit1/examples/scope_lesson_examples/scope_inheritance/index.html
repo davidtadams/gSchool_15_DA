@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-app="myApp">
+    <div>
+      <input type="text" ng-model="view.info">
+      {{view.info}}
+    </div>
+    <div ng-controller="ScopeController">
+      <input type="text" ng-model="view.info">
+      {{view.info}}
+    </div>
+  </div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script>
+  angular.module("myApp",[]).controller("ScopeController", function($rootScope){
+    $rootScope.view = {}
+  })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+img {
+  width: 100%;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.glyphicon-arrow-up:hover, .glyphicon-arrow-down:hover, .hoverable:hover {
+  cursor: pointer;
+}
+
+.glyphicon-arrow-up:hover, .positive {
+  color: green;
+}
+
+.glyphicon-arrow-down:hover, .negative {
+  color: red;
+}
+
+.comment {
+  opacity: 1;
+}
+
+.comment.ng-hide-add, .comment.ng-hide-remove {
+  transition: 1s linear all;
+}
+
+.comment.ng-hide {
+  opacity: 0;
+}
+
+.newForm {
+  margin-bottom: 15px;
+}
+
+.newForm.ng-hide-add, .newForm.ng-hide-remove {
+  transition: 0.4s linear all;
+  transform: translateX(0);
+}
+
+.newForm.ng-hide {
+  transition: 0.4s linear all;
+  transform: translateX(-100%);
+}
+
+.well.ng-enter {
+  transition:1s ease all;
+  opacity:0;
+  transform: translateX(100%);
+}
+
+.well.ng-enter.ng-enter-active {
+  opacity:1;
+  transition:1s ease all;
+  transform: translateX(0);
+}
+
+.well.ng-leave {
+  transition:1s ease all;
+  opacity:1;
+  transform: translateX(0);
+}
+
+.well.ng-leave.ng-leave-active {
+  opacity:0;
+  transform: translateX(100%);
+}
+
+.well.ng-enter-stagger, .well.ng-leave-stagger {
+  transition-delay: 0.5s;
+  transition-duration:0;
+}

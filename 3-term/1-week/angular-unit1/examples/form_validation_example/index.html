@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="firstFormValidation" ng-controller="mainController">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+</head>
+<body class="container">
+<h1>Here are our users {{ users }}</h1>
+  <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+<div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine ,'has-success' : userForm.username.$valid }">
+    <label class="control-label" for="username">Username:</label>
+    <input autofocus type="text" name="username" class="form-control" ng-model="user.username" ng-required="true" id="username" ng-minlength="3" ng-maxlength="12" >
+    <p ng-show="userForm.username.$error.minlength" class="help-block">username is too short.</p>
+    <p ng-show="userForm.username.$error.maxlength" class="help-block">username is too long.</p>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine ,'has-success' : userForm.password.$valid }">
+    <label class="control-label" for="password">Password</label>
+    <input type="password" name="password" class="form-control" ng-model="user.password" id="password" ng-minlength="3" ng-maxlength="12" ng-required="true">
+    <p ng-show="userForm.password.$error.minlength" class="help-block">password is too short.</p>
+    <p ng-show="userForm.password.$error.maxlength" class="help-block">password is too long.</p>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine ,'has-success' : userForm.email.$valid }">
+    <label class="control-label" for="email">Email</label>
+    <input type="email" id="email" name="email" class="form-control" ng-required="true" ng-model="user.email">
+    <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error' : userForm.zip.$invalid && !userForm.zip.$pristine ,'has-success' : userForm.zip.$valid }">
+    <label class="control-label" for="zip">Zip (5 digits)</label>
+    <input type="number" id="zip" name="zip" class="form-control" ng-pattern="/^[0-9]{5}$/" ng-required="true" ng-model="user.zip">
+    <p ng-show="userForm.zip.$invalid && !userForm.zip.$pristine" class="help-block">Enter a valid zip.</p>
+</div>
+
+<button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+</form>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

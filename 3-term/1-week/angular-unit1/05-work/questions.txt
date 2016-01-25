@@ -1,0 +1,20 @@
+Questions:
+
+What is the purpose of ng-init?
+
+Why use ng-src and ng-href?
+
+What are directives?
+
+Does ng-class require an object to be passed in?
+
+What order does an ng-repeat display items in?
+
+How does ng-repeat handle duplicate data?
+  https://docs.angularjs.org/error/ngRepeat/dupes
+
+
+ng-hide adds this css property
+  display: none !important;
+
+https://github.com/davidtadams/angular-curriculum/tree/master/Unit-1/examples/ng-cloak

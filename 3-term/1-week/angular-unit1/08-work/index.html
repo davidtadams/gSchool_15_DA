@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>woah</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="./app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div ng-controller="MainController">
+      <h3>The number is: {{number}}</h3>
+      <button ng-click="pickRandomNumber()" type="button">Pick Random Number</button>
+
+      <h3>Word Reverser</h3>
+      <input ng-model="textreverse" type="text">
+      <p>Your word is: {{textreverse}}</p>
+      <button ng-click="reverseText()" type="button">Reverse it!</button>
+
+      <h3>The div was entered {{enterCount}} times</h3>
+      <div class="divbox" ng-mouseenter="enterCount = enterCount + 1">
+        Sup
+      </div>
+
+      <form ng-submit="submitFav()" name="favPieForm">
+        <input name="name" type="text" ng-model="favoriteForm.name">
+        <input name="favorite_pie" type="text" ng-model="favoriteForm.favoritePie">
+        <input type="submit">
+      </form>
+      Name: {{favoriteForm.name}}<br>
+      Favorite Pi: {{favoriteForm.favoritePie}}      
+    </div>
+  </body>
+</html>

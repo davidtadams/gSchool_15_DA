@@ -1,0 +1,10 @@
+.container {
+  padding-top: 50px;
+  max-width: 500px;
+}
+.color {
+  color: orange;
+}
+.style {
+  font-style: italic;
+}

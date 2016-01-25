@@ -1,0 +1,20 @@
+Questions:
+
+What is $rootScope?
+
+Explain how $scope is passed from a parent to child controller
+
+List five built in directives that create their own scope
+
+what does this mean?
+  "Scope becomes tricky when you try to 2 way data bind to a primitive defined on the parent scope from inside the child scope"
+
+
+Directives that affect scope!!!!
+  ng-controller
+  ng-repeat
+  ng-if
+    (actually destroys the scope every time it is false and creates a new one every time it is true - be careful with this one!)
+  ng-view
+  ng-switch
+  ng-include

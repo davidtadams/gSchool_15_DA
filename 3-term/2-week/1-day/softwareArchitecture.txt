@@ -1,0 +1,7 @@
+Notes from Software Architecture with CJ
+
+Slides:
+  https://docs.google.com/presentation/d/1HN2B85RTnXWopvPbCzeHgL5p0UtZmOjxZf_MnGYpFIs/edit#slide=id.p
+
+Homework: 
+  Use some of the resources to do some more reserach into design patterns

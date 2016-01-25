@@ -3,7 +3,8 @@ Week 2 (week 14 overall)
 
 Schedule for what was covered each day.
 
-Day 1: 
+Day 1: Daily Coding Challenge / Finish reddit clone
+        Software Architecture - CJ
 
 Day 2: 
 

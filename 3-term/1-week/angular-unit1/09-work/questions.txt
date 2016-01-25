@@ -1,0 +1,3 @@
+https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages
+https://docs.angularjs.org/guide/forms
+https://docs.angularjs.org/api/ng/directive/input

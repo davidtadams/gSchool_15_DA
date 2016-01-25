@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="firstScope">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-controller="ParentController">
+    <label for="parent">Parent: </label>
+    <input type="text" ng-model="parent.name" placeholder="Name">{{parent.name}}
+    <div ng-controller="ChildController">
+      <h1>From $rootScope - {{info.fact}}</h1>
+      <label for="child">Chid: </label>
+      <input type="text" ng-model="child.name" placeholder="Name">{{child.name}}
+    </div>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

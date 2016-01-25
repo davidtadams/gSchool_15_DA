@@ -1,0 +1,23 @@
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>ngClass examples</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>ngClass Examples</h1>
+      <br><br>
+      <div ng-controller="MainController">
+        <h3 ng-class="'color'">Example 1</h3>
+        <h3 ng-class="{style: true}">Example 2</h3>
+        <h3 ng-class="{style: classVar}">Example 3</h3>
+        <h3 ng-class="['style', 'color']">Example 4</h3>
+      </div>
+    </div>
+    <br>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

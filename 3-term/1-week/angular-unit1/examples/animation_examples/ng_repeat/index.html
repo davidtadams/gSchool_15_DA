@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="animateApp" ng-cloak>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="MainController">
+  <input type="text" ng-model="search">
+  <div ng-repeat ="instructor in instructors | filter:search">
+    {{instructor}}
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.min.js"></script>
+  <script>
+    angular.module('animateApp',['ngAnimate']).controller("MainController", function($scope){
+      $scope.instructors = ["Tim","Ian","Matt", "Elie"]
+    });
+  </script>
+</body>
+</html>

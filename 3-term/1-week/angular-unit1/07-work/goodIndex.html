@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="broken">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div ng-controller="MainController">
+    {{view.message}}
+    <div ng-if="view.number === 42">
+        Secret Message: <input type="text" ng-model="view.message">
+    </div>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="goodApp.js"></script>
+</body>
+</html>

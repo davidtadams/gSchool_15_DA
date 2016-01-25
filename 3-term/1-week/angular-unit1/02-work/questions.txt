@@ -1,0 +1,20 @@
+Questions:
+
+What does ng-model do?
+  https://docs.angularjs.org/api/ng/directive/ngModel
+
+What is "dirty checking"?
+  see section on dirty checking https://www.ng-book.com/p/The-Digest-Loop-and-apply/
+
+Find a way to set the initial value of "name" as "BoJack" (without writing a controller).
+  OK
+
+What are those {{ }} expressions? Are they Handlebars?
+  They are moostaches for templating purposes
+  No, it is not Handlebars
+
+Explain what two-way data binding is.
+  https://docs.angularjs.org/guide/databinding
+
+BONUS: Research the $digest loop
+  https://www.ng-book.com/p/The-Digest-Loop-and-apply/

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>ngCloak Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>ngRepeat Examples</h1>
+      <br><br>
+      <div ng-controller="MainController">
+
+        <h3>Example 1: <small>Basic example of iterating through an array with primitives</small></h3>
+        <div ng-repeat="element in first">
+          {{ element }}
+        </div>
+
+        <h3>Example 2: <small>Example of iterating through an object using start and end</small></h3>
+        <div ng-repeat-start="user in second">
+          <strong>{{ user.name }}</strong>: {{ user.age }}
+        </div>
+
+        <hr ng-repeat-end>
+
+        <h3>Example 3: <small>Example of iterating through an object, outputting each attribute</small></h3>
+        <div ng-repeat="attr in third">
+          {{ attr }}
+        </div>
+
+        <h3>Example 4: <small>Example of iterating through an array, using the index value of each element to output duplicates</small></h3>
+        <div ng-repeat="element in fourth track by $index">
+          {{ element }}
+        </div>
+
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
+

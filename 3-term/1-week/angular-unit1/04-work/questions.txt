@@ -1,0 +1,26 @@
+Questions:
+
+What are Angular expressions? How do they compare to tags from templating engines you've used before?
+  JS like code snippets that can be placed within template bindings
+
+What happens when you write invalid code in an expression? What type of error do you get?
+  You get an angular error in the console
+    an injection error for the template when it is being compiled
+    Error: [$injector:unpr]
+
+What are Angular filters? Describe what a filter does and then name four built-in filters, including one that we haven't used yet.
+  https://docs.angularjs.org/guide/filter
+
+What's the syntax for filters?
+  you use a pipe |
+  {{expression | filter}}
+
+Can you use more than one filter?
+  yes, just keep piping
+
+We'll soon see how to create custom filters. What is a use case for a custom filter?
+  if you need a filter functionality but it doesn't exist, make your own
+
+Resources:
+  https://docs.angularjs.org/guide/expression
+  https://docs.angularjs.org/guide/filter
