@@ -1,0 +1,83 @@
+body {
+  padding-top: 70px;
+}
+
+.search-box {
+  margin-top: 9px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.dropdown {
+  margin-left: 20px;
+}
+
+.panel {
+  padding: 15px;
+  background-color: rgb(240,240,240);
+}
+
+.post-section {
+  min-height: 275px;
+}
+
+.character-info {
+  min-height: 100%;
+  position: absolute;
+  left: 300px;
+}
+
+.character-body {
+  margin-top: 20px;
+}
+
+.character-footer {
+  position: absolute;
+  bottom: 20px;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: green;
+}
+
+.newPostForm {
+  margin-bottom: 50px;
+}
+
+.character-comments.ng-hide {
+  animation: 0.3s fadeOut;
+}
+
+.character-comments {
+  animation: 0.3s fadeIn;
+}
+
+.character-newcomment.ng-hide {
+  animation: 0.3s fadeOut;
+}
+
+.character-newcomment {
+  animation: 0.3s fadeIn;
+}
+
+.row.ng-move {
+  animation: 0.5s bounceInUp;
+}
+
+.row.ng-enter {
+  animation: 0.5s fadeInRight;
+}
+
+.row.ng-leave {
+  animation: 0.5s fadeOutRight;
+}
+
+.form-error {
+  color: red;
+  margin-top: 5px;
+  text-align: center;
+}
