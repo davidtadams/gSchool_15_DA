@@ -4,8 +4,8 @@ app.controller('GOTController', function($scope) {
   $scope.sortOptions = [
     {name: 'Votes (asc)', selector: '-upvotes'},
     {name: 'Votes (desc)', selector: '+upvotes'},
-    {name: 'Date (asc)', selector: '-date_created'},
-    {name: 'Date (desc)', selector: '+date_created'},
+    {name: 'Date (asc)', selector: '-date_normal'},
+    {name: 'Date (desc)', selector: '+date_normal'},
     {name: 'Title (asc)', selector: '-title'},
     {name: 'Title (desc)', selector: '+title'}
   ]
@@ -66,6 +66,7 @@ app.controller('GOTController', function($scope) {
       author: newPost.author,
       description: newPost.description,
       image_url: newPost.image_url,
+      date_normal: new Date(),
       date_created: moment().calendar(),
       upvotes: 0,
       comments: [],
@@ -77,6 +78,11 @@ app.controller('GOTController', function($scope) {
     newPost.author = '';
     newPost.description = '';
     newPost.image_url = '';
+    $scope.createPostForm.$setUntouched();
+  }
+
+  $scope.checkFormError = function(formField) {
+    return formField.$touched && formField.$invalid;
   }
 
 });

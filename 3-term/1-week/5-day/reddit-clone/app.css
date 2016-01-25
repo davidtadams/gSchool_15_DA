@@ -67,3 +67,17 @@ body {
 .row.ng-move {
   animation: 0.5s bounceInUp;
 }
+
+.row.ng-enter {
+  animation: 0.5s fadeInRight;
+}
+
+.row.ng-leave {
+  animation: 0.5s fadeOutRight;
+}
+
+.form-error {
+  color: red;
+  margin-top: 5px;
+  text-align: center;
+}

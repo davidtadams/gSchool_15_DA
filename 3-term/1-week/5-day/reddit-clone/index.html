@@ -47,22 +47,26 @@
     <!-- Creat post form -->
     <div ng-show="view.showNewPost" class="container">
       <div class="row col-sm-offset-3 col-sm-6">
-        <form ng-submit="createNewPost(newPost)" class="newPostForm">
+        <form ng-submit="createNewPost(newPost)" name="createPostForm" class="newPostForm">
           <div class="form-group">
             <label for="postTitle">Character name</label>
             <input ng-model="newPost.title" type="text" id="postTitle" class="form-control" name="postTitle" placeholder="Enter a character's name" required>
+            <p ng-show="checkFormError(createPostForm.postTitle)" class="form-error">Error! This is required!</p>
           </div>
           <div class="form-group">
             <label for="postAuthor">Author</label>
             <input ng-model="newPost.author" type="text" id="postAuthor" class="form-control" name="postAuthor" placeholder="Enter an author for the post" required>
+            <p ng-show="checkFormError(createPostForm.postAuthor)" class="form-error">Error! This is required!</p>
           </div>
           <div class="form-group">
             <label for="postURL">Character Image URL</label>
             <input ng-model="newPost.image_url" type="text" id="postURL" class="form-control" name="postURL" placeholder="Enter a valid URL for the character" required>
+            <p ng-show="checkFormError(createPostForm.postURL)" class="form-error">Error! This is required!</p>
           </div>
           <div class="form-group">
             <label for="postDesc">Character Description</label>
-            <textarea ng-model="newPost.description" class="form-control" name="name" id="postDesc" rows="4" placeholder="Enter a description" required></textarea>
+            <textarea ng-model="newPost.description" class="form-control" name="description" id="postDesc" rows="4" placeholder="Enter a description" required></textarea>
+            <p ng-show="checkFormError(createPostForm.description)" class="form-error">Error! This is required!</p>
           </div>
           <input type="submit" class="btn btn-success" name="submit" value="Add New Post">
         </form>
