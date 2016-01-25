@@ -1,0 +1,23 @@
+Notes
+
+There are only three ways a component (object or function) can get a hold of its dependencies:
+  The component can create the dependency, typically using the new operator.
+  The component can look up the dependency, by referring to a global variable.
+  The component can have the dependency passed to it where it is needed.
+
+Dependencies are called services in angular
+
+Dependent objects
+  controller
+  directive
+  filter
+
+Angular supports 3 ways to annotate our code (define dependencies):
+  Implicit annotation
+  Inline array annotation
+  $inject property annotation
+
+Resources:
+  - https://www.youtube.com/watch?v=IKD2-MAkXyQ
+  - http://stackoverflow.com/questions/130794/what-is-dependency-injection
+  - https://docs.angularjs.org/guide/di
