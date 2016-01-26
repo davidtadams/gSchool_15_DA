@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket IO with Auth</title>
+</head>
+<body>
+<a class= "signup" href="/signup">Sign up</a>
+    <form id="login" action="javascript:void(0)" method="POST">
+        <input type="text" id="username" autofocus>
+        <input type="password" id="password">
+        <input type="submit" value="login">
+    </form>
+
+    <form id = "message" action="javascript:void(0)" style="display:none">
+      <label for="message">Message: </label>
+      <input type="text" name="message" id="text">
+      <input type="submit" value="SEND MESSAGE">
+    </form>
+
+    <div id="messages">
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var token, socket, $errMessage;
+
+        function connect () {
+          socket = io.connect(token ? ('?token=' + token) : '', {
+            'forceNew': true
+
+          });
+          console.log(socket)
+          socket.on('authenticated', function () {
+            console.log('authenticated');
+          }).on('disconnect', function () {
+            console.log('disconnected');
+          }).on('data', function(msg, info){
+             $('#messages').append($('<li>').text(info + ": " +msg));
+          });
+        }
+
+        connect();
+
+        $('#message').submit(function(e){
+          e.preventDefault();
+          var messageText = $("#text").val()
+          console.log(messageText)
+          socket.emit("message", messageText)
+          $("#text").val("")
+        })
+
+        $('#login').submit(function (e) {
+            e.preventDefault();
+            var username = $('#username').val();
+            var password = $('#password').val();
+            var data = {user: {username: username, password:password}}
+            $.ajax({
+                type: 'POST',
+                data: data,
+                url: '/login'
+            }).done(function (result) {
+                if ($errMessage) $errMessage.remove()
+                token = result.token;
+                connect();
+                $('#message').show();
+                $('#login').hide();
+                $('.signup').hide();
+                $('#text').focus()
+            }).fail(function(err){
+              if ($errMessage) $errMessage.remove()
+              $errMessage = $("<h1>").text(err.responseText)
+              $errMessage.css("color","red");
+              $("body").append($errMessage);
+              $('#login')[0].reset();
+            });
+        });
+    </script>
+</body>
+</html>

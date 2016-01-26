@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <form id="login" action="/signup" method="POST">
+    <div>
+      <label for="username">Username: </label>
+      <input type="text" name="user[username]" id="username" autofocus>
+    </div>
+    <div>
+      <label for="password">Password: </label>
+      <input type="password" name="user[password]" id="password">
+    </div>
+    <div>
+      <input type="submit" value="Signup">
+    </div>
+</form>
+  <p>
+    Have an account already? Login <a href="/login">here</a>
+  </p>
+</body>
+</html>

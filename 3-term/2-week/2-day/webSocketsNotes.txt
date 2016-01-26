@@ -1,0 +1,24 @@
+Notes from Web Sockets lecture with Danny
+
+An express server cannot make an http request to the client
+this is not the client server model
+
+Exercise:
+  https://github.com/gSchool/socket_chat_example
+
+Resources:
+  http://socket.io/
+  http://briantford.com/blog/angular-socket-io
+  http://psitsmike.com/2011/10/node-js-and-socket-io-multiroom-chat-tutorial/
+  http://www.tamas.io/advanced-chat-using-node-js-and-socket-io-episode-1/
+  http://stackoverflow.com/questions/19156636/node-js-and-socket-io-creating-room
+
+Repos:
+  https://github.com/btford/angular-socket-io-seed
+  https://github.com/btford/angular-socket-io
+
+Sockets with Auth:
+  https://github.com/gSchool/socket-mongo-auth-examples
+  https://auth0.com/blog/2014/01/15/auth-with-socket-io/
+  https://facundoolano.wordpress.com/2014/10/11/better-authentication-for-socket-io-no-query-strings/
+  https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
