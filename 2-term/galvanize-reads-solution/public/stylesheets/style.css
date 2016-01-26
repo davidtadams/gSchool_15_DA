@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+ */
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+main {
+  min-height: 100vh;
+  padding-top: 65px;
+  margin-top: -65px; }
+
+h2 {
+  font-family: Lora, serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem; }
+
+form {
+  padding: 1rem;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin-left: 3rem; }
+  form input, form textarea {
+    font-family: Lora, serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    font-size: 2rem; }
+    form input:not(:last-child), form textarea:not(:last-child) {
+      margin-bottom: 1rem; }
+  form input[type=submit] {
+    font-family: Lora, serif;
+    font-weight: 700;
+    color: #333;
+    font-size: 1rem;
+    font-size: 2rem;
+    background-color: #236467;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    transition: background-color 0.3s;
+    cursor: pointer; }
+    form input[type=submit]:hover {
+      background-color: #30898d; }
+  form input.delete {
+    background-color: #b34d4d; }
+    form input.delete:hover {
+      background-color: #c27070; }
+  form textarea {
+    resize: none;
+    height: 10rem; }
+
+.add {
+  display: inline-block;
+  padding: 2rem 3rem;
+  background: #236467;
+  font-family: Lora, serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s; }
+  .add:hover {
+    background-color: #30898d; }
+
+.remove-item {
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+  .remove-item li:nth-child(odd) {
+    background-color: #f2f2f2; }
+  .remove-item li:nth-child(even) {
+    background-color: #d9d9d9; }
+  .remove-item li form {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-style: italic; }
+    .remove-item li form button {
+      border: none;
+      background-color: transparent; }
+      .remove-item li form button .delete {
+        color: #b34d4d;
+        transition: transform 0.3s;
+        font-size: 1.5rem; }
+        .remove-item li form button .delete:hover {
+          transform: scale(1.2); }
+
+.add-item select {
+  background-color: #fff;
+  font-family: Lora, serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  width: 100%;
+  margin-bottom: 1rem; }
+
+main {
+  display: flex;
+  flex-flow: row wrap; }
+  main > nav {
+    margin: 1rem; }
+    main > nav ul {
+      display: flex;
+      flex-flow: row wrap; }
+      main > nav ul li {
+        position: relative;
+        flex-grow: 1; }
+        main > nav ul li a {
+          display: inline-block;
+          width: 100%;
+          color: #333;
+          text-decoration: none;
+          text-align: center;
+          transition: background-color 0.3s; }
+          main > nav ul li a .icon, main > nav ul li a h2 {
+            display: block; }
+          main > nav ul li a .icon {
+            padding: 5rem 5rem;
+            font-size: 6rem; }
+          main > nav ul li a h2 {
+            font-family: Lora, serif;
+            font-weight: 400;
+            color: #333;
+            font-size: 2rem;
+            padding: 1rem; }
+          main > nav ul li a:hover {
+            background-color: #cccccc; }
+    main > nav.index-navigation {
+      width: 100%; }
+      main > nav.index-navigation ul {
+        display: flex;
+        flex-flow: row wrap; }
+        main > nav.index-navigation ul li {
+          position: relative;
+          flex-grow: 1; }
+          main > nav.index-navigation ul li .icon {
+            padding: 5rem 5rem;
+            font-size: 6rem; }
+    main > nav.side-navigation {
+      position: relative;
+      width: 125px;
+      max-height: 90vh; }
+      main > nav.side-navigation ul {
+        position: absolute;
+        height: 100%; }
+        main > nav.side-navigation ul li {
+          display: flex;
+          align-items: center; }
+          main > nav.side-navigation ul li .icon {
+            padding: 0;
+            font-size: 2rem; }
+          main > nav.side-navigation ul li a {
+            transform: rotate(270deg);
+            width: 100%;
+            padding: 1rem; }
+      main > nav.side-navigation .active {
+        background-color: #cccccc; }
+
+body > header {
+  background-color: #162855;
+  padding: 1rem; }
+  body > header a {
+    text-decoration: none;
+    color: #fff; }
+    body > header a .logo {
+      display: inline-block;
+      font-size: 2rem; }
+    body > header a h1 {
+      display: inline-block;
+      font-family: Lora, serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: 2rem;
+      letter-spacing: -2px; }
+
+.books, .authors {
+  margin-left: 4rem;
+  padding: 1rem; }
+  .books h2, .authors h2 {
+    font-family: Lora, serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .books .book, .books .author, .authors .book, .authors .author {
+    display: flex;
+    flex-flow: row wrap; }
+    .books .book:not(:last-child), .books .author:not(:last-child), .authors .book:not(:last-child), .authors .author:not(:last-child) {
+      margin-bottom: 1rem; }
+    .books .book figure, .books .author figure, .authors .book figure, .authors .author figure {
+      position: relative;
+      max-width: 130px; }
+      .books .book figure img, .books .author figure img, .authors .book figure img, .authors .author figure img {
+        width: 100%; }
+    .books .book .details, .books .author .details, .authors .book .details, .authors .author .details {
+      position: relative;
+      max-width: 400px;
+      margin-left: 1rem; }
+      .books .book .details h3, .books .author .details h3, .authors .book .details h3, .authors .author .details h3 {
+        font-family: Lora, serif;
+        font-weight: 700;
+        color: #333;
+        font-size: 1rem; }
+        .books .book .details h3 a, .books .author .details h3 a, .authors .book .details h3 a, .authors .author .details h3 a {
+          color: #061539; }
+          .books .book .details h3 a:visited, .books .author .details h3 a:visited, .authors .book .details h3 a:visited, .authors .author .details h3 a:visited {
+            color: #7886AB; }
+      .books .book .details .books, .books .book .details .authors, .books .author .details .books, .books .author .details .authors, .authors .book .details .books, .authors .book .details .authors, .authors .author .details .books, .authors .author .details .authors {
+        margin-left: 0;
+        padding: 0; }
+      .books .book .details .authors, .books .author .details .authors, .authors .book .details .authors, .authors .author .details .authors {
+        font-family: Lora, serif;
+        font-weight: 400;
+        color: #333;
+        font-size: 1rem;
+        max-width: 325px; }
+        .books .book .details .authors li, .books .author .details .authors li, .authors .book .details .authors li, .authors .author .details .authors li {
+          display: inline; }
+          .books .book .details .authors li:not(:last-child):after, .books .author .details .authors li:not(:last-child):after, .authors .book .details .authors li:not(:last-child):after, .authors .author .details .authors li:not(:last-child):after {
+            content: ", "; }
+      .books .book .details .books, .books .author .details .books, .authors .book .details .books, .authors .author .details .books {
+        font-family: Lora, serif;
+        font-weight: 400;
+        color: #333;
+        font-size: 1rem;
+        margin: 1rem 0;
+        padding: 0; }
+        .books .book .details .books li, .books .author .details .books li, .authors .book .details .books li, .authors .author .details .books li {
+          display: inline; }
+          .books .book .details .books li:not(:last-child):after, .books .author .details .books li:not(:last-child):after, .authors .book .details .books li:not(:last-child):after, .authors .author .details .books li:not(:last-child):after {
+            content: ", "; }
+      .books .book .details .genre, .books .author .details .genre, .authors .book .details .genre, .authors .author .details .genre {
+        font-family: Lora, serif;
+        font-weight: 400;
+        color: #333;
+        font-size: 1rem;
+        font-style: italic; }
+      .books .book .details p, .books .author .details p, .authors .book .details p, .authors .author .details p {
+        margin-top: 1rem;
+        font-family: Lora, serif;
+        font-weight: 400;
+        color: #333;
+        font-size: 1rem; }
+      .books .book .details .actions, .books .author .details .actions, .authors .book .details .actions, .authors .author .details .actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        cursor: pointer;
+        transform: scale(1);
+        transition: transform 0.3s; }
+        .books .book .details .actions .delete:hover, .books .book .details .actions .edit:hover, .books .author .details .actions .delete:hover, .books .author .details .actions .edit:hover, .authors .book .details .actions .delete:hover, .authors .book .details .actions .edit:hover, .authors .author .details .actions .delete:hover, .authors .author .details .actions .edit:hover {
+          transform: scale(1.2); }
+        .books .book .details .actions .delete, .books .author .details .actions .delete, .authors .book .details .actions .delete, .authors .author .details .actions .delete {
+          color: #b34d4d; }
+        .books .book .details .actions .edit, .books .author .details .actions .edit, .authors .book .details .actions .edit, .authors .author .details .actions .edit {
+          color: #4F618E; }
+
+/*# sourceMappingURL=style.css.map */

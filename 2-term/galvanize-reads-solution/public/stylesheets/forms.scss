@@ -1,0 +1,103 @@
+h2 {
+    @include header-text;
+    margin-bottom: 1rem;
+}
+
+form {
+    padding: 1rem;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin-left: 3rem;
+    input, textarea {
+        @include body-text;
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+    }
+    input {
+        &[type=submit] {
+            @include subheader-text;
+            font-size: 2rem;
+            background-color: $create-color;
+            color: $white;
+            padding: 1rem;
+            border: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            &:hover {
+                background-color: lighten($create-color, 10%);
+            }
+        }
+        &.delete {
+            background-color: $delete-color;
+            &:hover {
+                background-color: lighten($delete-color, 10%);
+            }
+        }
+    }
+    textarea {
+        resize: none;
+        height: 10rem;
+    }
+}
+
+.add {
+    display: inline-block;
+    padding: 2rem 3rem;
+    background: $create-color;
+    @include subheader-text;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $white;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: lighten($create-color, 10%);
+    }
+}
+
+.remove-item {
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    li {
+        &:nth-child(odd) {
+            background-color: darken($white, 5%);
+        }
+        &:nth-child(even) {
+            background-color: darken($white, 15%);
+        }
+        form {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-style: italic;
+            button {
+                border: none;
+                background-color: rgba(0,0,0,0);
+                .delete {
+                    color: $delete-color;
+                    transition: transform 0.3s;
+                    font-size: 1.5rem;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-item {
+    select {
+        background-color: $white;
+        @include body-text;
+        font-size: 1.5rem;
+        font-style: italic;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

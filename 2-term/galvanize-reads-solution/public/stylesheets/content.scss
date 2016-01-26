@@ -1,0 +1,90 @@
+.books, .authors {
+    margin-left: 4rem;
+    padding: 1rem;
+    h2 {
+        @include header-text;
+        margin-bottom: 1rem;
+    }
+    .book, .author {
+        display: flex;
+        flex-flow: row wrap;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        figure {
+            position: relative;
+            max-width: 130px;
+            img {
+                width: 100%;
+            }
+        }
+        .details {
+            position: relative;
+            max-width: 400px;
+            margin-left: 1rem;
+            h3 {
+                @include subheader-text;
+                a {
+                    color: $darkest-color;
+                    &:visited {
+                        color: $lighter-color;
+                    }
+                }
+            }
+            .books, .authors {
+                margin-left: 0;
+                padding: 0;
+            }
+            .authors {
+                @include body-text;
+                max-width: 325px;
+                li {
+                    display: inline;
+                    &:not(:last-child):after {
+                        content: ", "
+                    }
+                }
+            }
+            .books {
+                @include body-text;
+                margin: 1rem 0;
+                padding: 0;
+                li {
+                    display: inline;
+                    &:not(:last-child):after {
+                        content: ", "
+                    }
+                }
+            }
+            .genre {
+                @include body-text;
+                font-style: italic;
+            }
+            p {
+                margin-top: 1rem;
+                @include body-text;
+            }
+            .actions {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 2rem;
+                cursor: pointer;
+                transform: scale(1);
+                transition: transform 0.3s;
+                .delete, .edit {
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+                .delete {
+                    color: $delete-color;
+                }
+                .edit {
+                    color: $light-color;
+                }
+            }
+        }
+
+    }
+}

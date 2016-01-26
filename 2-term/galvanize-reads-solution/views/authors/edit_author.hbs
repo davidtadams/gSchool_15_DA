@@ -1,0 +1,45 @@
+<section class="authors">
+    <form method="POST" action="/authors/{{author.id}}?_method=PUT">
+        <h2>Edit an Author</h2>
+        <label for="author-first-name">First Name</label>
+        <input type="text" maxlength="255" required="required" name="first_name" id="author-first-name" value="{{author.first_name}}" />
+
+        <label for="author-last-name">Last Name</label>
+        <input type="text" maxlength="255" required="required" name="last_name" id="author-last-name" value="{{author.last_name}}" />
+
+        <label for="author-portrait-url">Portrait URL</label>
+        <input type="url" name="portrait_url" id="author-portrait-url" value="{{author.portrait_url}}" />
+
+        <label for="author-biography">Biography</label>
+        <textarea maxlength="10000" required="required" id="author-biography" name="biography">{{author.biography}}</textarea>
+
+
+        <input type="submit" value="Edit Author Details" />
+    </form>
+
+    <div class="remove-item">
+        <h2>{{author.first_name}}'s Books</h2>
+        <ul>
+            {{#each author.books}}
+                <li>
+                    <form method="POST" action="/authors/{{../author.id}}/books/{{id}}?_method=DELETE">
+                        <span>{{title}}</span>
+                        <button type="submit">
+                            <i class="delete fa fa-remove"></i>
+                        </button>
+                    </form>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <form class="add-item" method="POST" action="/authors/{{author.id}}/books">
+        <h2>Add a Book to {{author.first_name}}</h2>
+        <select name="book_id">
+            {{#each books}}
+                <option value="{{id}}">{{title}}</option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Add Book" />
+    </form>
+</section>

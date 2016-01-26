@@ -1,0 +1,42 @@
+    <form method="POST" action="/books/{{book.id}}?_method=PUT">
+        <h2>Edit a Book</h2>
+        <label for="book-title">Title</label>
+        <input type="text" maxlength="255" required="required" name="title" id="book-title" value="{{book.title}}" />
+
+        <label for="book-genre">Genre</label>
+        <input type="text" maxlength="255" required="required" name="genre" id="book-genre" value="{{book.genre}}" />
+
+        <label for="book-cover-image-url">Cover Image URL</label>
+        <input type="url" name="cover_image_url" id="book-cover-image-url" value="{{book.cover_url}}" />
+
+        <label for="book-description">Description</label>
+        <textarea maxlength="10000" required="required" id="book-description" name="description">{{book.description}}</textarea>
+
+        <input type="submit" value="Edit Book" />
+    </form>
+
+    <div class="remove-item">
+        <h2>{{book.title}}'s Authors</h2>
+        <ul>
+            {{#each book.authors}}
+                <li>
+                    <form method="POST" action="/books/{{../book.id}}/authors/{{id}}?_method=DELETE">
+                        <span>{{first_name}} {{last_name}}</span>
+                        <button type="submit">
+                            <i class="delete fa fa-remove"></i>
+                        </button>
+                    </form>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <form class="add-item" method="POST" action="/books/{{book.id}}/authors">
+        <h2>Add an Author to {{book.title}}</h2>
+        <select name="author_id">
+            {{#each authors}}
+                <option value="{{id}}">{{first_name}} {{last_name}}</option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Add Author" />
+    </form>

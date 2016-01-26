@@ -1,0 +1,24 @@
+<section class="authors">
+    <form method="POST" action="/authors/{{author.id}}?_method=DELETE">
+        <div class="author">
+            <figure>
+                <img src="{{author.portrait_url}}" alt="{{author.first_name}} {{author.last_name}} portrait" />
+            </figure>
+            <div class="details">
+                <h3><a href="/author/{{author.id}}">{{author.first_name}} {{author.last_name}}</a></h3>
+                <p>{{author.biography}}</p>
+
+                <div class="books">
+                    <h3>Books</h3>
+                    <ul>
+                        {{#each author.books}}
+                            <li class="book"><a href="/books/{{id}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" class="delete" value="Delete {{author.first_name}} {{author.last_name}}?" />
+    </form>
+</section>

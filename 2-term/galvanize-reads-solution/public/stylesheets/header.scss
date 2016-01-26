@@ -1,0 +1,16 @@
+body > header {
+    background-color: $dark-color;
+    padding: 1rem;
+    a {
+        text-decoration: none;
+        color: $white;
+        .logo {
+            display: inline-block;
+            font-size: 2rem;
+        }
+        h1 {
+            display: inline-block;
+            @include primary-header-text;
+        }
+    }
+}

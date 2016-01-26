@@ -1,0 +1,77 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    & > nav {
+        margin: 1rem;
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            li {
+                position: relative;
+                flex-grow: 1;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    color: $black;
+                    text-decoration: none;
+                    text-align: center;
+                    transition: background-color 0.3s;
+                    .icon, h2 {
+                        display: block;
+                    }
+                    .icon {
+                        padding: 5rem 5rem;
+                        font-size: 6rem;
+                    }
+                    h2 {
+                        @include header-text;
+                        padding: 1rem;
+                    }
+                    &:hover {
+                        background-color: darken($white, 20%);
+                    }
+                }
+            }
+        }
+        &.index-navigation {
+            width: 100%;
+            ul {
+                display: flex;
+                flex-flow: row wrap;
+                li {
+                    position: relative;
+                    flex-grow: 1;
+                    .icon {
+                        padding: 5rem 5rem;
+                        font-size: 6rem;
+                    }
+                }
+            }
+        }
+        &.side-navigation {
+            position: relative;
+            width: 125px;
+            max-height: 90vh;
+            ul {
+                position: absolute;
+                height: 100%;
+                li {
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        padding: 0;
+                        font-size: 2rem;
+                    }
+                    a {
+                        transform: rotate(270deg);
+                        width: 100%;
+                        padding: 1rem;
+                    }
+                }
+            }
+            .active {
+                background-color: darken($white, 20%);
+            }
+        }
+    }
+}

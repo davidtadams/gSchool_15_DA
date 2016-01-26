@@ -1,0 +1,27 @@
+<section class="books">
+    <h2>Books</h2>
+    <ul>
+        {{#each books}}
+            <li class="book">
+                <figure>
+                    <img src="{{cover_url}}" alt="{{title}} book cover" />
+                </figure>
+                <div class="details">
+                    <h3><a href="/books/{{id}}">{{title}}</a></h3>
+                    <ul class="authors">
+                        {{#each authors}}
+                            <li><a href="/authors/{{id}}">{{first_name}} {{last_name}}</a></li>
+                        {{/each}}
+                    </ul>
+                    <span class="genre">{{genre}}</span>
+                    <p>{{description}}</p>
+                    <div class="actions">
+                        <a href="/books/edit/{{id}}"><i class="edit fa fa-pencil"></i></a>
+                        <a href="/books/delete/{{id}}"><i class="delete fa fa-remove"></i></a>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    <a class="add" href="/books/new">Add a Book</a>
+</section>

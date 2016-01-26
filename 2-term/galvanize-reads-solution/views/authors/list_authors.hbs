@@ -1,0 +1,30 @@
+<section class="authors">
+    <h2>Authors</h2>
+    <ul>
+        {{#each authors}}
+            <li class="author">
+                <figure>
+                    <img src="{{portrait_url}}" alt="{{first_name}} {{last_name}} portrait" />
+                </figure>
+                <div class="details">
+                    <h3><a href="/authors/{{id}}">{{first_name}} {{last_name}}</a></h3>
+                    <p>{{biography}}</p>
+
+                    <div class="books">
+                        <h3>Books</h3>
+                        <ul>
+                            {{#each books}}
+                                <li class="book"><a href="/books/{{id}}">{{title}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <div class="actions">
+                        <a href="/authors/edit/{{id}}"><i class="edit fa fa-pencil"></i></a>
+                        <a href="/authors/delete/{{id}}"><i class="delete fa fa-remove"></i></a>
+                    </div>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    <a class="add" href="/authors/new">Add an Author</a>
+</section>

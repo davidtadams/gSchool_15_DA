@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic);
+
+@mixin primary-header-text {
+    font-family: Lora, serif;
+    font-weight: 700;
+    color: $white;
+    font-size: 2rem;
+    letter-spacing: -2px;
+}
+
+@mixin header-text {
+    font-family: Lora, serif;
+    font-weight: 400;
+    color: $black;
+    font-size: 2rem;
+}
+
+@mixin subheader-text {
+    font-family: Lora, serif;
+    font-weight: 700;
+    color: $black;
+    font-size: 1rem;
+}
+
+@mixin body-text {
+    font-family: Lora, serif;
+    font-weight: 400;
+    color: $black;
+    font-size: 1rem;
+}

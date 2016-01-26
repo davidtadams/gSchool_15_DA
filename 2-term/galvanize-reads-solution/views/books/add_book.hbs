@@ -1,0 +1,16 @@
+<form method="POST" action="/books">
+    <h2>Add a Book</h2>
+    <label for="book-title">Title</label>
+    <input type="text" maxlength="255" required="required" name="title" id="book-title" />
+
+    <label for="book-genre">Genre</label>
+    <input type="text" maxlength="255" required="required" name="genre" id="book-genre" />
+
+    <label for="book-cover-image-url">Cover Image URL</label>
+    <input type="url" name="cover_image_url" id="book-cover-image-url" />
+
+    <label for="book-description">Description</label>
+    <textarea maxlength="10000" required="required" id="book-description" name="description"></textarea>
+
+    <input type="submit" value="Add Book" />
+</form>
