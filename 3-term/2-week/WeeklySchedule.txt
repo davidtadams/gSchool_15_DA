@@ -6,7 +6,8 @@ Schedule for what was covered each day.
 Day 1: Daily Coding Challenge / Finish reddit clone
         Software Architecture - CJ
 
-Day 2: 
+Day 2: Daily Challenge / Web Sockets with Socket.io - Danny
+        Angular Curriculum continued with unit 2
 
 Day 3: 
 
