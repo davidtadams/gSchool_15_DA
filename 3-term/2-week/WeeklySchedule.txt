@@ -7,9 +7,12 @@ Day 1: Daily Coding Challenge / Finish reddit clone
         Software Architecture - CJ
 
 Day 2: Daily Challenge / Web Sockets with Socket.io - Danny
+        Socket Chat app
         Angular Curriculum continued with unit 2
 
-Day 3: 
+Day 3: Daily Challenge / Continous Deployment and Integration - Brian
+        DevOps(Brians lecture)
+        Angular Curriculum continued with unit 2
 
 Day 4: 
 
