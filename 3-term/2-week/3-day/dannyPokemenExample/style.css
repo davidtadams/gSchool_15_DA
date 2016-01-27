@@ -1,0 +1,8 @@
+pokedex > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+pokedex > ul > pokemon {
+  width: 150px;
+}
