@@ -1,0 +1,21 @@
+Continuous Deployment and Integration with Brian
+
+DevOps
+  Brian had great slides, get link to these
+
+Continuous deployment
+  difference between delivery and deployment
+    delivery is more staging
+    and deployment it goes straight to production
+    with delivery you can push changes to a staging environment and then
+      deploy to production all these changes when ready
+
+Netflix
+  No Ops
+  everything is in the hands of the developers
+  environment is set up and configured
+  if it passes all tests it is good to go
+
+Implementation
+  Jenkins
+  Travis

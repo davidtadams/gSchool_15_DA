@@ -1,0 +1,70 @@
+body {
+  display: flex;
+  flex-direction: row;
+  background: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.superman,
+.pulp-fiction {
+  width: 450px;
+  height: 700px;
+  border: 3px solid #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+}
+
+.superman {
+  background: rgb(17, 100, 181);
+}
+.pulp-fiction {
+  background: rgb(208, 44, 35);
+}
+
+.stripe {
+  width: 2%;
+  height: 40%;
+  background: #FFF;
+  margin-top: 150px;
+}
+
+.superman .stripe {
+  transform: rotate(45deg);
+  /*background-image: url(http://texturelib.com/Textures/concrete/rough/concrete_rough_0035_01_preview.jpg);*/
+  background: linear-gradient(rgba(208, 44, 35, 1), rgba(208, 44, 35, 0));
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 244, 0);
+  margin-top: 150px;
+}
+.text p {
+  margin: 0;
+  font-size: 0.5rem;
+}
+
+.text h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+.title {
+  letter-spacing: 0.3rem;
+}
+
+.underline {
+  width: 40px;
+  height: 10px;
+  border-bottom: 2px solid rgb(255, 244, 0);
+  margin: 3px 0 10px 0;
+}
+.tiny-type {
+  font-size: 0.3rem;
+  padding-right: 5px;
+}
