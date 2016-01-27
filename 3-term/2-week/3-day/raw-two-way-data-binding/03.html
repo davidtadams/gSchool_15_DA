@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Binding Warmup</title>
+    <script type="text/javascript">
+      // Challenge #1
+      // on page load
+      // use document.querySelectorAll to find all elements with the data-bind attribute
+
+      // Challenge #2
+      // on page load
+      // print out the value of all of the data-bind attributes
+
+      // Challenge #3
+      // on page load
+      // loop through all of the elements returned from document.querySelectorAll
+      // if it's an input, add an event listener for keyup that sets a property on window
+      // so if the element is data-bind="fooBar" it would set window.fooBar = [the value of the input]
+      // check your correctness by logging the property, such as window.fooBar, in Chrome dev tools
+
+      // NOTE: there's nothing special about the words "data-bind" - it could be "data-kitten" and would still work
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Pizza Size</legend>
+      <p>
+        <label for="pizza-size">What size would you like your pizza?</label>
+        <input type="text" id="pizza-size" name="size" value="" data-bind="pizzaSize">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Crust</legend>
+      <p>
+        <label for="pizza-crust">What crust would you like your pizza?</label>
+        <input type="text" id="pizza-crust" name="size" value="" data-bind="pizzaCrust">
+      </p>
+    </fieldset>
+  </body>
+</html>

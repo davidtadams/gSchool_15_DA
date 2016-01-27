@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Binding Warmup</title>
+    <script type="text/javascript">
+      // Challenge #1
+      // on page load
+      // log the pizza-size input element using document.querySelector
+
+      // Challenge #2
+      // on page load
+      // add an event listener to the pizza-size input that listens for keyup events
+      // every time a user types into the field, set window.pizzaSize to the value of the input
+      // this binds window.pizzaSize to the value of the input
+
+      // Challenge #3
+      // when a user types into the input, update the display-size span
+      // with the value of window.pizzaSize
+      // this binds span to the value of the input
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log(document.querySelector('#pizza-size'))
+      })
+
+    </script>
+  </head>
+  <body>
+    <p>
+      <label for="pizza-size">What size would you like your pizza?</label>
+      <input type="text" name="size" value="" id="pizza-size">
+    </p>
+    <p>
+      <strong>Size: </strong>
+      <span id="display-size"></span>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Binding Warmup</title>
+    <script type="text/javascript">
+      // Challenge #1
+      // start with the code from 04.html
+      // using setInterval, make it so that if you change window.pizzaSize in Chrome dev tools
+      // the pizzaSize inputs and labels will change with it
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Pizza Size</legend>
+      <p>
+        <label for="pizza-size">What size would you like your pizza?</label>
+        <input type="text" id="pizza-size" name="size" value="" data-bind="pizzaSize">
+      </p>
+      <p>
+        <strong>Size: </strong>
+        <span data-bind="pizzaSize"></span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Crust</legend>
+      <p>
+        <label for="pizza-crust">What crust would you like your pizza?</label>
+        <input type="text" id="pizza-crust" name="size" value="" data-bind="pizzaCrust">
+      </p>
+      <p>
+        <strong>Crust: </strong>
+        <span data-bind="pizzaCrust"></span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Pizza Size</legend>
+      <p>
+        <label for="pizza-size-2">What size would you like your pizza?</label>
+        <input type="text" id="pizza-size-2" name="size" value="" data-bind="pizzaSize">
+      </p>
+      <p>
+        <strong>Size: </strong>
+        <span data-bind="pizzaSize"></span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Crust</legend>
+      <p>
+        <label for="pizza-crust-2">What crust would you like your pizza?</label>
+        <input type="text" id="pizza-crust-2" name="size" value="" data-bind="pizzaCrust">
+      </p>
+      <p>
+        <strong>Crust: </strong>
+        <span data-bind="pizzaCrust"></span>
+      </p>
+    </fieldset>
+  </body>
+</html>

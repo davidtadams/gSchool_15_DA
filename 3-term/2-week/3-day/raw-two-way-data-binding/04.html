@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Data Binding Warmup</title>
+    <script type="text/javascript">
+      // Challenge #1
+      // start with the code from 03.html
+      // whenever an input is changed, also change any other field bound to the same variable
+    </script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Pizza Size</legend>
+      <p>
+        <label for="pizza-size">What size would you like your pizza?</label>
+        <input type="text" id="pizza-size" name="size" value="" data-bind="pizzaSize">
+      </p>
+      <p>
+        <strong>Size: </strong>
+        <span data-bind="pizzaSize"></span>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Crust</legend>
+      <p>
+        <label for="pizza-crust">What crust would you like your pizza?</label>
+        <input type="text" id="pizza-crust" name="size" value="" data-bind="pizzaCrust">
+      </p>
+      <p>
+        <strong>Crust: </strong>
+        <span data-bind="pizzaCrust"></span>
+      </p>
+    </fieldset>
+  </body>
+</html>
