@@ -1,7 +1,7 @@
 Continuous Deployment and Integration with Brian
 
 DevOps
-  Brian had great slides, get link to these
+  Slides: http://slides.com/brianjackson/deck/embed
 
 Continuous deployment
   difference between delivery and deployment
