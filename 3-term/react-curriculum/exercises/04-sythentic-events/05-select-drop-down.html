@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var SelectDropDown = React.createClass({
+        getInitialState: function() {
+          return { value: 'B' };
+        },
+
+        handleChange: function(event) {
+          var nextValue = event.target.value;
+          this.setState({ value: nextValue });
+        },
+
+        render: function() {
+          return <div>
+            <div>
+              {"I'm changeable and under React's control."}
+              <select onChange={this.handleChange} value={this.state.value}>
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+            </div>
+
+            <div>
+              {"I'm read-only, am under React's control, but raise a warning."}
+              <select value="B">
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+            </div>
+
+            <div>
+              {"I'm changeable but am not under React's control."}
+              <select defaultValue="B">
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+            </div>
+
+            <div>
+              {"I'm read-only but under React's control."}
+              <select readOnly={true} value="B">
+                <option value="A">Apple</option>
+                <option value="B">Banana</option>
+              </select>
+            </div>
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <SelectDropDown />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

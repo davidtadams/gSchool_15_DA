@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var Entity = React.createClass({
+        getInitialState: function() {
+          return { menu: { appetizer: '', entree: '', dessert: '' } };
+        },
+
+        handleChange: function(event) {
+          var nextMenu = Object.assign({}, this.state.menu);
+          nextMenu[event.target.name] = event.target.value;
+
+          this.setState({ menu: nextMenu });
+        },
+
+        render: function() {
+          return <div>
+            Appetizer:
+            <input
+              name="appetizer"
+              onChange={this.handleChange}
+              type="text"
+              value={this.state.appetizer}
+            />
+
+            Entrée:
+            <input
+              name="entree"
+              onChange={this.handleChange}
+              type="text"
+              value={this.state.entree}
+            />
+
+            Dessert:
+            <input
+              name="dessert"
+              onChange={this.handleChange}
+              type="text"
+              value={this.state.dessert}
+            />
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <Entity />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

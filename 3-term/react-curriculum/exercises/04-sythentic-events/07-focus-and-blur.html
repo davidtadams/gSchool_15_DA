@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var FocusAndBlur = React.createClass({
+        getInitialState: function() {
+          return { value: "I'm blurred :(" };
+        },
+
+        handleBlur: function() {
+          var nextValue = "I'm blurred :(";
+          this.setState({ value: nextValue });
+        },
+
+        handleFocus: function() {
+          var nextValue = "I'm focused :D";
+          this.setState({ value: nextValue });
+        },
+
+        render: function() {
+          return <div>
+            <input
+              onBlur={this.handleBlur}
+              onFocus={this.handleFocus}
+              readOnly={true}
+              value={this.state.value}
+            />
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <FocusAndBlur />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

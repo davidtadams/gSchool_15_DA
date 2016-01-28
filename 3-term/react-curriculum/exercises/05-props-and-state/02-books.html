@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var Book = React.createClass({
+        handleChange: function(event) {
+          this.props.updateBook(this.props.index, event.target.value);
+        },
+
+        render: function() {
+          return <div>
+            <h2>Book {this.props.index}: {this.props.book}</h2>
+            <input
+              onChange={this.handleChange}
+              type="text"
+              value={this.props.book}
+            />
+          </div>;
+        }
+      });
+
+      var Books = React.createClass({
+        getInitialState: function() {
+          return {
+            books: [
+              'A Game of Thrones',
+              'Snow Crash',
+              'The Martian'
+            ]
+          };
+        },
+
+        updateBook: function(index, value) {
+          var nextBooks = this.state.books;
+          nextBooks[index] = value;
+          this.setState({ books: nextBooks });
+        },
+
+        render: function() {
+          var bookEls = this.state.books.map(function(book, index) {
+            return <Book
+              book={book}
+              index={index}
+              key={index}
+              updateBook={this.updateBook}
+            />;
+          }, this);
+
+          return <div>{bookEls}</div>;
+        }
+      });
+
+      ReactDOM.render(
+        <Books />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

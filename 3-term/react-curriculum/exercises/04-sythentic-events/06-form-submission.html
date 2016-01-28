@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var FormSubmission = React.createClass({
+        getInitialState: function() {
+          return { json: 'null', password: '', username:'' };
+        },
+
+        handleChange: function(event) {
+          var nextState = {};
+          nextState[event.target.name] = event.target.value;
+          this.setState(nextState);
+        },
+
+        handleSubmit: function(event) {
+          event.preventDefault();
+
+          var nextJSON = JSON.stringify({
+            password: this.state.password,
+            username: this.state.username
+          });
+
+          this.setState({ json: nextJSON });
+        },
+
+        render: function() {
+          return <div>
+            <form onSubmit={this.handleSubmit}>
+              Username:
+              <input
+                name="username"
+                onChange={this.handleChange}
+                type="text"
+                value={this.username}
+              />
+
+              Password:
+              <input
+                name="password"
+                onChange={this.handleChange}
+                type="password"
+                value={this.password}
+              />
+
+              <input type="submit" value="Log in" />
+            </form>
+
+            <pre>JSON: '{this.state.json}'</pre>
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <FormSubmission />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

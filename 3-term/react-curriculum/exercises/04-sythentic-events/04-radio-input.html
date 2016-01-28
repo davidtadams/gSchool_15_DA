@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var RadioInput = React.createClass({
+        getInitialState: function() {
+          return { value: 'no' };
+        },
+
+        handleChange: function(event) {
+          var nextValue = event.target.value;
+          this.setState({ value: nextValue });
+        },
+
+        render: function() {
+          return <div>
+            <div>
+              {"We're changeable and under React's control."}
+              <input
+                onChange={this.handleChange}
+                type="radio"
+                checked={this.state.value === 'yes'}
+                value="yes"
+              />
+              <input
+                onChange={this.handleChange}
+                type="radio"
+                checked={this.state.value === 'no'}
+                value="no"
+              />
+            </div>
+
+            <div>
+              {"We're read-only, are under React's control, but raise a warning."}
+              <input type="radio" name="1" checked={true} value="yes" />
+              <input type="radio" name="1" checked={false} value="no" />
+            </div>
+
+            <div>
+              {"We're changeable but are not under React's control."}
+              <input type="radio" name="2" defaultChecked={true} value="yes" />
+              <input type="radio" name="2" defaultChecked={false} value="no" />
+            </div>
+
+            <div>
+              {"We're read-only and are under React's control."}
+              <input type="radio" name="3" readOnly="true" checked={true} value="yes" />
+              <input type="radio" name="3" readOnly="true" checked={false} value="no" />
+            </div>
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <RadioInput />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

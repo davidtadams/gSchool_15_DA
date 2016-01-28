@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var CheckboxInput = React.createClass({
+        getInitialState: function() {
+          return { checked: false };
+        },
+
+        handleChange: function(event) {
+          var nextChecked = event.target.checked;
+          this.setState({ checked: nextChecked });
+        },
+
+        render: function() {
+          return <div>
+            <div>
+              {"I'm changeable and under React's control."}
+              <input
+                onChange={this.handleChange}
+                type="checkbox"
+                checked={this.state.checked}
+              />
+            </div>
+
+            <div>
+              {"I'm read-only, am under React's control, but raise a warning."}
+              <input type="checkbox" checked={true} />
+            </div>
+
+            <div>
+              {"I'm changeable but am not under React's control."}
+              <input type="checkbox" defaultChecked={true} />
+            </div>
+
+            <div>
+              {"I'm read-only and under React's control."}
+              <input type="checkbox" readOnly="true" checked={true} />
+            </div>
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <CheckboxInput />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

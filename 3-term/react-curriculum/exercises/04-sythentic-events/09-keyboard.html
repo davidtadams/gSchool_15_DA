@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var Keyboard = React.createClass({
+        getInitialState: function() {
+          return { events: [], value: '' };
+        },
+
+        handleChange: function(event) {
+          var nextValue = event.target.value;
+          this.setState({ value: nextValue });
+        },
+
+        handleClick: function() {
+          this.setState({ events: [], value: '' });
+        },
+
+        handleKeyDown: function(event) {
+          var nextEvents = this.state.events;
+          nextEvents.push('Key Down: ' + event.which);
+          this.setState({ events: nextEvents });
+        },
+
+        handleKeyPress: function(event) {
+          var nextEvents = this.state.events;
+          nextEvents.push('Key Press: ' + event.which);
+          this.setState({ events: nextEvents });
+        },
+
+        handleKeyUp: function(event) {
+          var nextEvents = this.state.events;
+          nextEvents.push('Key Up: ' + event.which);
+          this.setState({ events: nextEvents });
+        },
+
+        render: function() {
+          var eventEls = this.state.events.map(function(event, index) {
+            return <div key={index}>{event}</div>;
+          });
+
+          return <div>
+            <textarea
+              onChange={this.handleChange}
+              onKeyDown={this.handleKeyDown}
+              onKeyPress={this.handleKeyPress}
+              onKeyUp={this.handleKeyUp}
+              value={this.state.value}
+            />
+
+            <button onClick={this.handleClick}>
+              Clear
+            </button>
+
+            <h2>History</h2>
+
+            {eventEls}
+          </div>
+        }
+      });
+
+      ReactDOM.render(
+        <Keyboard />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

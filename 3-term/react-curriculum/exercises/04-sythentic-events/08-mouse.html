@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var Mouse = React.createClass({
+        getInitialState: function() {
+          return {
+            clicks: 0,
+            location: null,
+            pageX: null,
+            pageY: null
+          };
+        },
+
+        handleClick: function() {
+          var nextClicks = this.state.clicks + 1;
+          this.setState({ clicks: nextClicks });
+        },
+
+        handleMouseEnter: function() {
+          this.setState({ location: 'Entered' });
+        },
+
+        handleMouseLeave: function() {
+          this.setState({ location: 'Left' });
+        },
+
+        handleMouseMove: function(event) {
+          var nextState = {
+            pageX: event.pageX,
+            pageY: event.pageY
+          };
+          this.setState(nextState);
+        },
+
+        render: function() {
+          return <div>
+            <div
+              onClick={this.handleClick}
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}
+              onMouseMove={this.handleMouseMove}
+              style={{
+                backgroundColor: 'lightblue',
+                height: '300px',
+                width: '300px'
+              }}
+            ></div>
+
+            <div>clicks: {this.state.clicks}</div>
+            <div>location: {this.state.location}</div>
+            <div>pageX: {this.state.pageX}</div>
+            <div>pageY: {this.state.pageY}</div>
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <Mouse />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>

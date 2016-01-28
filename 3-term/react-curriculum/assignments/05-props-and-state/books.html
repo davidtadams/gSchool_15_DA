@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-family: 'PT Serif', serif;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: 0;
+      }
+
+      *,:after,:before {
+        box-sizing: inherit
+      }
+
+      body {
+        background-color: #ACD0B5;
+        color: #343434;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      td, th {
+        border: 1px solid #454545;
+        padding: 10px;
+        vertical-align: top;
+      }
+
+      th {
+        background-color: #FCF2E5;
+        color: #800000;
+      }
+
+      label {
+        cursor: pointer;
+        margin: 0 12px;
+      }
+
+      input[type="button"] {
+        font-size: 20px;
+      }
+
+      input[type="text"] {
+        text-align: right;
+      }
+
+      .books {
+        margin: 0 auto;
+        width: 470px;
+      }
+
+      .title {
+        font-weight: 700;
+      }
+
+      .row0 {
+        background-color: #FCF2E5;
+      }
+
+      .row1 {
+        background-color: #D9EAE0;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="books">
+        <h1>Books Inventory</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Cover</th>
+              <th>Description</th>
+              <th>Stock</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="row1">
+              <td>
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg" width="100" />
+              </td>
+              <td>
+                <div class="title">A Game of Thrones</div>
+                <div>By George R. R. Martin</div>
+                <div>Published in 1996</div>
+                <div>ISBN 978-0553103547</div>
+              </td>
+              <td>
+                <input type="button" value="-" />
+                <label class="show">7</label>
+                <input class="hide" maxlength="4" size="4" type="text" value="7" />
+                <input type="button" value="+" />
+              </td>
+            </tr>
+            <tr class="row0">
+              <td>
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Snowcrash.jpg" width="100" />
+              </td>
+              <td>
+                <div class="title">Snow Crash</div>
+                <div>By Neal Stephenson</div>
+                <div>Published in 1992</div>
+                <div>ISBN 978-1491515051</div>
+              </td>
+              <td>
+                <input type="button" value="-" />
+                <label class="show">3</label>
+                <input class="hide" maxlength="4" size="4" type="text" value="3" />
+                <input type="button" value="+" />
+              </td>
+            </tr>
+            <tr class="row1">
+              <td>
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/The_Martian_2014.jpg" width="100" />
+              </td>
+              <td>
+                <div class="title">The Martian</div>
+                <div>By Andy Weir</div>
+                <div>Published in 2014</div>
+                <div>ISBN 978-0804139021</div>
+              </td>
+              <td>
+                <input type="button" value="-" />
+                <label class="show">11</label>
+                <input class="hide" maxlength="4" size="4" type="text" value="11" />
+                <input type="button" value="+" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

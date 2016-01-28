@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+      var Textarea = React.createClass({
+        getInitialState: function() {
+          return { value: "I'm changeable and under React's control." };
+        },
+
+        handleChange: function(event) {
+          var nextValue = event.target.value;
+          this.setState({ value: nextValue });
+        },
+
+        render: function() {
+          return <div>
+            <textarea
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+
+            <textarea
+              value="I'm read-only, am under React's control, but raise a warning."
+            />
+
+            <textarea
+              defaultValue="I'm changeable but am not under React's control."
+            />
+
+            <textarea
+              readOnly="true"
+              value="I'm read-only and under React's control."
+            />
+          </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <Textarea />,
+        document.getElementById('container')
+      );
+    </script>
+  </body>
+</html>
