@@ -1,0 +1,53 @@
+.message {
+  margin-left: 0px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.message + .message {
+  border-top: 1px solid #efefef;
+}
+
+.message.read {
+  background: #efefef;
+}
+
+.message.unread {
+  font-weight: bold;
+}
+
+.message.selected {
+  background: #ffffcc;
+}
+
+.message:hover {
+  margin-left: -3px;
+  border-left: 3px solid #ccc;
+}
+
+.toolbar {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.toolbar .label-select {
+  width: auto;
+  display: inline;
+}
+
+.toolbar select, .toolbar button, .toolbar .badge {
+  margin-right: .5em;
+}
+
+footer.spacer {
+  margin-bottom: 20em;
+}
+
+.label {
+  margin-right: .5em;
+}
+
+.fa-close {
+  cursor: pointer;
+}
