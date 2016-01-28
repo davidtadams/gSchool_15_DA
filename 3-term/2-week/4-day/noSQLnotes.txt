@@ -1,0 +1,11 @@
+Notes on NoSQL databases with Roberto
+
+Slides:
+  https://docs.google.com/presentation/d/1AJhG6g3J6S5RAIlf4GGeiPdWs7lNFaOeH3sXIfgA3qc/edit#slide=id.p
+
+Types of NoSQL
+- Graph
+- Column
+- Multi-model
+- Key-value
+- Document-Store

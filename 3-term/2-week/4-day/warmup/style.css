@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+  padding: 10px;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.poster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 95vh;
+  width: 500px;
+  background-color: rgb(26,26,26);
+}
+
+.topleft-triangle {
+  width: 0;
+  height: 0;
+  border-top: 175px solid rgb(60,60,60);
+  border-left: 250px solid transparent;
+}
+
+.topright-triangle {
+  width: 0;
+  height: 0;
+  border-top: 175px solid rgb(123,123,123);
+  border-right: 250px solid transparent;
+}
+
+.left-circle {
+  height: 200px;
+  width: 100px;
+  border-radius: 200px 0 0 200px;
+  background: rgb(60,60,60);
+  text-align: right;
+  padding-top: 120px;
+  box-sizing: border-box;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.left-small-circle {
+  height: 60px;
+  width: 30px;
+  border-radius: 60px 0 0 60px;
+  background: rgb(26,26,26);
+  display: inline-block;
+}
+
+.right-circle {
+  height: 200px;
+  width: 100px;
+  border-radius: 0 200px 200px 0;
+  background: rgb(123,123,123);
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+.right-small-circle {
+  height: 60px;
+  width: 30px;
+  border-radius: 0 60px 60px 0;
+  background: rgb(64,64,64);
+  display: inline-block;
+  margin-top: 120px;
+}
+
+h1 {
+  color: rgb(238,238,238);
+  font-size: 1.2em;
+}
