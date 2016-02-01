@@ -1,0 +1,35 @@
+Notes from React Lunch with Jean de Klerk from Pivotal
+github jadekler
+
+React.js
+React is solely for the view layer
+Only the V in MVC
+
+Has a github repo he is going off of
+  https://github.com/jadekler/git-js-workshop
+
+Franc npm module
+  https://www.npmjs.com/package/franc
+
+Inside the react this element
+there is state
+  this.state
+  this.setState()
+react gives you a function called getInitialState()
+  Lifecycle of react component, setup, initial, destroy
+
+The react lifecycle is very simple
+  not much magic happening behind the scenes
+
+React makes the assumption that every component is a pure function stateless
+
+using System.js for transpiling into babel
+
+React with Flux and Redux
+Flux is also by facebook
+Redux is a more pure version than Flux
+
+Flux -> says you can have multiple data stores
+Redux -> says you can have only one
+
+https://www.linkedin.com/in/jean-de-klerk-59a1141a
