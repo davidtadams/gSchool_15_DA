@@ -1,0 +1,12 @@
+Roberto - Server Side HTTP requests lesson
+
+Same origin policy
+  - created as a security policy
+  - you can only make a request from the client side to your own domain
+  - CORS was a way to fix the same origin policy
+
+The main use case as to why you would want to do this is because of security
+concerns, The same origin policy
+
+Using the built in http module of node vs the request npm package
+Also using unirest
