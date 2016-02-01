@@ -1,0 +1,19 @@
+Who?
+  - Developers use virtual machines
+
+What?
+  - Virtual machines are software. They are software that aims to replicate
+    or emulate a certain hardware or software configuration.
+
+Why?
+  - Virutal machines are used for a variety of reasons.
+    - To run software that relies on outdated hardware that might not be available
+      anymore
+    - To cheaply abstract out hardware specifications to run
+    - Portability concerns
+
+Where?
+  - All over the code world
+
+When?
+  - See why

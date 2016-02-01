@@ -1,0 +1,17 @@
+Term 3
+Week 3 (week 16 overall)
+
+Schedule for what was covered each day.
+
+Day 1: Server side http requests - Roberto
+      Lunch talk about React from Jean de Klerk
+      DevOps - Kyle (VMs, App Containers, Configuration Management, DevOps Workflow)
+        try to deploy a docker container, somewhere
+
+Day 2:
+
+Day 3:
+
+Day 4:
+
+Day 5:
