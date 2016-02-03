@@ -1,0 +1,40 @@
+Unfamiliar Environments with CJ
+
+Action Plan
+
+1. Choose a language
+2. Setup development environment
+3. write/compile/run hello world
+4. fix a bug in existing project
+5. implement a feature in existing project
+6. build and deploy a web service/application
+
+Server side languages
+php
+c#
+c++
+python
+Java
+etc..
+
+macs
+python, ruby, and php all built in by default
+
+Meteor
+  isomorphic js framework
+Rails
+Django
+  python
+Flask
+  python
+Sinatra
+  ruby
+etc.
+
+Tips
+  Find frameworks on github
+  Google Foo
+  Stack Exchange, Stack Overflow
+  Sub-reddits specific to what you are doing
+  Google Groups, forums
+  Q&A Websites
