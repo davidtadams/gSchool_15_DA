@@ -1,0 +1,11 @@
+Good resources for GoLang:
+  https://gobyexample.com/
+  http://shop.oreilly.com/product/0636920046516.do
+  http://www.golang-book.com/
+  https://howistart.org/posts/go/1
+  https://github.com/tools/godep
+
+https://github.com/BertoOrt/go-challenges
+https://github.com/BertoOrt/go-curriculum/blob/master/00_Intro.md
+
+http://l-lin.github.io/2015/01/31/Golang-Deploy_to_heroku/
