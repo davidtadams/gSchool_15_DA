@@ -1,0 +1,14 @@
+Resources:
+  Docs: https://swift.org/documentation/#the-swift-programming-language
+  Cocoa Pods: https://cocoapods.org/?q=alamof
+  make http requests: https://cocoapods.org/pods/Alamofire
+  server side swift: https://github.com/Zewo/Epoch
+
+  sample swift gitignore:
+    https://github.com/github/gitignore/blob/master/Swift.gitignore
+
+  https://get.fabric.io/ios
+
+Slides:
+  http://slides.com/robertmurray/ios-programming-with-swift#/
+
