@@ -12,3 +12,11 @@ Resources:
 Slides:
   http://slides.com/robertmurray/ios-programming-with-swift#/
 
+Exercise:
+  use this repo: https://github.com/BPJackson/ios-pokemon-game
+  Find bugs and fix them
+
+Swift Tutorial:
+  https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html#//apple_ref/doc/uid/TP40015214-CH2-SW1
+
+
