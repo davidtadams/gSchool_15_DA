@@ -10,5 +10,3 @@ https://didgeridone.firebaseapp.com/#/
 
 API
 https://didgeridone.herokuapp.com/
-
-Notes:
