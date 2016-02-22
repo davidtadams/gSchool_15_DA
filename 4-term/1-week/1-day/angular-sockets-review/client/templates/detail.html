@@ -1,0 +1,11 @@
+<div class="home-detail">
+  {{home.address}}
+</div>
+<div class="bids">
+  <ul>
+    <li ng-repeat="bid in bids">
+      {{bid.amount | currency}}
+      {{bid.time | date}}
+    </li>
+  </ul>
+</div>
