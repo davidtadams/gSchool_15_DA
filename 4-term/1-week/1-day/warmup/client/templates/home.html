@@ -1,0 +1,12 @@
+<div class="row">
+  <div ng-repeat="home in homes" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img ng-src="{{home.photoURL}}" alt="{{home.address}}">
+      <div class="caption">
+        <h3>{{home.address}}</h3>
+        <p>{{home.beds}} bedrooms</p>
+        <p>{{home.baths}} bathrooms</p>
+      </div>
+    </div>
+  </div>
+</div>
