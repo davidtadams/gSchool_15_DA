@@ -22,6 +22,7 @@ function DetailController($scope, RealEstateService, $stateParams, BidService) {
   $scope.bids = []
   BidService.on(function (data) {
     $scope.bids.push(data)
+    $scope.average = data.average
     console.log($scope.bids)
     $scope.$apply()
   })

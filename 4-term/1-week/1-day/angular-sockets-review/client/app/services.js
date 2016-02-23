@@ -18,14 +18,22 @@ function RealEstateService($http) {
   }
 }
 
-BidService.$inject = []
+BidService.$inject = ['$stateParams']
 
-function BidService () {
+function BidService ($stateParams) {
   var socket = io()
   var callbacks = []
+  console.log($stateParams.id);
   socket.on('bid', function (data) {
     callbacks.forEach(function (callback) {
-      callback(data)
+      var amount, average;
+      data.body.forEach(function (house, index) {
+        if (house.id == $stateParams.id) {
+          amount = house.currentBid;
+          average = data.average[house.id].average
+        }
+      })
+      callback({amount: amount, time: data.time, average: average})
     })
   })
   return {
