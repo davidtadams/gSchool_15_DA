@@ -44,6 +44,9 @@ Tech
 Beacon project (new project)
   React
 
+Naveen Somasekhar
+https://www.linkedin.com/in/naveensoma
+
 SlingTV
   carry over 65 channels
   live OTT product
