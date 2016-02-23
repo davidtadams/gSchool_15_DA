@@ -1,0 +1,101 @@
+Dish Network 
+Rob talking to us
+Rob Bennet
+https://www.linkedin.com/in/robbennett5
+
+Dish has been actively trying to look at how they create software
+Office downtown is software development center
+Dish business and slingTV business
+
+how we test/deploy/build software has changed drastically
+trying to re-analyze how to build software
+initiative started around 2 years ago
+
+other office is in Meridian
+lincoln and 25 / park meadows
+
+new office 17th and wazee
+pair programming
+TDD
+space will support pair programming
+planning to staff 100
+
+adding product managers
+trying to hire people who are newer to the profession
+
+Travis Cole
+https://www.linkedin.com/in/travis-cole-a022213
+
+worked with dish for 11 years
+worked with Pivotal Labs to figure out development process
+
+Tech
+  Senior and junior devs
+  Ruby rspec coupled with webkit for testing and integration
+  Jenkins CI
+  Oracle Backend
+  Java Spring
+  Cloud Foundry
+    invested into cloud foundry internal
+    run their own cloud infrastructure
+  J2E
+  May go to NoSQL database
+
+Beacon project (new project)
+  React
+
+SlingTV
+  carry over 65 channels
+  live OTT product
+  9ish extra add ons
+  OTT cable (what is this?)
+    Sling is a true OTD product
+  started in a "start up mode product environment"
+
+Tech
+  Amazon AWS
+  Angular
+  MySQL
+  Rails
+
+trying to move forward with synergies b/w sling and dish systems
+
+Hoping to allow people to rotate through and work on different projects
+
+Nick Hunsberger
+https://www.linkedin.com/in/nick-hunsberger-b36a8b48
+recruiter
+
+dishgrandcentral.com
+4-5 Mondays and Wednesdays
+open house for Dish
+inquire about this!
+can email Nick
+
+Timeline
+  working out of building now
+  will be up and running May 1st
+  temporary space has room for about 50
+  have 15 working in there now
+
+Pairing
+  select pairs within a team randomly
+  one member writes the tests
+  the other member tries to make the tests pass
+  red/green refactor
+
+Teams
+  beyond 5 pairs a team gets unmanageable
+  10 or less
+
+Interview process
+  RPI methodology from pivotal
+  running people through pairing interviews
+  looking for a developer mindset
+
+Support for this developer change comes from the top
+about 10 people coming over from the old office
+the rest are new hires
+
+nicholas.hunsberger@dish.com
+
