@@ -1,0 +1,8 @@
+Observable Pattern
+Really good example
+https://docs.nodejitsu.com/articles/getting-started/control-flow/what-are-event-emitters
+
+node utlizes this pattern for its event module
+https://nodejs.org/api/events.html
+
+
