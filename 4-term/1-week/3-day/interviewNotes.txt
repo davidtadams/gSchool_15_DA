@@ -1,0 +1,174 @@
+Kyle Lecture
+Notes on phone interview screening interviews and questions
+
+What is JavaScript?
+  - dynamically typed interpreted language
+
+What is the difference between JavaScript and Java?
+  - java is statically typed and compiled
+
+JS types? (there are 8)
+Primitives:
+  Number
+  String
+  Boolean
+  Null
+  Undefined
+  Function
+Object
+Symbol
+
+NaN (type is number), NaN === NaN -> false
+
+What is the use of the isNaN function?
+  to check if something is not a number
+  it is hard to compare NaN to anything
+  NaN is of type number
+
+Is it possible to break JS code up into multiple lines
+  you can use the backslash character
+
+ASI
+  Automatic semicolon insertion
+  you don't have to put semicolons in code
+
+JS
+  Netscape
+  1995
+  Brandon Eich
+
+Undeclared variables
+  var variablename doesn't exist
+
+Undefined variables
+  when you do var test
+  test is now undefined
+
+Global Variables
+  1. var a in global scope
+  2. a = 3 when there is no var a declaration anywhere, it will auto go to global scope
+  3. attach to window object window.a = 3
+    for node: global.a = 3
+
+Polluting the namespace
+  global variables do this
+  libraries can pollute the global scope if not poorly designed
+
+Prompt Box
+  built into the browser
+  you can enter stuff into it and get the value of the thing back
+  type of the Modal dialogue
+
+What is the this keyword?!!!!!! (HUGE QUESTION)
+  Gives you a reference to your current scope
+  Current context
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+  Real answer:
+    1. Call and Apply
+      Call = comma
+      Apply = array
+    2. Bind - whatever you bound to the function
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+    3. This refers to the calling object for a method
+    4. default value is Global Scope - if all else fails, this is where it looks
+
+Functions are the only thing in JS that create scope
+
+What are the timers in JS?
+  1. SetTimeout
+  2. SetInterval
+    how to stop a setInterval -> clearInterval
+  Difference: Interval repeats, timeout only happens once
+
+== vs ===
+  == coerces types
+  === strictly checks value
+  1 excuse for ==, user input checking numbers, can coerce to strings
+    can use parse int to get around it
+
+Form Submit in JS
+  submit is a built in method
+  Can intercept the form on submit in JS
+
+JS looping structures
+  do while
+  while
+  for
+  for each
+  map (arrays)
+  reduce (arrays)
+  for in (objects)
+  for of (objects)
+
+Navigator Object
+  can get the client OS
+  along with other stuff like Lat and Long
+
+Delete Keyword
+  Deletes anything that wasn't set with var
+  such as object keys
+
+location.href
+  reload page to certain url
+
+JS Scope
+  JS is lexically scoped
+    specifically it is functional scope
+  is not block scope, it is functional scope
+  let allows you to use block scope in ES2015
+
+2 basic data types in JS
+  1. primitive
+  2. reference
+
+Error types
+  1. Compile error
+    Syntax error. code can't compile and won't run
+  2. Run time error
+    something that is happening during program execution
+    unhandled exception
+  3. Logic error
+    output is not what it should be based off of input
+
+2 favorite JS interview questions
+  1. JS and `this`
+    see above
+  2. What is a closure?
+    see below
+
+Closures
+  when in an inner function can reference an outer functions scope after that outer function is finished
+
+Anonymous Function
+  doesn't have a name
+  example: callbacks
+  you can name an anonymous function
+    if you do this and there is an error, it shows up in stack trace instead of anonymous function
+
+Event bubbling and event capturing
+
+JS IS case sensitive
+
+First class functions
+  functions can be treated like other value types
+  1. you can pass them into a function
+  2. return them from a function
+  3. treat them like values
+
+Decode URI
+Encode URI
+  encode and decode url characters to be in correct format
+  encode url to contain 'illegal' characters that are not supported
+
+ECMAscript vs JavaScript
+  ECMA is the standards body
+  ECMAscript is the spec that describes the language
+  JavaScript is the implementation of the language
+    such as V8
+    Chakra
+    Edge
+  ECMAscript came after JavaScript
+  W3C wouldn't touch JS in terms of standards
+  JS needed a standards body
+  TC39
+  Technical Committee 39 is the working committee for JS
