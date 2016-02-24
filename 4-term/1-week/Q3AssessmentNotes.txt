@@ -1,0 +1,24 @@
+Notes on the Q3 Assessment
+
+Client API library to consume
+https://github.com/gSchool/galvanize-warroom/tree/war-room-client
+
+LE
+https://coursework.galvanize.com/users/711/learning_experiences/1347
+
+repo to fork and clone
+https://github.com/gSchool/galvanize-warroom
+
+Provided War Room API DOCS
+War Room Client
+Installation
+  Download `warroom-client.js` to your project.
+  Install `axios` with `npm`.
+Documentation
+  warroom(callback)
+  Calling `warroom` will fetch server status and return data every 500ms.
+  If there is an error, it will call the `callback` like `callback(error, null)`.
+  If it is successful, it will call the `callback` like `callback(null, data)`.
+Usage
+  const warroom = require("./warroom-client")
+  warroom((error, data) => console.log(data))

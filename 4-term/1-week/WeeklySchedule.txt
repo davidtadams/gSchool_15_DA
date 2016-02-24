@@ -3,9 +3,12 @@ Week 1 (week 19)
 
 Schedule for what was covered each day.
 
-Day 1:
+Day 1: Q3 Review
+  MongoDB
+  Angular
+  Sockets
 
-Day 2:
+Day 2: Q3 Assessment
 
 Day 3:
 
