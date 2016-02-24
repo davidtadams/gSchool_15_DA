@@ -1,0 +1,46 @@
+James Conti Speaker today on Job search and resumes
+
+Internal tool is called Flyt
+students.galvanize.com
+
+Put group projects on Resume and LinkedIn
+
+Ideal Resume
+  Absolutely most relevant info ever
+  No objectives, no summaries
+  1 page only
+  Consistent with branding
+  Order/Flow
+
+Have more in depth information on LinkedIn page
+
+The Flow
+  Header
+  Projects
+  Tech Skills
+  Experience
+  Education
+  Else
+
+Header
+  Name
+  Title
+  Contact
+  Location
+  Links(github, linkedin, portfolio)
+for denver use 80202 (downtown zip)
+
+Projects #1
+  Plain english description / Product Description
+  Technical Notes
+  Deployed link and repo link
+
+Tech Skills
+  add mocha and chai
+  add pair programming and TDD
+  Languages, tools, techniques
+
+Experience
+
+Education
+  Galvanize Full Stack
