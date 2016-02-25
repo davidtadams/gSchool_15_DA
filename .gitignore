@@ -41,6 +41,6 @@ build
 knexfile.js
 
 # Java
-build
-.gradle
+build*
+*.gradle
 *.class
