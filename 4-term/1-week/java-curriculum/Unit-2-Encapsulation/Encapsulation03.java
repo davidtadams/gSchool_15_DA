@@ -20,7 +20,7 @@ class Transfer {
 }
 
 class Encapsulation03 {
-  public static void main(String[] args){
+  public static void main(String[] args) {
     Account sourceAccount = new Account();
     Account destinationAccount = new Account();
 

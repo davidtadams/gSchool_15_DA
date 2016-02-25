@@ -1,7 +1,11 @@
 package galvanize;
 
 class Proposal {
-  String name = "";
+  private String name = "";
+
+  public String getName() {
+    return name;
+  }
 }
 
 class Encapsulation02 {

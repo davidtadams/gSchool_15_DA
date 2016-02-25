@@ -2,7 +2,7 @@ package galvanize;
 
 class Proposal {
   String name = "";
-  private int allInFavor = 0;
+  int allInFavor = 0;
 }
 
 class Encapsulation01 {
