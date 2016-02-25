@@ -1,5 +1,6 @@
 CJ Java lesson and OOP
-slides:
+
+Robert OOP Slides: http://slides.com/robertmurray/oop#/
 
 JS is prototype OOP, which is only language like that
 
