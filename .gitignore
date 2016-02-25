@@ -39,3 +39,8 @@ build
 
 # Knex configuration file
 knexfile.js
+
+# Java
+build
+.gradle
+*.class

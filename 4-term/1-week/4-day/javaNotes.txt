@@ -1,0 +1,11 @@
+CJ Java lesson and OOP
+slides:
+
+JS is prototype OOP, which is only language like that
+
+CL
+$ javac
+(java compiler, accepts java source files)
+
+$ java
+(runner, accepts class files)

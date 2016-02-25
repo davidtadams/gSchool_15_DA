@@ -1,0 +1,20 @@
+4 Pillars of OOP
+  - abstraction
+  - encapsulation
+  - inheritance
+  - Polymorphism
+
+Abstraction
+  the process of hiding the implementation details and showing only the functionality
+  java -> interface and abstract class
+
+Encapsulation
+
+
+Inheritance
+  - single inheritance (parent child)
+  - multiple inheritance (inheriting from multiple classes directly, more than one parent class)
+  - multilevel inheritance (multiple levels down)
+
+Polymorphism
+  a single interface that works for many types
