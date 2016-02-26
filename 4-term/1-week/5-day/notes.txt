@@ -1,0 +1,5 @@
+Practice coding interviews
+https://www.pramp.com/
+
+map filter reduce practice
+https://github.com/gSchool/map-filter-reduce-exercises
