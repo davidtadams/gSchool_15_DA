@@ -13,3 +13,8 @@ You'll have to:
 - run with `java Exercise01`
 
 */
+class Exercise01 {
+  public static void main(String[] args) {
+    System.out.println("Hello, my name is David");
+  }
+}
