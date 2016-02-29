@@ -1,8 +1,9 @@
 package main;
 
 public class LinkedList {
-	// reference to the head node.
+	// reference to the head and tail node.
 	private Node head;
+	private Node tail;
 	private int listCount;
 
 	// LinkedList constructor
@@ -13,31 +14,69 @@ public class LinkedList {
 
   // appends the specified element to the end of this list.
 	public void add(int data) {
-
+		Node newNode = new Node(data);
+		if (listCount == 0) {
+			head = newNode;
+			tail = newNode;
+		} else {
+			tail.setNext(newNode);
+			tail = newNode;
+		}
+		listCount++;
 	}
 
   // inserts the specified element at the specified position in this list.
 	public void add(int data, int index) {
-
+		Node tempNode = head;
+		Node newNode = new Node(data);
+		if (index == 0) {
+			newNode.setNext(tempNode);
+			head = newNode;
+		} else {
+			for (int i = 1; i < index; i++) {
+				tempNode = tempNode.getNext();
+			}
+			newNode.setNext(tempNode.getNext());
+			tempNode.setNext(newNode);
+		}
+		listCount++;
 	}
 
   // returns the element at the specified position in this list.
 	public int get(int index) {
-		return 0;
+		Node tempNode = head;
+		for (int i = 0; i < index; i++) {
+			tempNode = tempNode.getNext();
+		}
+		return tempNode.getData();
 	}
 
   // removes the element at the specified position in this list.
-	public boolean remove(int index) {
-		return false;
+	public void remove(int index) {
+		if (index == 0) {
+			head = head.getNext();
+		} else {
+			Node tempNode = head;
+			for (int i = 1; i < index; i++) {
+				tempNode = tempNode.getNext();
+			}
+			if (index == listCount - 1) {
+				tempNode.setNext(null);
+				tail = tempNode;
+			} else {
+				tempNode.setNext(tempNode.getNext().getNext());
+			}
+		}
+		listCount--;
 	}
 
   // returns the number of elements in this list.
 	public int size() {
-		return 0;
+		return listCount;
 	}
 
 	public String toString() {
-		Node current = head.getNext();
+		Node current = head;
 		String output = "";
 		while(current != null) {
 			output += "[" + String.valueOf(current.getData()) + "]";
