@@ -1,0 +1,10 @@
+Denver,Chicago,1004
+Denver,Seattle,1316
+San Francisco,Seattle,807
+San Francisco,Denver,1254
+Chicago,Atlanta,716
+Nashville,Atlanta,248
+Nashville,Denver,1158
+Nashville,Chicago,470
+Nashville,Austin,859
+Austin,Denver,918
