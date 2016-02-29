@@ -8,3 +8,7 @@ Danny Lecture on algorithms
 
 Big O Cheatsheet
 http://bigocheatsheet.com/
+
+CJ:
+  Arrays Slides: https://docs.google.com/presentation/d/15Pvx09_spsLvV2ST5KCOAZJembz53X1Mf3YI63VTYBk/edit#slide=id.p
+  LinkedList Slides: https://docs.google.com/presentation/d/1VmmQp-07Ed7i5iK8ZvDNB_4coZyEw1Pr0XrwFCtj128/edit#slide=id.p
