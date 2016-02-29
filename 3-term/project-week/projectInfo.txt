@@ -14,4 +14,5 @@ https://didgeridone.herokuapp.com/
 Presentation link:
 https://www.youtube.com/watch?v=_JDjvryStvo&index=1&list=PLM_i0obccy3v04bcToKHFCKpLAXHekd4D
 
-
+Google doc with class links:
+https://docs.google.com/spreadsheets/d/1FBm24ovlPFuuvVj0r-cJNkjkqncl3bIAZeTjP93bUOg/edit#gid=569495877
