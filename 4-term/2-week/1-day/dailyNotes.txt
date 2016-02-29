@@ -1,0 +1,10 @@
+CJ Lecture on Data structures
+  included markdown notes
+
+Galvanize CS Repo: https://github.com/gSchool/computer-science-curriculum
+
+Danny Lecture on algorithms
+  included markdown notes
+
+Big O Cheatsheet
+http://bigocheatsheet.com/

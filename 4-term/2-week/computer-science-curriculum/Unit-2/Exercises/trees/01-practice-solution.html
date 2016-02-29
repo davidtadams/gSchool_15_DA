@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tree Practice</title>
+    <style media="screen">
+      .flexbox-container {
+      	display: -ms-flex;
+      	display: -webkit-flex;
+      	display: flex;
+      }
+
+      .flexbox-container > div {
+      	width: 50%;
+      	padding: 10px;
+      }
+
+      .flexbox-container > div:first-child {
+      	margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexbox-container">
+    	<div>
+        <ul>
+          <li>Write a depth-first-search function that logs the nodename</li>
+          <li>Find the element with the id "starting-point" and call your function.</li>
+          <li>The result should be:
+            <ul>
+              <li>ARTICLE</li>
+              <li>HEADER</li>
+              <li>H1</li>
+              <li>A</li>
+              <li>ASIDE</li>
+              <li>NAV</li>
+              <li>A</li>
+              <li>SPAN</li>
+              <li>MAIN</li>
+              <li>SECTION</li>
+              <li>H1</li>
+              <li>SMALL</li>
+              <li>A</li>
+              <li>SPAN</li>
+              <li>FOOTER</li>
+              <li>P</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    	<div>
+        <ul>
+          <li>Write a breadth-first-search function that logs the nodename</li>
+          <li>Find the element with the id "starting-point" and call your function</li>
+          <li>The results should be:
+            <ul>
+              <li>ARTICLE</li>
+              <li>HEADER</li>
+              <li>ASIDE</li>
+              <li>MAIN</li>
+              <li>FOOTER</li>
+              <li>H1</li>
+              <li>NAV</li>
+              <li>SECTION</li>
+              <li>P</li>
+              <li>A</li>
+              <li>A</li>
+              <li>H1</li>
+              <li>SPAN</li>
+              <li>SMALL</li>
+              <li>A</li>
+              <li>SPAN</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <article id="starting-point">
+      <header>
+        <h1>
+          <a href="#"></a>
+        </h1>
+      </header>
+      <aside>
+        <nav>
+          <a href="#">
+            <span></span>
+          </a>
+        </nav>
+      </aside>
+      <main>
+        <section>
+          <h1>
+            <small>
+              <a href="#">
+                <span></span>
+              </a>
+            </small>
+          </h1>
+        </section>
+      </main>
+      <footer>
+        <p></p>
+      </footer>
+    </article>
+    <script type="text/javascript">
+      'use strict'
+
+      function bfs(node) {
+        var queue = [node];
+        while(queue.length) {
+          let current = queue.shift()
+          if(current.nodeType === Node.ELEMENT_NODE) console.log(current.nodeName);
+          for(var i = 0; i<current.childNodes.length; i++) {
+            queue.push(current.childNodes[i])
+          }
+        }
+      }
+
+      function dfs(node) {
+        if(node.nodeType === Node.ELEMENT_NODE) console.log(node.nodeName);
+        for(var i = 0; i < node.childNodes.length; i++) {
+          dfs(node.childNodes[i])
+        }
+      }
+
+      console.log("-------- Breadth-first search ----------");
+      bfs(document.getElementById("starting-point"))
+
+      console.log("\n---------- Depth-first search ----------");
+      console.log("\n");
+      dfs(document.getElementById("starting-point"))
+    </script>
+  </body>
+</html>
