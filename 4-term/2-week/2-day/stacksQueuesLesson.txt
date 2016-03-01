@@ -1,0 +1,25 @@
+Stacks and Queues with Kyle
+
+Stacks
+  can Push and Pop
+  Stacks are LIFO
+  Last in first out
+  stacks give us efficiency
+  an array has some of the same methods as stacks but is not a stack
+  The top of the stack is all we care about
+
+  Methods:
+    push
+    pop
+    maybes:
+      swap
+      length (common)
+      clear/purge
+      peak (look at what is on top) (common)
+
+Queue
+  FIFO
+  first in first out
+  things go in at the beginning of the queue and out at the end
+
+Implement a stack and a queue in Java by Friday
