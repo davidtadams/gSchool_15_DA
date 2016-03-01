@@ -16,6 +16,8 @@ public class Playground {
     // linkedList.add(20);
     // System.out.println(linkedList.toString());
 
-    
+    // int[] numArray = {42, 23, 16, 15, 8, 4};
+    // ArrayUtils.print(BasicSorting.insertion(numArray));
+
   }
 }
