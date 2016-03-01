@@ -1,0 +1,7 @@
+Hash Tables with Danny
+  Slides notes
+  used notepad to draw images of hash tables
+
+Danny notes: https://gist.github.com/dannyfritz/f722d773b2fe8f7e3f5d
+
+Danny drawings: https://gist.github.com/dannyfritz/90ae4e6f92dc0dd4f5ab
