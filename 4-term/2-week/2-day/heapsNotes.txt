@@ -1,0 +1,4 @@
+Bryan lecture on Heaps
+  Min and Max Heaps
+
+Slides: http://slides.com/brianjackson/deck-3#/
