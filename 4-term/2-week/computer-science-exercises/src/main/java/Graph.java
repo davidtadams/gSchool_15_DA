@@ -91,7 +91,7 @@ public class Graph {
     return sum;
   }
 
-  public class GraphNode {
+  public static class GraphNode {
 
     String value;
 
