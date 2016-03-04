@@ -50,36 +50,49 @@ public class AdvancedSorting {
   }
 
   public static int[] quicksort(int[] array) {
-    // quicksort(array, 0, array.length - 1);
+    quicksort(array, 0, array.length - 1);
     return array;
   }
 
   private static void quicksort(int[] array, int start, int end) {
-    // if (start < end) {
-    //   int pivot = partition(array, start, end);
-    //   quicksort(array, start, pivot - 1);
-    //   quicksort(array, pivot + 1, end);
-    // }
+    if (start < end) {
+      int pivot = partition(array, start, end);
+      quicksort(array, start, pivot - 1);
+      quicksort(array, pivot + 1, end);
+    }
   }
 
-  private static int partition(int[] array, int start, int end) {
-    // int x = array[end];
-    // int i = start;
-    // int temp;
-    // for (int j = start; j <= end; j++) {
-    //   if (array[j] <= x) {
-    //     i += 1;
-    //     //swap a[i] with a[j]
-    //     temp = array[i];
-    //     array[i] = array[j];
-    //     array[j] = temp;
-    //   }
-    // }
-    // //swap a[i + 1] with a[r]
-    // temp = array[i + 1];
-    // array[i + 1] = array[end];
-    // array[end] = temp;
-    // return i + 1;
+  public static int partition(int[] array, int start, int end) {
+    System.out.println("Start: " + start);
+    System.out.println("End: " + end);
+    System.out.println("partition begin: ");
+    ArrayUtils.print(array);
+
+    int i = start - 1;
+    System.out.println("pivot(x): " + array[end]);
+    System.out.println("i: " + i);
+    int temp;
+
+    for (int j = start; j < end; j++) {
+      if (array[j] <= array[end]) {
+        i += 1;
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      ArrayUtils.print(array);
+    }
+    System.out.println("i: " + i);
+    //swap a[i + 1] with a[r]
+    temp = array[i + 1];
+    array[i + 1] = array[end];
+    array[end] = temp;
+
+    System.out.println("partition end: ");
+    ArrayUtils.print(array);
+    System.out.println("i + 1: " + (i + 1));
+
+    return i + 1;
   }
 
 }
