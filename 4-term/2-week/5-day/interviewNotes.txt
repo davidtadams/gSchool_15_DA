@@ -1,0 +1,58 @@
+Outcomes Repo: https://github.com/gSchool/outcomes-curriculum
+
+Interview notes with Kyle
+
+Psuedo Code
+  Writing out logic and steps using syntex independent language
+  A way of clear communication of what you are doing
+
+Parts of a programming language
+  Sequence
+  Selection
+  Iterative
+
+Helpers
+  input
+  output/print
+  var (type)
+  if/then/else if/else
+  while/for/loop
+  return
+
+Whiteboarding
+  DON'T GO DARK!
+  Steps:
+    Ask about the format!
+      edge cases?
+      psuedo code?
+      handle errors?
+    Sample I/O
+    Narrate
+    Diagram the flow (of inputs to outputs)
+
+Cultural Interviews
+  1. So tell me about yourself?
+    -experience?
+    -personality traits?
+    -communication?
+    Practice
+      elevator pitch
+      craft a story
+      short/dense/tight dialogue
+  2. Why do you want to work here?
+    Do you know what we do? (that's what they are looking for)
+    Passion
+    How do you add value?
+  3. Tell me about a problem/project?
+    How do you solve problems?
+    Can you speak about a technical problem plainly?
+    How do you respond to adversity?
+    Responding to conflict?
+    wrap all of this into a story
+      how you grew?
+      how you learned from others
+      what you took out of it?
+
+What you say in interviews needs to be true, but not factual!
+  It doesn't have to have literally happened to you in that order on the same
+    project.
