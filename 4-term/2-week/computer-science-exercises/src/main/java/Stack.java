@@ -2,8 +2,8 @@ package main;
 
 public class Stack {
   private int size;
-  private int stackLength = 20;
-  private int[] stack = new int[stackLength];
+  static final int CAPACITY = 20;
+  private int[] stack = new int[CAPACITY];
 
   public Stack() {
     size = 0;
@@ -30,10 +30,7 @@ public class Stack {
   }
 
   public boolean isEmpty() {
-    if (size > 0) {
-      return false;
-    }
-    return true;
+    return size == 0;
   }
 
 }
