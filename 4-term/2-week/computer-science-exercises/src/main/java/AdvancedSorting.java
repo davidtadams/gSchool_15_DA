@@ -63,14 +63,7 @@ public class AdvancedSorting {
   }
 
   public static int partition(int[] array, int start, int end) {
-    System.out.println("Start: " + start);
-    System.out.println("End: " + end);
-    System.out.println("partition begin: ");
-    ArrayUtils.print(array);
-
     int i = start - 1;
-    System.out.println("pivot(x): " + array[end]);
-    System.out.println("i: " + i);
     int temp;
 
     for (int j = start; j < end; j++) {
@@ -80,18 +73,10 @@ public class AdvancedSorting {
         array[i] = array[j];
         array[j] = temp;
       }
-      ArrayUtils.print(array);
     }
-    System.out.println("i: " + i);
-    //swap a[i + 1] with a[r]
     temp = array[i + 1];
     array[i + 1] = array[end];
     array[end] = temp;
-
-    System.out.println("partition end: ");
-    ArrayUtils.print(array);
-    System.out.println("i + 1: " + (i + 1));
-
     return i + 1;
   }
 
