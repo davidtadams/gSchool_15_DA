@@ -14,3 +14,4 @@ Why test?
   with some development workflows, testing can reduce expense of bug fixes
 
 See notes from code Danny went over
+  https://gist.github.com/dannyfritz/6da8cd7a6efb941ee60d

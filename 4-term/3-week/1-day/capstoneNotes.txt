@@ -16,3 +16,6 @@ AWS
 
 WORKING CODE!!
 COMPLETE FEATURES!!!
+
+Project Proposal:
+  https://github.com/davidtadams/capstone-submissions
