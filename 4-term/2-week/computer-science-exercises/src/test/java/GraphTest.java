@@ -41,40 +41,40 @@ public class GraphTest {
     return graph;
   }
 
-  // @Test
-  // public void ShouldPrint() {
-  //   Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
-  //   cityGraph.print();
-  // }
-  //
-  // @Test
-  // public void ShouldGetSize () {
-  //   Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
-  //   Assert.assertEquals(7, cityGraph.size());
-  // }
-  //
-  // @Test
-  // public void ShouldGetNumEdges () {
-  //   Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
-  //   Assert.assertEquals(10, cityGraph.numEdges());
-  // }
-  //
-  // @Test
-  // public void ShouldGetWeight () {
-  //   Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
-  //   Assert.assertEquals(8750, cityGraph.weight());
-  // }
-  //
-  // @Test
-  // public void ShouldGetNeighbors () {
-  //   Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
-  //   ArrayList<String> neighbors = cityGraph.findNeighbors("Chicago");
-  //   Assert.assertEquals(3, neighbors.size());
-  //   Assert.assertEquals(true, neighbors.contains("Denver"));
-  //   Assert.assertEquals(true, neighbors.contains("Atlanta"));
-  //   Assert.assertEquals(true, neighbors.contains("Nashville"));
-  // }
-  //
+  @Test
+  public void ShouldPrint() {
+    Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
+    cityGraph.print();
+  }
+
+  @Test
+  public void ShouldGetSize () {
+    Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
+    Assert.assertEquals(7, cityGraph.size());
+  }
+
+  @Test
+  public void ShouldGetNumEdges () {
+    Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
+    Assert.assertEquals(10, cityGraph.numEdges());
+  }
+
+  @Test
+  public void ShouldGetWeight () {
+    Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
+    Assert.assertEquals(8750, cityGraph.weight());
+  }
+
+  @Test
+  public void ShouldGetNeighbors () {
+    Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
+    ArrayList<String> neighbors = cityGraph.findNeighbors("Chicago");
+    Assert.assertEquals(3, neighbors.size());
+    Assert.assertEquals(true, neighbors.contains("Denver"));
+    Assert.assertEquals(true, neighbors.contains("Atlanta"));
+    Assert.assertEquals(true, neighbors.contains("Nashville"));
+  }
+
   // @Test
   // public void ShouldFindShortestPath () {
   //   Graph cityGraph = readGraph("./src/test/fixture/cityGraph.txt");
@@ -87,18 +87,18 @@ public class GraphTest {
   //   Assert.assertEquals(path.get(1).second.value, "Denver");
   //   Assert.assertEquals(Graph.pathWeight(path), 2474);
   // }
-  //
-  // @Test
-  // public void ShouldGetOrphans () {
-  //   Graph graph = new Graph();
-  //   // A <-> B   C
-  //   graph.addNode("A");
-  //   graph.addNode("B");
-  //   graph.addNode("C");
-  //   graph.addEdge("A", "B", 10);
-  //   ArrayList<Graph.GraphNode> orphans = graph.findOrphans();
-  //   Assert.assertEquals(1, orphans.size());
-  //   Assert.assertEquals(true, orphans.contains("C"));
-  // }
+
+  @Test
+  public void ShouldGetOrphans () {
+    Graph graph = new Graph();
+    // A <-> B   C
+    graph.addNode("A");
+    graph.addNode("B");
+    graph.addNode("C");
+    graph.addEdge("A", "B", 10);
+    Set<String> orphans = graph.findOrphans();
+    Assert.assertEquals(1, orphans.size());
+    Assert.assertEquals(true, orphans.contains("C"));
+  }
 
 }

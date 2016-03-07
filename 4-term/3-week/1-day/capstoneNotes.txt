@@ -1,0 +1,18 @@
+Capstone review - Kyle
+
+Thursday would be the earliest to work on Capstone
+if you get approved early
+
+Hiring Day is on Thursday
+
+Start with your presentation and work backwards
+  what are the cool things you can talk about within a 3 minute demo
+  build those things
+
+AWS Credit?
+AWS
+  can do PSQL in the cloud
+  elastic beanstock
+
+WORKING CODE!!
+COMPLETE FEATURES!!!

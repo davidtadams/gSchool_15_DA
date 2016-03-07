@@ -1,0 +1,16 @@
+Testing with Danny
+
+Testing is the process of finding if there are errors and defects in a product
+
+Who does tests?
+  Users
+  Programmers
+  QA's
+  Computers
+
+Why test?
+  Improve user experience
+  the sooner you catch a problem the easier it is to fix
+  with some development workflows, testing can reduce expense of bug fixes
+
+See notes from code Danny went over
