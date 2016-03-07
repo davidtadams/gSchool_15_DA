@@ -35,7 +35,7 @@ public class BinarySearchTree {
   private Node delete(Node node, int value)
   {
     //TODO
-    
+
      return node;
   }
 
