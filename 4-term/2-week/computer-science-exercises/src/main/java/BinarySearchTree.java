@@ -2,19 +2,19 @@ package main;
 
 public class BinarySearchTree {
 
-  private Node root;
+  private BSTNode root;
 
   BinarySearchTree() {}
 
   BinarySearchTree(int rootValue) {
-    root = new Node(rootValue);
+    root = new BSTNode(rootValue);
   }
 
   public void insert(int value) {
     insert(root, value);
   }
 
-  private void insert(Node node, int value) {
+  private void insert(BSTNode node, int value) {
     //TODO
   }
 
@@ -22,7 +22,7 @@ public class BinarySearchTree {
     return search(root, value);
   }
 
-  private boolean search(Node node, int value) {
+  private boolean search(BSTNode node, int value) {
     //TODO
     return false;
   }
@@ -32,51 +32,13 @@ public class BinarySearchTree {
      root = delete(root, value);
   }
 
-  private Node delete(Node node, int value)
+  private BSTNode delete(BSTNode node, int value)
   {
     //TODO
-
      return node;
   }
 
-  public Node getRoot() {
+  public BSTNode getRoot() {
     return root;
-  }
-
-  public String traverse(Node node)
-  {
-    if (node != null)
-    {
-       String tree = node + " l-" + node.left + " r-" + node.right + "--";
-       tree += traverse(node.left);
-       tree += traverse(node.right);
-       return tree;
-    } else {
-      return "";
-    }
-  }
-
-  private class Node
-  {
-     private int value;
-     private Node left;
-     private Node right;
-
-     public Node(int value)
-     {
-        this(value, null, null);
-     }
-
-     public Node(int value, Node left, Node right)
-     {
-        this.value = value;
-        this.left = left;
-        this.right = right;
-     }
-
-     public String toString()
-     {
-        return Integer.toString(value);
-     }
   }
 }
