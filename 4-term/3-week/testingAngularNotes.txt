@@ -1,0 +1,10 @@
+Testing with Angular and Protractor with Brian
+
+Resources:
+  http://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html
+
+Slides:
+  https://docs.google.com/presentation/d/1P0R2irkhX0qFJjGad3-3iBhaHZN8j7mhTBLbbdEWR1E/edit#slide=id.p
+
+Demo:
+  https://github.com/BPJackson/protractor-demo
