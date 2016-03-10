@@ -1,0 +1,21 @@
+Lecture about continued learning with Danny
+
+Resources for news
+  Feedly
+  Denver Devs
+  email newsletters
+    HTML5
+    JS
+    CSS
+
+Pocket
+  bookmark service
+
+Hard Skills
+  tutorials
+
+Gitter.io
+  tied to git repos and you can answer questions
+
+IRC
+Reddit
