@@ -1,0 +1,37 @@
+REST with Kyle
+
+REST
+  - stateless!
+    important because it can be decoupled
+
+Coupled apps
+  server side templating redirects to another route after some actions
+    - such as POST
+      it creates user or whatever and then redirects to another page route
+
+Your back end and front end are different app!
+  - you deploy them separately
+  - can use different technologies
+  - code should be separated into different repos
+
+Advantages
+  1. reusability, ability to have multiple clients connect to it
+  2. Scaling! you can scale the apps differently
+    if you say serve front end from a public directly, the app is still the
+    same thing, they are both the same app still
+
+Downside
+  1. it is slower
+    since it isn't storing state, you have to figure out a way to store
+    the state yourself and it is by definition slower
+  SOAP services run faster
+
+Formats
+  JSON API spec on formatting api data to send back
+
+Roy Fielding PHD dissertation created REST
+
+Use query string for filtering
+Use item/id/item
+  for listing things
+  ownership over something
