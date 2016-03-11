@@ -1,0 +1,49 @@
+How can I structure my project to put me on a pathway I want to take?
+
+Understand achievable project scope….
+
+3 Elements of a Great Project
+ - Interesting Problem
+-  Technically impressive
+-  UX/UI
+
+Marketing page to sell your app and explain its use….
+
+Talk about your capstone in interviews, sales pitch, resume, etc. - can be a conversation starter - can I buy you coffee and have you look at my Capstone...
+
+Identify the Problem...
+What is the very specific problem you are solving
+Who specifically has this problem?  Might not be the audience
+Why did you choose to solve this problem? (differentiate yourself)
+
+Technically Impressive
+ - Highlight the new technology
+ - Complex data model
+ - Live updating front end
+ - Interesting data visualization
+
+UX/UI
+ - Custom design
+ - Demonstrate that you care - dressing it up nicely for an interview 😃
+
+ - Well documented github repo that’s accessible through the front end  - don’t forget the readme.md and make it useful!!
+ - Answer:  Why am I logging in?
+
+The presentation:
+ - The presentation is almost as important as the app - showcases personality and soft skills
+ - Make your presentation memorable - think outside the box
+ - Make sure to deploy and give a reason for the user to interact with the app - holding up the big crocodile 😃
+
+Give them a a good domain name to reference….not herokuapp……..
+
+
+What you want:
+Intro:  30 seconds  Who are you?  What brought you to this?  be memorable
+Problem statement:  30 secs
+Demo(live demo,screencast, slide deck,etc):  1 min 30 sec   could leave with a cliffhanger - ask me about….
+Tech notes:  30 secs
+Problems encountered:  30 secs  STAR - situation, task, action, resolution
+Future implementations:  30 secs  what is obtainable and we are in progress with...
+End with a contact slide….
+
+4 minutes total
