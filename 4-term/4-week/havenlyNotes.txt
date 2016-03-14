@@ -1,0 +1,51 @@
+Notes from Fireside chat with Havenly
+3/14
+Gabe Hesse
+
+Havenly
+https://app.havenly.com/careers
+
+Online interior design company
+private marketplace that is an ecommerce company
+
+Product space in denver now is primarily B2B
+havenly is selling directly to consumers
+no sales team, all marketing
+
+Still in startup stage
+growing rapidly
+
+Gabe has been at Havenly for about a year
+CEO Lee Mayor
+she wrote the initial software herself
+she demonstrated traction with bootstraped site
+did a rewrite in PHP
+use Cake PHP
+
+looking for specific type of engineer
+- someone who is curious
+- people who favor more antiquated tools are not curious
+  - they have figured out what they want and they can get paid, but don't want to explore
+- at a startup things move fast, need people who are curious and can adapt
+  - want people who say 'can we learn more?'
+
+Favorite questions?
+  - tell me something cool that you worked on recently?
+    - if pitch goes up, they start talking fast = good!
+  - looking for active github profiles
+    - what are they hacking on, what are they messing around with
+
+Moved PHP piece and just made it an API
+  - just the thing that drives data
+Opened up Tech stack to something more modern
+Now in React/Redux
+developing a good set of APIs has opened the door for native development
+
+experimenting with Slack/dev
+
+looking for people who know when to ask for help
+
+looking for a react/redux senior dev and then looking to hire juniors
+
+total employees: 30
+dev team now: 3-4 looking to double
