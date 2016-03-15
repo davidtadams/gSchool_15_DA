@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/slate/bootstrap.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>Hello JWT</h1>
+    </div>
+    <div class="container" ng-controller="MainController">
+
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var app = angular.module('app', []);
+      app.config(function() {
+        console.log("Hello from angular!");
+      });
+
+      app.run(function($http) {
+        $http.defaults.headers.common.Authorization = 'Basic eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ0oiLCJwYXNzd29yZCI6MTIzLCJpYXQiOjE0NTc5ODgyMDYsImV4cCI6MTQ1ODA3NDYwNn0.6oMbqicMdkuBJleMRwVfLJNYMYazSJNXyA3EoV0OZ1w'
+      });
+
+      app.controller('MainController', function($scope, $http) {
+        $http.get('/secret').then(function(result){
+          console.log(result);
+        })
+      });
+
+
+    </script>
+  </body>
+</html>
