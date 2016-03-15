@@ -10,26 +10,41 @@
       <h1>Hello JWT</h1>
     </div>
     <div class="container" ng-controller="MainController">
-
+      <pre>{{ result | json }}</pre>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js" charset="utf-8"></script>
     <script type="text/javascript">
       var app = angular.module('app', []);
-      app.config(function() {
-        console.log("Hello from angular!");
-      });
-
       app.run(function($http) {
-        $http.defaults.headers.common.Authorization = 'Basic eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ0oiLCJwYXNzd29yZCI6MTIzLCJpYXQiOjE0NTc5ODgyMDYsImV4cCI6MTQ1ODA3NDYwNn0.6oMbqicMdkuBJleMRwVfLJNYMYazSJNXyA3EoV0OZ1w'
+        // Set the Authorization header for all $http requests in the app
+        // This function only runs the first time the page is loaded,
+        // IFF localStorage.token is not set, the Authorization header will NOT contain a token
+        $http.defaults.headers.common.Authorization = 'Bearer ' + localStorage.token;
       });
 
       app.controller('MainController', function($scope, $http) {
-        $http.get('/secret').then(function(result){
-          console.log(result);
-        })
+        $http.post('/auth/login', {
+          name: "CJ",
+          password: 123
+        }).then(function(result){
+          console.log(result.data.token);
+          localStorage.token = result.data.token;
+          getSecret();
+        });
+
+        function getSecret() {
+          // Set the Authorization header in the call to $http.get
+          $http.get('/secret', {
+            headers: {
+              Authorization: 'Bearer ' + localStorage.token
+            }
+          }).then(function(result){
+            $scope.result = result.data;
+          }).catch(function(error){
+            console.log(error);
+          });
+        }
       });
-
-
     </script>
   </body>
 </html>

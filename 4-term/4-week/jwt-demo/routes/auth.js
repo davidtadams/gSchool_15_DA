@@ -15,14 +15,18 @@ router.post('/login', function(req, res) {
   if(req.body.name == "CJ"
     && req.body.password == "123") {
       //YAY
+
+      // jwt.sign accepts the payload, secret, options and a callback
+      // We set the token to expire in 1 day.
+      // After 1 day, the token will no longer be verifiable, and a new token will need to be obtained
       jwt.sign(user, process.env.TOKEN_SECRET, { expiresIn: '1d' }, function(token) {
-        console.log(user);
+        console.log(token);
         res.json({
           token: token
         });
       });
     } else {
-    res.status(401);
+      res.status(401);
       res.json({
         message: "UnAuthorized"
       })
