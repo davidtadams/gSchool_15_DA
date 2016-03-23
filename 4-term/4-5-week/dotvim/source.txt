@@ -1,0 +1,8 @@
+Source for vim setup:
+https://github.com/killtheliterate/dotvim
+
+Neovim:
+https://github.com/neovim/neovim
+
+https://github.com/killtheliterate/dotnvim
+
