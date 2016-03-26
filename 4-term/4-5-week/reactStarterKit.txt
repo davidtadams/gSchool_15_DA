@@ -1,0 +1,6 @@
+Github repo:
+https://github.com/kriasoft/react-starter-kit
+
+Site:
+https://www.reactstarterkit.com/
+
